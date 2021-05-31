@@ -1,0 +1,62 @@
+﻿ID,dish,ingredient,grams,group
+16,Oyster Omelette 蚵仔煎,Cilantro,10,Garnish
+15,Oyster Omelette 蚵仔煎,Green Onion,60,Garnish
+39,Popiah 薄餅皮,Fried Garlic,24,Garnish
+46,Wonton Soup 扁肉,Scallion,5,Garnish
+18,Fish Ball Soup 魚蛋湯,Fatty Pork,113,Protein
+17,Fish Ball Soup 魚蛋湯,Fish Fillet,454,Protein
+23,Fish Ball Soup 魚蛋湯,Ground Pork,28,Protein
+2,Oyster Omelette 蚵仔煎,Eggs,300,Protein
+1,Oyster Omelette 蚵仔煎,Oyster Sauce,252,Protein
+42,Popiah 薄餅皮,Eggs,60,Protein
+33,Popiah 薄餅皮,Firm Tofu,224,Protein
+36,Popiah 薄餅皮,French Beans,170,Protein
+28,Popiah 薄餅皮,Pork Belly,224,Protein
+29,Popiah 薄餅皮,Prawns,750,Protein
+51,Wonton Soup 扁肉,Eggs,120,Protein
+48,Wonton Soup 扁肉,Ground Pork,269,Protein
+20,Fish Ball Soup 魚蛋湯,Salt,4,Seasoning
+26,Fish Ball Soup 魚蛋湯,Oyster Sauce,12,Seasoning
+21,Fish Ball Soup 魚蛋湯,Rice Wine,12,Seasoning
+25,Fish Ball Soup 魚蛋湯,Soy Sauce,12,Seasoning
+11,Oyster Omelette 蚵仔煎,Black Pepper,4,Seasoning
+13,Oyster Omelette 蚵仔煎,Chili Paste,127,Seasoning
+3,Oyster Omelette 蚵仔煎,Cooking Oil,127.5,Seasoning
+5,Oyster Omelette 蚵仔煎,Fish Sauce,33.9,Seasoning
+14,Oyster Omelette 蚵仔煎,Rice Vinegar,40,Seasoning
+12,Oyster Omelette 蚵仔煎,Salt,4,Seasoning
+10,Oyster Omelette 蚵仔煎,Sesame Oil,12.6,Seasoning
+9,Oyster Omelette 蚵仔煎,Soy Sauce,12.6,Seasoning
+32,Popiah 薄餅皮,Cooking Oil,90,Seasoning
+30,Popiah 薄餅皮,Garlic,30,Seasoning
+38,Popiah 薄餅皮,Oyster Sauce,24,Seasoning
+44,Popiah 薄餅皮,Red Chili,30,Seasoning
+31,Popiah 薄餅皮,Salt,4,Seasoning
+58,Wonton Soup 扁肉,Chicken Powder,27,Seasoning
+47,Wonton Soup 扁肉,Ginger,28,Seasoning
+54,Wonton Soup 扁肉,Granulated Sugar,24,Seasoning
+52,Wonton Soup 扁肉,Oyster Sauce,6,Seasoning
+60,Wonton Soup 扁肉,Rice Vinegar,8.53,Seasoning
+59,Wonton Soup 扁肉,Salt,6,Seasoning
+55,Wonton Soup 扁肉,Sesame Oil,27,Seasoning
+53,Wonton Soup 扁肉,Sherry Wine,3,Seasoning
+50,Wonton Soup 扁肉,Soy Sauce,12,Seasoning
+57,Wonton Soup 扁肉,Vegetable Oil,4,Seasoning
+49,Wonton Soup 扁肉,White pepper,3,Seasoning
+19,Fish Ball Soup 魚蛋湯,Sweet Potato Starch,32,Starch
+27,Fish Ball Soup 魚蛋湯,Tapioca Flour,12,Starch
+7,Oyster Omelette 蚵仔煎,All Purpose Flour,90,Starch
+8,Oyster Omelette 蚵仔煎,Sweet Potato Starch,90,Starch
+6,Oyster Omelette 蚵仔煎,Tapioca Flour,270,Starch
+37,Popiah 薄餅皮,Popiah Wrap,140,Starch
+61,Wonton Soup 扁肉,Wonton Wrappers,120,Starch
+24,Fish Ball Soup 魚蛋湯,Fried Shallots,12,Vegetable
+41,Popiah 薄餅皮,Bean Sprouts,24,Vegetable
+35,Popiah 薄餅皮,Carrots,300,Vegetable
+40,Popiah 薄餅皮,Cucumber,24,Vegetable
+34,Popiah 薄餅皮,Jicama,300,Vegetable
+43,Popiah 薄餅皮,Lettuce,40,Vegetable
+45,Wonton Soup 扁肉,Napa Cabbage,714,Vegetable
+22,Fish Ball Soup 魚蛋湯,Crushed Ice,32,Water
+4,Oyster Omelette 蚵仔煎,Water,300,Water
+56,Wonton Soup 扁肉,Water,820,Water

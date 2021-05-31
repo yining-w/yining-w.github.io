@@ -1,0 +1,80 @@
+.chart-container {
+    max-width: 1050px;
+    margin: 0 auto;
+    /* auto centers the div */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* border: 3px solid red; */
+}
+
+svg {
+    overflow: visible;
+    /* display: inline-block;
+    position: fixed;
+    top: 60px;
+    margin-left: 0; */
+    
+    /* border: 0.5px solid purple; */
+    display: inline-block;
+}
+
+
+.chart-headline {
+ /*   padding-bottom: 0;
+    margin-bottom: 0;*/
+    width:42%;
+    float: left;
+}
+
+.chart-description {
+    display: inline-block;
+}
+
+.chart-subtitle {
+    width:42%;
+    float: left;
+    opacity: 0
+}
+.side-text {
+    width:32%;
+    float: left;
+}
+
+h1 {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.source {
+    margin-top: 60px;
+    margin-left: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.legend {
+    position:absolute;
+    left:20px;
+    top:30px;
+    font-family: 'Franklin Gothic Medium'
+    }
+
+.label {
+    font-family: 'Franklin Gothic Medium';
+    }
+
+.pop-up {
+    position: absolute; 
+    border: 1px solid white;
+    border-radius: 1px;
+    pointer-events: none;
+    background-color: white;
+    padding: 10px;
+    }
+
+.pop-uptwo {
+    position: absolute; 
+    border: 1px solid white;
+    border-radius: 1px;
+    pointer-events: none;
+    background-color: white;
+    padding: 10px;
+    }
