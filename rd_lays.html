@@ -109,7 +109,7 @@
     
       // add the x Axis
       const x = d3.scaleLinear()
-        .domain([0, 100])
+        .domain([0, 15])
         .range([0, width]);
       svg.append("g")
           .attr("transform", "translate(0," + height + ")")
@@ -118,7 +118,7 @@
       // add the y Axis
       const y = d3.scaleLinear()
                 .range([height, 2])
-                .domain([0, 0.15]);
+                .domain([0, 0.35]);
       svg.append("g")
           .call(d3.axisLeft(y));
     
@@ -130,12 +130,12 @@
       // )
       let density_lic =  kde( data
         .filter(function(d){ return d.scenario == "Baseline" & d.incomelevel == "LIC"})
-        .map(function(d){  return +d.lp; })
+        .map(function(d){  return +d.lays; })
       )
 
       let density_hic =  kde( data
         .filter(function(d){ return d.scenario == "Baseline" & d.incomelevel == "HIC"})
-        .map(function(d){  return +d.lp; })
+        .map(function(d){  return +d.lays; })
       )
     
     
@@ -198,12 +198,12 @@
         // )
         let density_lic =  kde( data
         .filter(function(d){ return d.scenario == selectedGroup & d.incomelevel == "LIC"})
-        .map(function(d){  return +d.lp; })
+        .map(function(d){  return +d.lays; })
       )
 
       let density_hic =  kde( data
         .filter(function(d){ return d.scenario == selectedGroup & d.incomelevel == "HIC"})
-        .map(function(d){  return +d.lp; })
+        .map(function(d){  return +d.lays; })
       )
     
         // update the chart
@@ -255,7 +255,7 @@
     svg.append("text").attr("x", 40).attr("y", 50).text("High Income Countries").style("font-size", "12px").attr("font-family", "Arial").attr("alignment-baseline","middle")
 
     // x axis title
-    svg.append("text").attr("x", 400).attr("y", 370).text("Learning Poverty").style("font-size", "12px").attr("font-family", "Arial").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", 430).attr("y", 370).text("LAYS").style("font-size", "12px").attr("font-family", "Arial").attr("alignment-baseline","middle")
 
 
     
