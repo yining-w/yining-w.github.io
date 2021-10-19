@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+          
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v6.js"></script>
+
+<!-- A bit of CSS: change stroke color of circle on hover (white -> black) -->
+<style>
+
+  .pop-up {
+            position: absolute; 
+            border: 1px solid black;
+            border-radius: 1px;
+            line-height: 1.2;
+            width: 150px;
+            pointer-events: none;
+            background-color: white;
+            padding: 10px;
+            opacity: 0;
+            font-size: 9px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 200;
+        }
+
+  h2 {
+    margin-left: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+
+  h4 {
+    margin-left: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+
+  .x .tick line {
+            stroke: rgba(0, 0, 0, .2);
+        }
+
+        .y .tick line {
+            stroke: rgba(0, 0, 0, .2);
+        }
+
+        .x .domain {
+            display: none;
+        }
+
+        .y .domain {
+            display: none;
+        }
+
+        .y .tick text {
+            font-size: 14px;
+            fill: #333;
+        }
+
+        .x .tick text {
+            font-size: 14px;
+            fill: #333;
+        }
+
+        .x.label {
+            text-transform: uppercase;
+            font-size: 13px;
+            /* font-family: Arial, Helvetica, sans-serif; */
+            letter-spacing: .02em;
+            font-weight: 100;
+
+        }
+
+</style>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz">
+  <h2>
+    R&D Investments in Education and Health 
+</h2>
+  <h4> Data uses most recent available per country </h4>
+</div>
+<div class="pop-up">
+</div>
+<h4> Source: <a href= "https://www.oecd.org/sti/inno/researchanddevelopmentstatisticsrds.htm">OECD</a> </h4>
+
+<script>
+
+    // set the dimensions and margins of the graph
+    const margin = {top: 10, right: 20, bottom: 40, left: 80},
+        width = 800 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+    
+    // append the svg object to the body of the page
+    const svg = d3.select("#my_dataviz")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+    
+    //Read the data
+    d3.csv("rd_expenditures.csv").then( function(data) {
+    
+      // Add X axis
+      const x = d3.scaleLinear()
+      .domain([0,4])
+ //     .domain(d3.extent(data.map(function (d) { return d.pct_health })))
+      .range([margin.left- 30, width - margin.right])
+      svg.append("g")
+        .attr("transform", `translate(0, ${height})`)
+        .call(d3.axisBottom(x));
+    
+      // Add Y axis
+      const y = d3.scaleLinear()
+      .domain([0,4])
+      .range([height - 10, margin.top])
+      svg.append("g")
+        .call(d3.axisLeft(y));
+
+
+      svg.append("text")
+      .attr("class", "x label")
+      .attr("text-anchor", "end")
+      .attr("x", width - 35)
+      .attr("y", height +30)
+      .attr("font-family", "Arial")
+      .text("Education Spending (% of total budget)");
+
+      svg.append("text")
+      .attr("class", "x label")
+      .attr("text-anchor", "end")
+      .attr("x", margin.left- 120)
+      .attr("y", -35)
+      .attr("font-family", "Arial")
+      .attr("transform", "rotate(-90)")
+      .text("Health Spending (% of total budget)");
+
+
+
+      // Add a scale for bubble color
+      var color = d3.scaleOrdinal([`orange`, `teal`]);
+      var r = d3.scaleSqrt()
+          .domain([0, d3.max(data, function (d) { return d.population_0417; })])
+          .range([1, 4]);
+
+    // Bubble Legend
+    // The scale you use for bubble size
+    var size = d3.scaleSqrt()
+      .domain([1, 100])  // What's in the data, let's say it is percentage
+      .range([1, 30])  // Size in pixel
+
+    // Add legend: circles
+    var valuesToShow = [5, 50, 100]
+    var xCircle = 600
+    var yCircle = 70
+    svg
+      .selectAll("legend")
+      .data(valuesToShow)
+      .enter()
+      .append("circle")
+        .attr("cx", xCircle)
+        .attr("cy", function(d){ return yCircle - size(d) } )
+        .attr("r", function(d){ return size(d) })
+        .style("fill", "none")
+        .attr("stroke", "black")
+
+    
+
+    svg.append("text")
+      .attr("class", "x label")
+      .attr("text-anchor", "end")
+      .attr("x", width - 60)
+      .attr("y", height -260)
+      .attr("font-family", "Arial")
+      .text("Population");
+
+
+  
+      svg.append("text")
+      .attr("class", "x label")
+      .attr("text-anchor", "end")
+      .attr("x", width - 90)
+      .attr("y", height -225)
+      .attr("font-family", "Arial")
+      .text("UMC");
+
+    
+      svg.append("text")
+      .attr("class", "x label")
+      .attr("text-anchor", "end")
+      .attr("x", width - 97)
+      .attr("y", height -210)
+      .attr("font-family", "Arial")
+      .text("HIC");
+
+   
+
+      
+      let shuffled = d3.shuffle(data); //trick
+
+      let popup = d3.select(".pop-up");
+
+      // Add dots
+      let points = svg.append("g")
+            .selectAll(".points")
+            .data(data.sort((a,b) => d3.descending(a.population_0417, b.population_0417)))
+            .join("circle")
+            .attr("class", function (d) { return "points p-" + d.country }) // Give circles a class name.
+            .attr("cx", function (d) { return x(d.pct_educ) }) //callback to access the data, position according to x axis
+            .attr("cy", function (d) { return y(d.pct_health) })
+            .attr("r", function (d) { return r(d.population_0417) })
+            .style("stroke", "#333333")
+            .style("stroke-width", .5)
+            .style("opacity", 1)
+            .style("fill", function(d, i){ return color(d.income); })
+            .style("fill-opacity", .5)
+
+  svg.append("rect")
+  .attr('x', 550)
+  .attr('y', 115)
+  .attr('width', 20)
+  .attr('height', 10)
+  .attr('stroke', 'black')
+  .attr('fill', 'teal');
+
+  svg.append("rect")
+  .attr('x', 550)
+  .attr('y', 130)
+  .attr('width', 20)
+  .attr('height', 10)
+  .attr('stroke', 'black')
+  .attr('fill', 'orange');
+
+        
+
+points.on("mouseover", (event, d) => {
+
+    points
+        .style("stroke", "#333333")
+        .style("stroke-width", .5)
+        .style("fill", function(d, i){ return color(d.income); })
+        .style("fill-opacity", .5)
+
+    svg.select(".p-" + d.country)
+        .style("stroke", "black")
+        .style("stroke-width", 2)
+        .style("fill", function(d, i){ return color(d.income); })
+        .style("fill-opacity", 1)
+        .raise()
+
+    let reScaleLang = d3.scaleThreshold()
+            .domain([0]) //make sure to put this in brackets!
+            .range(["less", "more"])
+
+        let diff = +d.pct_educ - +d.pct_health
+
+    let lang = "In " + d.year + ", <b>" + d.countryname + "</b> spent <b>" 
+    lang += d3.format(".2f")(Math.abs(diff)) + "</b> percent <b>" + reScaleLang(diff) + "</b> on education compared to health."
+
+    popup
+        .style("opacity", 1)
+        .style("left", (event.x + 10) + "px")
+        .style("top", (event.y - 10) + "px")
+        .html(lang)
+
+})
+    
+points.on("mouseout", (event, d) => {
+    // console.log(event)
+    points
+        .style("stroke", "#333333")
+        .style("stroke-width", .5)
+        .style("fill", function(d, i){ return color(d.income); })
+
+    popup
+        .style("opacity", 0)
+
+})
+})  
+
+    </script>
