@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+    <!-- set styles on the top -->
+    <style>
+        .chart-container {
+            /* border: 2px solid red; */
+            margin: 0 auto;
+            /* auto centers the div */
+
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', sans-serif;
+
+        }
+
+        svg {
+            /* border: 2px solid purple; */
+            overflow: visible;
+        }
+
+        h2 {
+          font-family: 'Arial'
+        }
+
+
+
+        .x .tick line {
+            stroke: rgba(0, 0, 0, .2);
+        }
+
+        .y .tick line {
+            stroke: rgba(0, 0, 0, .5);
+        }
+
+        .x .domain {
+            display: none;
+        }
+
+        .y .domain {
+            display: none;
+        }
+
+        .y .line{
+            stroke-width:1px;
+            stroke: #ccc;
+        }
+
+        .y .tick text {
+            font-size: 14px;
+            fill: #333;
+        }
+
+        .x .tick text {
+            font-size: 14px;
+            fill: #333;
+        }
+
+        
+        select {
+            margin: 0px 0 0 0px;
+            width: 70px;
+            cursor: pointer;
+            width: 200px;
+            padding: 4px
+
+        }
+
+    </style>
+
+
+
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<!--Buttons-->
+<h2>Learning Loss Scenarios due to COVID19</h2>
+<select id="selectButton"></select>
+
+<!--Graph-->
+<div id="my_dataviz"></div>
+
+<script>
+
+    // set the dimensions and margins of the graph
+    const margin = {top: 30, right: 30, bottom: 30, left: 50},
+        width = 1000 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+    
+    // append the svg object to the body of the page
+    const svg = d3.select("#my_dataviz")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+    
+    // get the data
+    d3.csv("lp_scenarios_long.csv").then( function(data) {
+    
+      // List of groups (here I have one group per column)
+      let allGroup = Array.from(new Set(data.map(d => d.scenario)))//data.map(d=>d.Species)// new Map(data.map(function(d){return(d.Species)}))//.keys()
+    
+      // add the options to the button
+      d3.select("#selectButton")
+        .selectAll('myOptions')
+        .data(allGroup)
+        .enter()
+        .append('option')
+        .text(function (d) { return d; }) // text showed in the menu
+        .attr("value", function (d) { return d; }) // corresponding value returned by the button
+    
+      // add the x Axis
+      const x = d3.scaleLinear()
+        .domain([0, 100])
+        .range([0, width]);
+      svg.append("g")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(x));
+    
+      // add the y Axis
+      const y = d3.scaleLinear()
+                .range([height, 2])
+                .domain([0, 0.15]);
+      svg.append("g")
+          .call(d3.axisLeft(y));
+    
+      // Compute kernel density estimation for the first group called Setosa
+      let kde = kernelDensityEstimator(kernelEpanechnikov(1), x.ticks(30))
+      // let density =  kde( data
+      //   .filter(function(d){ return d.scenario == "Baseline"})
+      //   .map(function(d){  return +d.lp; })
+      // )
+      let density_lic =  kde( data
+        .filter(function(d){ return d.scenario == "Baseline" & d.incomelevel == "LIC"})
+        .map(function(d){  return +d.lp; })
+      )
+
+      let density_hic =  kde( data
+        .filter(function(d){ return d.scenario == "Baseline" & d.incomelevel == "HIC"})
+        .map(function(d){  return +d.lp; })
+      )
+    
+    
+      // Plot the area
+      // const curve = svg
+      //   .append('g')
+      //   .append("path")
+      //     .attr("class", "mypath")
+      //     .datum(density)
+      //     .attr("fill", "#69b3a2")
+      //     .attr("opacity", ".6")
+      //     .attr("stroke", "#000")
+      //     .attr("stroke-width", 1)
+      //     .attr("stroke-linejoin", "round")
+      //     .attr("d",  d3.line()
+      //       .curve(d3.curveBasis)
+      //         .x(function(d) { return x(d[0]); })
+      //         .y(function(d) { return y(d[1]); })
+      //     );
+        
+        const curve_lic = svg
+            .append('g')
+            .append("path")
+            .attr("class", "mypath")
+            .datum(density_lic)
+            .attr("fill", "orange")
+            .attr("opacity", ".6")
+            .attr("stroke", "#000")
+            .attr("stroke-width", 1)
+            .attr("stroke-linejoin", "round")
+            .attr("d",  d3.line()
+                .curve(d3.curveBasis)
+                .x(function(d) { return x(d[0]); })
+                .y(function(d) { return y(d[1]); })
+            );
+
+        const curve_hic = svg
+        .append('g')
+        .append("path")
+        .attr("class", "mypath")
+        .datum(density_hic)
+        .attr("fill", "purple")
+        .attr("opacity", ".6")
+        .attr("stroke", "#000")
+        .attr("stroke-width", 1)
+        .attr("stroke-linejoin", "round")
+        .attr("d",  d3.line()
+            .curve(d3.curveBasis)
+            .x(function(d) { return x(d[0]); })
+            .y(function(d) { return y(d[1]); })
+        );
+
+      // A function that update the chart when slider is moved?
+      function updateChart(selectedGroup) {
+        // recompute density estimation
+        kde = kernelDensityEstimator(kernelEpanechnikov(1), x.ticks(30))
+        // let density =  kde( data
+        //   .filter(function(d){ return d.scenario == selectedGroup})
+        //   .map(function(d){  return +d.lp; })
+        // )
+        let density_lic =  kde( data
+        .filter(function(d){ return d.scenario == selectedGroup & d.incomelevel == "LIC"})
+        .map(function(d){  return +d.lp; })
+      )
+
+      let density_hic =  kde( data
+        .filter(function(d){ return d.scenario == selectedGroup & d.incomelevel == "HIC"})
+        .map(function(d){  return +d.lp; })
+      )
+    
+        // update the chart
+        // curve
+        //   .datum(density)
+        //   .transition()
+        //   .duration(1000)
+        //   .attr("d",  d3.line()
+        //     .curve(d3.curveBasis)
+        //       .x(function(d) { return x(d[0]); })
+        //       .y(function(d) { return y(d[1]); })
+        //   );
+
+          curve_lic
+          .datum(density_lic)
+          .transition()
+          .duration(1000)
+          .attr("d",  d3.line()
+            .curve(d3.curveBasis)
+              .x(function(d) { return x(d[0]); })
+              .y(function(d) { return y(d[1]); })
+          );
+
+          curve_hic
+          .datum(density_hic)
+          .transition()
+          .duration(1000)
+          .attr("d",  d3.line()
+            .curve(d3.curveBasis)
+              .x(function(d) { return x(d[0]); })
+              .y(function(d) { return y(d[1]); })
+          );
+      }
+    
+      // Listen to the slider?
+      d3.select("#selectButton").on("change", function(d){
+        selectedGroup = this.value
+        updateChart(selectedGroup)
+      })
+    
+    });
+
+    // Handmade legend
+    svg.append("circle").attr("cx",30).attr("cy",30).attr("r", 3).style("fill", "orange").style("stroke", "#000")
+    // svg.append("circle").attr("cx",30).attr("cy",70).attr("r", 3).style("fill", "teal").style("stroke", "#000")
+    svg.append("circle").attr("cx",30).attr("cy",50).attr("r", 3).style("fill", "purple").style("stroke", "#000")
+    svg.append("text").attr("x", 40).attr("y", 30).text("Low Income Countries").style("font-size", "12px").attr("font-family", "Arial").attr("alignment-baseline","middle")
+    // svg.append("text").attr("x", 40).attr("y", 70).text("All Countries").style("font-size", "12px").attr("font-family", "Arial").attr("alignment-baseline","middle")
+    svg.append("text").attr("x", 40).attr("y", 50).text("High Income Countries").style("font-size", "12px").attr("font-family", "Arial").attr("alignment-baseline","middle")
+
+    // x axis title
+    svg.append("text").attr("x", 400).attr("y", 370).text("Learning Poverty").style("font-size", "12px").attr("font-family", "Arial").attr("alignment-baseline","middle")
+
+
+    
+    
+    // Function to compute density
+    function kernelDensityEstimator(kernel, X) {
+      return function(V) {
+        return X.map(function(x) {
+          return [x, d3.mean(V, function(v) { return kernel(x - v); })];
+        });
+      };
+    }
+    function kernelEpanechnikov(k) {
+      return function(v) {
+        return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
+      };
+    }
+    
+    </script>
