@@ -1,0 +1,697 @@
+countrycode,income,scenario,lp
+Australia,HIC,Baseline,11.23
+Brunei Darussalam,HIC,Baseline,9.23
+Cambodia,LMC,Baseline,6.85
+China,UMC,Baseline,9.27
+Fiji,UMC,Baseline,6.94
+"Hong Kong SAR, China",HIC,Baseline,11.89
+Indonesia,UMC,Baseline,7.83
+Japan,HIC,Baseline,11.74
+Kiribati,LMC,Baseline,7.37
+"Korea, Rep.",HIC,Baseline,11.68
+Lao PDR,LMC,Baseline,6.25
+"Macao SAR, China",HIC,Baseline,11.58
+Malaysia,UMC,Baseline,8.9
+Marshall Islands,UMC,Baseline,5.66
+"Micronesia, Fed. Sts.",LMC,Baseline,7.19
+Mongolia,LMC,Baseline,9.16
+Myanmar,LMC,Baseline,6.79
+Nauru,UMC,Baseline,6.52
+New Zealand,HIC,Baseline,11.4
+Palau,HIC,Baseline,8.69
+Papua New Guinea,LMC,Baseline,5.99
+Philippines,LMC,Baseline,7.5
+Samoa,UMC,Baseline,7.25
+Singapore,HIC,Baseline,12.81
+Solomon Islands,LMC,Baseline,4.68
+Thailand,UMC,Baseline,8.69
+Timor-Leste,LMC,Baseline,6.29
+Tonga,UMC,Baseline,7.14
+Tuvalu,UMC,Baseline,5.99
+Vanuatu,LMC,Baseline,5.63
+Vietnam,LMC,Baseline,10.68
+Albania,UMC,Baseline,8.95
+Armenia,UMC,Baseline,8
+Austria,HIC,Baseline,10.92
+Azerbaijan,UMC,Baseline,8.28
+Belarus,UMC,Baseline,10.78
+Belgium,HIC,Baseline,11.18
+Bosnia and Herzegovina,UMC,Baseline,7.8
+Bulgaria,UMC,Baseline,8.69
+Croatia,HIC,Baseline,10.45
+Cyprus,HIC,Baseline,10.92
+Czech Republic,HIC,Baseline,11.11
+Denmark,HIC,Baseline,11.1
+Estonia,HIC,Baseline,11.71
+Finland,HIC,Baseline,11.75
+France,HIC,Baseline,11.26
+Georgia,UMC,Baseline,8.28
+Germany,HIC,Baseline,11.03
+Greece,HIC,Baseline,9.97
+Hungary,HIC,Baseline,10.26
+Iceland,HIC,Baseline,10.72
+Ireland,HIC,Baseline,11.59
+Italy,HIC,Baseline,10.45
+Kazakhstan,UMC,Baseline,9.13
+Kosovo,UMC,Baseline,7.88
+Kyrgyz Republic,LMC,Baseline,8.65
+Latvia,HIC,Baseline,10.98
+Lithuania,HIC,Baseline,10.98
+Luxembourg,HIC,Baseline,9.8
+Moldova,LMC,Baseline,8.3
+Montenegro,UMC,Baseline,8.91
+Netherlands,HIC,Baseline,11.55
+North Macedonia,UMC,Baseline,7.31
+Norway,HIC,Baseline,11.24
+Poland,HIC,Baseline,11.37
+Portugal,HIC,Baseline,11.32
+Romania,UMC,Baseline,8.37
+Russian Federation,UMC,Baseline,10.91
+Serbia,UMC,Baseline,9.74
+Slovak Republic,HIC,Baseline,9.79
+Slovenia,HIC,Baseline,11.38
+Spain,HIC,Baseline,10.52
+Sweden,HIC,Baseline,11.58
+Switzerland,HIC,Baseline,10.93
+Tajikistan,LIC,Baseline,6.79
+Turkey,UMC,Baseline,9.23
+Ukraine,LMC,Baseline,9.87
+United Kingdom,HIC,Baseline,11.53
+Uzbekistan,LMC,Baseline,9.13
+Antigua and Barbuda,HIC,Baseline,8.45
+Argentina,UMC,Baseline,8.41
+Brazil,UMC,Baseline,7.87
+Chile,HIC,Baseline,9.4
+Colombia,UMC,Baseline,8.62
+Costa Rica,UMC,Baseline,9.01
+Dominica,UMC,Baseline,8.02
+Dominican Republic,UMC,Baseline,6.55
+Ecuador,UMC,Baseline,8.7
+El Salvador,LMC,Baseline,7.64
+Grenada,UMC,Baseline,8.28
+Guatemala,UMC,Baseline,6.29
+Guyana,UMC,Baseline,6.75
+Haiti,LIC,Baseline,6.15
+Honduras,LMC,Baseline,6.14
+Jamaica,UMC,Baseline,7.05
+Mexico,UMC,Baseline,8.82
+Nicaragua,LMC,Baseline,6.75
+Panama,HIC,Baseline,6.48
+Paraguay,UMC,Baseline,6.99
+Peru,UMC,Baseline,8.63
+St. Kitts and Nevis,HIC,Baseline,8.47
+St. Lucia,UMC,Baseline,8.49
+St. Vincent and the Grenadines,UMC,Baseline,7.7
+Trinidad and Tobago,HIC,Baseline,9.11
+Uruguay,HIC,Baseline,8.56
+Algeria,UMC,Baseline,7.09
+Bahrain,HIC,Baseline,9.29
+"Egypt, Arab Rep.",LMC,Baseline,6.53
+"Iran, Islamic Rep.",UMC,Baseline,8.19
+Iraq,UMC,Baseline,4.02
+Israel,HIC,Baseline,10.59
+Jordan,UMC,Baseline,7.66
+Kuwait,HIC,Baseline,7.37
+Lebanon,UMC,Baseline,6.34
+Malta,HIC,Baseline,10.19
+Morocco,LMC,Baseline,6.31
+Oman,HIC,Baseline,8.66
+Qatar,HIC,Baseline,8.77
+Saudi Arabia,HIC,Baseline,7.89
+Tunisia,LMC,Baseline,6.49
+United Arab Emirates,HIC,Baseline,9.65
+West Bank and Gaza,LMC,Baseline,8.04
+"Yemen, Rep.",LIC,Baseline,4.18
+Canada,HIC,Baseline,11.72
+United States,HIC,Baseline,10.56
+Afghanistan,LIC,Baseline,5.06
+Bangladesh,LMC,Baseline,5.98
+Bhutan,LMC,Baseline,6.33
+India,LMC,Baseline,7.1
+Nepal,LIC,Baseline,7.23
+Pakistan,LMC,Baseline,5.08
+Sri Lanka,UMC,Baseline,8.46
+Angola,LMC,Baseline,4.24
+Benin,LIC,Baseline,5.66
+Botswana,UMC,Baseline,5.08
+Burkina Faso,LIC,Baseline,4.54
+Burundi,LIC,Baseline,5.17
+Cameroon,LMC,Baseline,5.29
+Central African Republic,LIC,Baseline,2.7
+Chad,LIC,Baseline,2.83
+Comoros,LMC,Baseline,5.12
+"Congo, Dem. Rep.",LIC,Baseline,4.53
+"Congo, Rep.",LMC,Baseline,5.29
+Cote d'Ivoire,LMC,Baseline,4.81
+Eswatini,LMC,Baseline,4.52
+Ethiopia,LIC,Baseline,4.35
+Gabon,UMC,Baseline,6.03
+"Gambia, The",LIC,Baseline,5.38
+Ghana,LMC,Baseline,5.95
+Guinea,LIC,Baseline,4.56
+Kenya,LMC,Baseline,8.47
+Lesotho,LMC,Baseline,6.31
+Liberia,LIC,Baseline,2.21
+Madagascar,LIC,Baseline,4.72
+Malawi,LIC,Baseline,5.5
+Mali,LIC,Baseline,2.57
+Mauritania,LMC,Baseline,4.23
+Mauritius,UMC,Baseline,9.41
+Mozambique,LIC,Baseline,4.47
+Namibia,UMC,Baseline,6.11
+Niger,LIC,Baseline,2.68
+Nigeria,LMC,Baseline,5.04
+Rwanda,LIC,Baseline,3.92
+Senegal,LMC,Baseline,4.83
+Seychelles,HIC,Baseline,9.69
+Sierra Leone,LIC,Baseline,4.86
+South Africa,UMC,Baseline,5.61
+South Sudan,LIC,Baseline,2.52
+Sudan,LMC,Baseline,4.3
+Tanzania,LIC,Baseline,4.48
+Togo,LIC,Baseline,5.98
+Uganda,LIC,Baseline,4.33
+Zambia,LMC,Baseline,5.03
+Zimbabwe,LMC,Baseline,7
+Australia,HIC,Optimistic,11.06
+Brunei Darussalam,HIC,Optimistic,9.23
+Cambodia,LMC,Optimistic,5.68
+China,UMC,Optimistic,9.11
+Fiji,UMC,Optimistic,6.51
+"Hong Kong SAR, China",HIC,Optimistic,11.18
+Indonesia,UMC,Optimistic,6.86
+Japan,HIC,Optimistic,11.1
+Kiribati,LMC,Optimistic,7.35
+"Korea, Rep.",HIC,Optimistic,11.04
+Lao PDR,LMC,Optimistic,5.95
+"Macao SAR, China",HIC,Optimistic,11.58
+Malaysia,UMC,Optimistic,8.21
+Marshall Islands,UMC,Optimistic,5.66
+"Micronesia, Fed. Sts.",LMC,Optimistic,7.13
+Mongolia,LMC,Optimistic,8.41
+Myanmar,LMC,Optimistic,5.99
+Nauru,UMC,Optimistic,6.52
+New Zealand,HIC,Optimistic,11.4
+Palau,HIC,Optimistic,8.69
+Papua New Guinea,LMC,Optimistic,5.63
+Philippines,LMC,Optimistic,6.43
+Samoa,UMC,Optimistic,7.25
+Singapore,HIC,Optimistic,12.61
+Solomon Islands,LMC,Optimistic,4.57
+Thailand,UMC,Optimistic,7.92
+Timor-Leste,LMC,Optimistic,5.39
+Tonga,UMC,Optimistic,7.12
+Tuvalu,UMC,Optimistic,5.97
+Vanuatu,LMC,Optimistic,5.48
+Vietnam,LMC,Optimistic,10.04
+Albania,UMC,Optimistic,8.49
+Armenia,UMC,Optimistic,7.83
+Austria,HIC,Optimistic,10.41
+Azerbaijan,UMC,Optimistic,7.55
+Belarus,UMC,Optimistic,10.78
+Belgium,HIC,Optimistic,10.8
+Bosnia and Herzegovina,UMC,Optimistic,7.12
+Bulgaria,UMC,Optimistic,8.06
+Croatia,HIC,Optimistic,10.33
+Cyprus,HIC,Optimistic,10.57
+Czech Republic,HIC,Optimistic,10.51
+Denmark,HIC,Optimistic,10.66
+Estonia,HIC,Optimistic,11.37
+Finland,HIC,Optimistic,11.34
+France,HIC,Optimistic,11.1
+Georgia,UMC,Optimistic,7.79
+Germany,HIC,Optimistic,10.56
+Greece,HIC,Optimistic,9.52
+Hungary,HIC,Optimistic,9.77
+Iceland,HIC,Optimistic,10.64
+Ireland,HIC,Optimistic,11.27
+Italy,HIC,Optimistic,9.97
+Kazakhstan,UMC,Optimistic,8.48
+Kosovo,UMC,Optimistic,7.88
+Kyrgyz Republic,LMC,Optimistic,8.19
+Latvia,HIC,Optimistic,10.41
+Lithuania,HIC,Optimistic,10.49
+Luxembourg,HIC,Optimistic,9.61
+Moldova,LMC,Optimistic,8.05
+Montenegro,UMC,Optimistic,8.34
+Netherlands,HIC,Optimistic,11.12
+North Macedonia,UMC,Optimistic,6.56
+Norway,HIC,Optimistic,10.88
+Poland,HIC,Optimistic,10.8
+Portugal,HIC,Optimistic,10.99
+Romania,UMC,Optimistic,8.04
+Russian Federation,UMC,Optimistic,10.69
+Serbia,UMC,Optimistic,9.12
+Slovak Republic,HIC,Optimistic,9.31
+Slovenia,HIC,Optimistic,10.78
+Spain,HIC,Optimistic,10.33
+Sweden,HIC,Optimistic,11.25
+Switzerland,HIC,Optimistic,10.86
+Tajikistan,LIC,Optimistic,6.79
+Turkey,UMC,Optimistic,8.47
+Ukraine,LMC,Optimistic,9.43
+United Kingdom,HIC,Optimistic,11.18
+Uzbekistan,LMC,Optimistic,8.82
+Antigua and Barbuda,HIC,Optimistic,7.81
+Argentina,UMC,Optimistic,7.21
+Brazil,UMC,Optimistic,6.78
+Chile,HIC,Optimistic,8.49
+Colombia,UMC,Optimistic,7.52
+Costa Rica,UMC,Optimistic,7.8
+Dominica,UMC,Optimistic,7.47
+Dominican Republic,UMC,Optimistic,5.75
+Ecuador,UMC,Optimistic,7.55
+El Salvador,LMC,Optimistic,6.45
+Grenada,UMC,Optimistic,7.32
+Guatemala,UMC,Optimistic,5.28
+Guyana,UMC,Optimistic,5.83
+Haiti,LIC,Optimistic,5.73
+Honduras,LMC,Optimistic,5.01
+Jamaica,UMC,Optimistic,6.25
+Mexico,UMC,Optimistic,7.72
+Nicaragua,LMC,Optimistic,6.52
+Panama,HIC,Optimistic,5.69
+Paraguay,UMC,Optimistic,6.01
+Peru,UMC,Optimistic,7.53
+St. Kitts and Nevis,HIC,Optimistic,8.16
+St. Lucia,UMC,Optimistic,7.37
+St. Vincent and the Grenadines,UMC,Optimistic,6.84
+Trinidad and Tobago,HIC,Optimistic,8.24
+Uruguay,HIC,Optimistic,8.09
+Algeria,UMC,Optimistic,6.72
+Bahrain,HIC,Optimistic,8.47
+"Egypt, Arab Rep.",LMC,Optimistic,6.16
+"Iran, Islamic Rep.",UMC,Optimistic,7.14
+Iraq,UMC,Optimistic,3.19
+Israel,HIC,Optimistic,10.18
+Jordan,UMC,Optimistic,6.9
+Kuwait,HIC,Optimistic,6.64
+Lebanon,UMC,Optimistic,5.58
+Malta,HIC,Optimistic,9.93
+Morocco,LMC,Optimistic,5.84
+Oman,HIC,Optimistic,8.05
+Qatar,HIC,Optimistic,8.04
+Saudi Arabia,HIC,Optimistic,7.23
+Tunisia,LMC,Optimistic,6.06
+United Arab Emirates,HIC,Optimistic,8.97
+West Bank and Gaza,LMC,Optimistic,7.18
+"Yemen, Rep.",LIC,Optimistic,3.92
+Canada,HIC,Optimistic,11.07
+United States,HIC,Optimistic,9.68
+Afghanistan,LIC,Optimistic,4.36
+Bangladesh,LMC,Optimistic,4.95
+Bhutan,LMC,Optimistic,5.32
+India,LMC,Optimistic,5.96
+Nepal,LIC,Optimistic,6.29
+Pakistan,LMC,Optimistic,4.31
+Sri Lanka,UMC,Optimistic,7.02
+Angola,LMC,Optimistic,3.72
+Benin,LIC,Optimistic,5.5
+Botswana,UMC,Optimistic,4.78
+Burkina Faso,LIC,Optimistic,4.32
+Burundi,LIC,Optimistic,5.17
+Cameroon,LMC,Optimistic,4.98
+Central African Republic,LIC,Optimistic,2.42
+Chad,LIC,Optimistic,2.53
+Comoros,LMC,Optimistic,4.66
+"Congo, Dem. Rep.",LIC,Optimistic,4.05
+"Congo, Rep.",LMC,Optimistic,4.65
+Cote d'Ivoire,LMC,Optimistic,4.65
+Eswatini,LMC,Optimistic,3.72
+Ethiopia,LIC,Optimistic,3.97
+Gabon,UMC,Optimistic,5.73
+"Gambia, The",LIC,Optimistic,5
+Ghana,LMC,Optimistic,5.11
+Guinea,LIC,Optimistic,4.24
+Kenya,LMC,Optimistic,7.9
+Lesotho,LMC,Optimistic,5.75
+Liberia,LIC,Optimistic,1.83
+Madagascar,LIC,Optimistic,4.35
+Malawi,LIC,Optimistic,5.15
+Mali,LIC,Optimistic,2.42
+Mauritania,LMC,Optimistic,3.94
+Mauritius,UMC,Optimistic,9.2
+Mozambique,LIC,Optimistic,3.64
+Namibia,UMC,Optimistic,5.8
+Niger,LIC,Optimistic,2.51
+Nigeria,LMC,Optimistic,4.72
+Rwanda,LIC,Optimistic,3.34
+Senegal,LMC,Optimistic,4.53
+Seychelles,HIC,Optimistic,9.2
+Sierra Leone,LIC,Optimistic,4.71
+South Africa,UMC,Optimistic,4.88
+South Sudan,LIC,Optimistic,1.96
+Sudan,LMC,Optimistic,4.02
+Tanzania,LIC,Optimistic,4.34
+Togo,LIC,Optimistic,5.79
+Uganda,LIC,Optimistic,3.2
+Zambia,LMC,Optimistic,4.66
+Zimbabwe,LMC,Optimistic,6.38
+Australia,HIC,Intermediate,10.8
+Brunei Darussalam,HIC,Intermediate,9.23
+Cambodia,LMC,Intermediate,4.97
+China,UMC,Intermediate,8.97
+Fiji,UMC,Intermediate,6.15
+"Hong Kong SAR, China",HIC,Intermediate,10.16
+Indonesia,UMC,Intermediate,6.03
+Japan,HIC,Intermediate,10.19
+Kiribati,LMC,Intermediate,7.34
+"Korea, Rep.",HIC,Intermediate,10.11
+Lao PDR,LMC,Intermediate,5.74
+"Macao SAR, China",HIC,Intermediate,11.58
+Malaysia,UMC,Intermediate,7.62
+Marshall Islands,UMC,Intermediate,5.66
+"Micronesia, Fed. Sts.",LMC,Intermediate,7.09
+Mongolia,LMC,Intermediate,7.87
+Myanmar,LMC,Intermediate,5.34
+Nauru,UMC,Intermediate,6.52
+New Zealand,HIC,Intermediate,11.4
+Palau,HIC,Intermediate,8.69
+Papua New Guinea,LMC,Intermediate,5.39
+Philippines,LMC,Intermediate,5.74
+Samoa,UMC,Intermediate,7.25
+Singapore,HIC,Intermediate,12.32
+Solomon Islands,LMC,Intermediate,4.49
+Thailand,UMC,Intermediate,7.27
+Timor-Leste,LMC,Intermediate,4.82
+Tonga,UMC,Intermediate,7.09
+Tuvalu,UMC,Intermediate,5.96
+Vanuatu,LMC,Intermediate,5.37
+Vietnam,LMC,Intermediate,9.6
+Albania,UMC,Intermediate,8.1
+Armenia,UMC,Intermediate,7.65
+Austria,HIC,Intermediate,9.67
+Azerbaijan,UMC,Intermediate,6.89
+Belarus,UMC,Intermediate,10.78
+Belgium,HIC,Intermediate,10.24
+Bosnia and Herzegovina,UMC,Intermediate,6.48
+Bulgaria,UMC,Intermediate,7.52
+Croatia,HIC,Intermediate,10.14
+Cyprus,HIC,Intermediate,10.04
+Czech Republic,HIC,Intermediate,9.66
+Denmark,HIC,Intermediate,9.98
+Estonia,HIC,Intermediate,10.84
+Finland,HIC,Intermediate,10.66
+France,HIC,Intermediate,10.87
+Georgia,UMC,Intermediate,7.36
+Germany,HIC,Intermediate,9.81
+Greece,HIC,Intermediate,8.86
+Hungary,HIC,Intermediate,9.04
+Iceland,HIC,Intermediate,10.5
+Ireland,HIC,Intermediate,10.76
+Italy,HIC,Intermediate,9.24
+Kazakhstan,UMC,Intermediate,7.83
+Kosovo,UMC,Intermediate,7.88
+Kyrgyz Republic,LMC,Intermediate,7.84
+Latvia,HIC,Intermediate,9.49
+Lithuania,HIC,Intermediate,9.75
+Luxembourg,HIC,Intermediate,9.34
+Moldova,LMC,Intermediate,7.87
+Montenegro,UMC,Intermediate,7.78
+Netherlands,HIC,Intermediate,10.51
+North Macedonia,UMC,Intermediate,5.9
+Norway,HIC,Intermediate,10.31
+Poland,HIC,Intermediate,9.97
+Portugal,HIC,Intermediate,10.52
+Romania,UMC,Intermediate,7.57
+Russian Federation,UMC,Intermediate,10.48
+Serbia,UMC,Intermediate,8.56
+Slovak Republic,HIC,Intermediate,8.62
+Slovenia,HIC,Intermediate,9.89
+Spain,HIC,Intermediate,10.05
+Sweden,HIC,Intermediate,10.75
+Switzerland,HIC,Intermediate,10.74
+Tajikistan,LIC,Intermediate,6.79
+Turkey,UMC,Intermediate,7.78
+Ukraine,LMC,Intermediate,9.1
+United Kingdom,HIC,Intermediate,10.68
+Uzbekistan,LMC,Intermediate,8.57
+Antigua and Barbuda,HIC,Intermediate,6.93
+Argentina,UMC,Intermediate,6.21
+Brazil,UMC,Intermediate,5.85
+Chile,HIC,Intermediate,7.19
+Colombia,UMC,Intermediate,6.57
+Costa Rica,UMC,Intermediate,6.78
+Dominica,UMC,Intermediate,7.03
+Dominican Republic,UMC,Intermediate,5.1
+Ecuador,UMC,Intermediate,6.56
+El Salvador,LMC,Intermediate,5.66
+Grenada,UMC,Intermediate,6.54
+Guatemala,UMC,Intermediate,4.45
+Guyana,UMC,Intermediate,5.06
+Haiti,LIC,Intermediate,5.55
+Honduras,LMC,Intermediate,4.28
+Jamaica,UMC,Intermediate,5.52
+Mexico,UMC,Intermediate,6.81
+Nicaragua,LMC,Intermediate,6.36
+Panama,HIC,Intermediate,4.59
+Paraguay,UMC,Intermediate,5.12
+Peru,UMC,Intermediate,6.55
+St. Kitts and Nevis,HIC,Intermediate,7.73
+St. Lucia,UMC,Intermediate,6.57
+St. Vincent and the Grenadines,UMC,Intermediate,6.3
+Trinidad and Tobago,HIC,Intermediate,7.02
+Uruguay,HIC,Intermediate,7.34
+Algeria,UMC,Intermediate,6.48
+Bahrain,HIC,Intermediate,7.35
+"Egypt, Arab Rep.",LMC,Intermediate,5.93
+"Iran, Islamic Rep.",UMC,Intermediate,6.43
+Iraq,UMC,Intermediate,2.61
+Israel,HIC,Intermediate,9.6
+Jordan,UMC,Intermediate,6.23
+Kuwait,HIC,Intermediate,5.62
+Lebanon,UMC,Intermediate,4.95
+Malta,HIC,Intermediate,9.56
+Morocco,LMC,Intermediate,5.57
+Oman,HIC,Intermediate,7.18
+Qatar,HIC,Intermediate,6.95
+Saudi Arabia,HIC,Intermediate,6.22
+Tunisia,LMC,Intermediate,5.77
+United Arab Emirates,HIC,Intermediate,7.98
+West Bank and Gaza,LMC,Intermediate,6.57
+"Yemen, Rep.",LIC,Intermediate,3.79
+Canada,HIC,Intermediate,10.1
+United States,HIC,Intermediate,8.43
+Afghanistan,LIC,Intermediate,4.01
+Bangladesh,LMC,Intermediate,4.25
+Bhutan,LMC,Intermediate,4.68
+India,LMC,Intermediate,5.22
+Nepal,LIC,Intermediate,5.67
+Pakistan,LMC,Intermediate,3.76
+Sri Lanka,UMC,Intermediate,6.18
+Angola,LMC,Intermediate,3.42
+Benin,LIC,Intermediate,5.39
+Botswana,UMC,Intermediate,4.52
+Burkina Faso,LIC,Intermediate,4.22
+Burundi,LIC,Intermediate,5.17
+Cameroon,LMC,Intermediate,4.78
+Central African Republic,LIC,Intermediate,2.32
+Chad,LIC,Intermediate,2.41
+Comoros,LMC,Intermediate,4.42
+"Congo, Dem. Rep.",LIC,Intermediate,3.9
+"Congo, Rep.",LMC,Intermediate,4.32
+Cote d'Ivoire,LMC,Intermediate,4.55
+Eswatini,LMC,Intermediate,3.24
+Ethiopia,LIC,Intermediate,3.82
+Gabon,UMC,Intermediate,5.52
+"Gambia, The",LIC,Intermediate,4.85
+Ghana,LMC,Intermediate,4.54
+Guinea,LIC,Intermediate,4.14
+Kenya,LMC,Intermediate,7.5
+Lesotho,LMC,Intermediate,5.38
+Liberia,LIC,Intermediate,1.69
+Madagascar,LIC,Intermediate,4.16
+Malawi,LIC,Intermediate,4.99
+Mali,LIC,Intermediate,2.34
+Mauritania,LMC,Intermediate,3.78
+Mauritius,UMC,Intermediate,8.87
+Mozambique,LIC,Intermediate,3.28
+Namibia,UMC,Intermediate,5.53
+Niger,LIC,Intermediate,2.45
+Nigeria,LMC,Intermediate,4.52
+Rwanda,LIC,Intermediate,3.1
+Senegal,LMC,Intermediate,4.37
+Seychelles,HIC,Intermediate,8.51
+Sierra Leone,LIC,Intermediate,4.63
+South Africa,UMC,Intermediate,4.26
+South Sudan,LIC,Intermediate,1.73
+Sudan,LMC,Intermediate,3.86
+Tanzania,LIC,Intermediate,4.23
+Togo,LIC,Intermediate,5.71
+Uganda,LIC,Intermediate,2.73
+Zambia,LMC,Intermediate,4.39
+Zimbabwe,LMC,Intermediate,5.94
+Australia,HIC,Pessimistic,10.75
+Brunei Darussalam,HIC,Pessimistic,9.23
+Cambodia,LMC,Pessimistic,4.98
+China,UMC,Pessimistic,8.95
+Fiji,UMC,Pessimistic,6.06
+"Hong Kong SAR, China",HIC,Pessimistic,9.83
+Indonesia,UMC,Pessimistic,5.86
+Japan,HIC,Pessimistic,9.87
+Kiribati,LMC,Pessimistic,7.34
+"Korea, Rep.",HIC,Pessimistic,9.87
+Lao PDR,LMC,Pessimistic,5.73
+"Macao SAR, China",HIC,Pessimistic,11.58
+Malaysia,UMC,Pessimistic,7.54
+Marshall Islands,UMC,Pessimistic,5.66
+"Micronesia, Fed. Sts.",LMC,Pessimistic,7.08
+Mongolia,LMC,Pessimistic,7.9
+Myanmar,LMC,Pessimistic,5.27
+Nauru,UMC,Pessimistic,6.52
+New Zealand,HIC,Pessimistic,11.4
+Palau,HIC,Pessimistic,8.69
+Papua New Guinea,LMC,Pessimistic,5.39
+Philippines,LMC,Pessimistic,5.67
+Samoa,UMC,Pessimistic,7.25
+Singapore,HIC,Pessimistic,12.21
+Solomon Islands,LMC,Pessimistic,4.49
+Thailand,UMC,Pessimistic,7.1
+Timor-Leste,LMC,Pessimistic,4.77
+Tonga,UMC,Pessimistic,7.09
+Tuvalu,UMC,Pessimistic,5.96
+Vanuatu,LMC,Pessimistic,5.37
+Vietnam,LMC,Pessimistic,9.53
+Albania,UMC,Pessimistic,8.02
+Armenia,UMC,Pessimistic,7.63
+Austria,HIC,Pessimistic,9.47
+Azerbaijan,UMC,Pessimistic,6.77
+Belarus,UMC,Pessimistic,10.78
+Belgium,HIC,Pessimistic,10.07
+Bosnia and Herzegovina,UMC,Pessimistic,6.35
+Bulgaria,UMC,Pessimistic,7.41
+Croatia,HIC,Pessimistic,10.08
+Cyprus,HIC,Pessimistic,9.9
+Czech Republic,HIC,Pessimistic,9.4
+Denmark,HIC,Pessimistic,9.78
+Estonia,HIC,Pessimistic,10.7
+Finland,HIC,Pessimistic,10.47
+France,HIC,Pessimistic,10.79
+Georgia,UMC,Pessimistic,7.29
+Germany,HIC,Pessimistic,9.61
+Greece,HIC,Pessimistic,8.68
+Hungary,HIC,Pessimistic,8.83
+Iceland,HIC,Pessimistic,10.46
+Ireland,HIC,Pessimistic,10.61
+Italy,HIC,Pessimistic,9.03
+Kazakhstan,UMC,Pessimistic,7.71
+Kosovo,UMC,Pessimistic,7.88
+Kyrgyz Republic,LMC,Pessimistic,7.8
+Latvia,HIC,Pessimistic,9.3
+Lithuania,HIC,Pessimistic,9.55
+Luxembourg,HIC,Pessimistic,9.26
+Moldova,LMC,Pessimistic,7.85
+Montenegro,UMC,Pessimistic,7.67
+Netherlands,HIC,Pessimistic,10.32
+North Macedonia,UMC,Pessimistic,5.77
+Norway,HIC,Pessimistic,10.14
+Poland,HIC,Pessimistic,9.71
+Portugal,HIC,Pessimistic,10.39
+Romania,UMC,Pessimistic,7.43
+Russian Federation,UMC,Pessimistic,10.44
+Serbia,UMC,Pessimistic,8.45
+Slovak Republic,HIC,Pessimistic,8.42
+Slovenia,HIC,Pessimistic,9.61
+Spain,HIC,Pessimistic,9.96
+Sweden,HIC,Pessimistic,10.61
+Switzerland,HIC,Pessimistic,10.71
+Tajikistan,LIC,Pessimistic,6.79
+Turkey,UMC,Pessimistic,7.64
+Ukraine,LMC,Pessimistic,9.06
+United Kingdom,HIC,Pessimistic,10.53
+Uzbekistan,LMC,Pessimistic,8.54
+Antigua and Barbuda,HIC,Pessimistic,6.68
+Argentina,UMC,Pessimistic,6.07
+Brazil,UMC,Pessimistic,5.73
+Chile,HIC,Pessimistic,6.88
+Colombia,UMC,Pessimistic,6.52
+Costa Rica,UMC,Pessimistic,6.64
+Dominica,UMC,Pessimistic,6.94
+Dominican Republic,UMC,Pessimistic,4.99
+Ecuador,UMC,Pessimistic,6.36
+El Salvador,LMC,Pessimistic,5.7
+Grenada,UMC,Pessimistic,6.4
+Guatemala,UMC,Pessimistic,4.4
+Guyana,UMC,Pessimistic,4.91
+Haiti,LIC,Pessimistic,5.53
+Honduras,LMC,Pessimistic,4.31
+Jamaica,UMC,Pessimistic,5.38
+Mexico,UMC,Pessimistic,6.65
+Nicaragua,LMC,Pessimistic,6.37
+Panama,HIC,Pessimistic,4.33
+Paraguay,UMC,Pessimistic,5.13
+Peru,UMC,Pessimistic,6.42
+St. Kitts and Nevis,HIC,Pessimistic,7.72
+St. Lucia,UMC,Pessimistic,6.66
+St. Vincent and the Grenadines,UMC,Pessimistic,6.38
+Trinidad and Tobago,HIC,Pessimistic,6.68
+Uruguay,HIC,Pessimistic,7.21
+Algeria,UMC,Pessimistic,6.44
+Bahrain,HIC,Pessimistic,7.02
+"Egypt, Arab Rep.",LMC,Pessimistic,6.02
+"Iran, Islamic Rep.",UMC,Pessimistic,6.56
+Iraq,UMC,Pessimistic,2.52
+Israel,HIC,Pessimistic,9.4
+Jordan,UMC,Pessimistic,6.12
+Kuwait,HIC,Pessimistic,5.31
+Lebanon,UMC,Pessimistic,4.85
+Malta,HIC,Pessimistic,9.45
+Morocco,LMC,Pessimistic,5.52
+Oman,HIC,Pessimistic,6.93
+Qatar,HIC,Pessimistic,6.64
+Saudi Arabia,HIC,Pessimistic,5.93
+Tunisia,LMC,Pessimistic,5.72
+United Arab Emirates,HIC,Pessimistic,7.7
+West Bank and Gaza,LMC,Pessimistic,6.49
+"Yemen, Rep.",LIC,Pessimistic,3.84
+Canada,HIC,Pessimistic,9.81
+United States,HIC,Pessimistic,8.04
+Afghanistan,LIC,Pessimistic,4.08
+Bangladesh,LMC,Pessimistic,4.12
+Bhutan,LMC,Pessimistic,4.66
+India,LMC,Pessimistic,5.08
+Nepal,LIC,Pessimistic,5.55
+Pakistan,LMC,Pessimistic,3.69
+Sri Lanka,UMC,Pessimistic,6.08
+Angola,LMC,Pessimistic,3.36
+Benin,LIC,Pessimistic,5.36
+Botswana,UMC,Pessimistic,4.48
+Burkina Faso,LIC,Pessimistic,4.21
+Burundi,LIC,Pessimistic,5.17
+Cameroon,LMC,Pessimistic,4.75
+Central African Republic,LIC,Pessimistic,2.31
+Chad,LIC,Pessimistic,2.39
+Comoros,LMC,Pessimistic,4.36
+"Congo, Dem. Rep.",LIC,Pessimistic,3.95
+"Congo, Rep.",LMC,Pessimistic,4.43
+Cote d'Ivoire,LMC,Pessimistic,4.53
+Eswatini,LMC,Pessimistic,3.21
+Ethiopia,LIC,Pessimistic,3.8
+Gabon,UMC,Pessimistic,5.47
+"Gambia, The",LIC,Pessimistic,4.84
+Ghana,LMC,Pessimistic,4.5
+Guinea,LIC,Pessimistic,4.13
+Kenya,LMC,Pessimistic,7.44
+Lesotho,LMC,Pessimistic,5.32
+Liberia,LIC,Pessimistic,1.68
+Madagascar,LIC,Pessimistic,4.15
+Malawi,LIC,Pessimistic,4.97
+Mali,LIC,Pessimistic,2.34
+Mauritania,LMC,Pessimistic,3.75
+Mauritius,UMC,Pessimistic,8.78
+Mozambique,LIC,Pessimistic,3.22
+Namibia,UMC,Pessimistic,5.48
+Niger,LIC,Pessimistic,2.43
+Nigeria,LMC,Pessimistic,4.5
+Rwanda,LIC,Pessimistic,3.05
+Senegal,LMC,Pessimistic,4.35
+Seychelles,HIC,Pessimistic,8.36
+Sierra Leone,LIC,Pessimistic,4.62
+South Africa,UMC,Pessimistic,4.18
+South Sudan,LIC,Pessimistic,1.72
+Sudan,LMC,Pessimistic,3.84
+Tanzania,LIC,Pessimistic,4.22
+Togo,LIC,Pessimistic,5.71
+Uganda,LIC,Pessimistic,2.69
+Zambia,LMC,Pessimistic,4.37
+Zimbabwe,LMC,Pessimistic,5.89
