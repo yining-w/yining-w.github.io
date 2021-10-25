@@ -118,12 +118,12 @@
       // add the y Axis
       const y = d3.scaleLinear()
                 .range([height, 2])
-                .domain([0, 0.35]);
+                .domain([0, 0.30]);
       svg.append("g")
           .call(d3.axisLeft(y));
     
       // Compute kernel density estimation for the first group called Setosa
-      let kde = kernelDensityEstimator(kernelEpanechnikov(1), x.ticks(30))
+      let kde = kernelDensityEstimator(kernelEpanechnikov(1), x.ticks(10))
       // let density =  kde( data
       //   .filter(function(d){ return d.scenario == "Baseline"})
       //   .map(function(d){  return +d.lp; })
@@ -191,7 +191,7 @@
       // A function that update the chart when slider is moved?
       function updateChart(selectedGroup) {
         // recompute density estimation
-        kde = kernelDensityEstimator(kernelEpanechnikov(1), x.ticks(30))
+        kde = kernelDensityEstimator(kernelEpanechnikov(1), x.ticks(10))
         // let density =  kde( data
         //   .filter(function(d){ return d.scenario == selectedGroup})
         //   .map(function(d){  return +d.lp; })
