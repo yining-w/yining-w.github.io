@@ -1,0 +1,85 @@
+.chart-container {
+    max-width: 1500px;
+    margin: 0 auto;
+
+    /* auto centers the div */
+   /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+ /* body {
+    background-color: black;
+  }  */
+
+svg {
+    overflow: visible;
+}
+
+
+h1 {
+    text-align: left;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    font-family:'Segoe UI'
+}
+
+h2 {
+    text-align: left;
+    padding-bottom: 20px;
+    font-family:'Segoe UI';
+    color:#0E4D92
+}
+
+h4 {
+    text-align: left;
+    /* padding-bottom: 5px; */
+    font-family:'Segoe UI';
+    color:#5fbaff
+}
+
+p {
+    text-align: left;
+    font-family:'Segoe UI';
+    color:black;
+    font-weight: bold;
+    font-size: 6;
+}
+
+.headline {
+    margin-left: 30px;
+}
+.source {
+    font-family: 'Segoe UI';
+    margin-top: 350px;
+    margin-left: 30px; 
+}
+
+svg .foo {
+    stroke-width: 1;
+    stroke: black;
+  }
+
+svg .text {
+    font-family: 'Segoe UI';
+    font-weight: bold;
+  }
+
+.label {
+    font-family: 'Segoe UI';
+    font-weight: bold;    
+    pointer-events: none;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 1px;
+    padding: 10px;
+    inline-size: 10px;
+    overflow-wrap: break-word;
+}
+
+.pop-up {
+    position: absolute; 
+        /*border: 1px solid black;
+        border-radius: 1px;*/
+    pointer-events: none;
+    background-color: white;
+    padding: 10px;
+    }
