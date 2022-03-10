@@ -19,7 +19,7 @@ let svg = d3.select("body").select("svg")
 
 
 // Read the data
-d3.json('output_2.json').then(function (data) { 
+d3.json('output_4.json').then(function (data) { 
 
     // Grab the country shape files
     let countries = topojson.feature(data, data.objects.wld)
@@ -40,9 +40,9 @@ d3.json('output_2.json').then(function (data) {
       
 
     // Project map
-    let myProjection = d3.geoMercator()
+    let myProjection = d3.geoNaturalEarth1()
         .rotate([0, 0])
-        .scale(120)
+        .scale(180)
         .translate([(width) / 2, height * 4.3 / 2])
 
     //path function
@@ -96,66 +96,65 @@ d3.json('output_2.json').then(function (data) {
       .enter()
       .append("rect")
         .attr("class", "foo")
-        .attr("x", function(d,i){ return -300 + i*(-60)})
-        .attr("y", 300) // 100 is where the first dot appears. 25 is the distance between dots
+        .attr("y", function(d,i){ return 390 + i*(-20)})
+        .attr("x", -570) // 100 is where the first dot appears. 25 is the distance between dots
         .attr("width", 40)
         .attr("height", 10)
         .style("fill", function(d){ return legend_color(d)})
 
-    svg.selectAll("mylabels")
-        .data(legend_keys)
-        .enter()
-        .append("text")
-        .attr("class", "text")
-        .attr("x", function(d,i){ return -530 + i*(60)})
-        .attr("y", 325) // 100 is where the first dot appears. 25 is the distance between dots
-        .style("fill", function(d){ return legend_color(d)})
-        .text(function(d){ return d})
-        .attr("text-anchor", "left")
-        .style("alignment-baseline", "middle")
+     svg.selectAll("mylabels")
+         .data(legend_keys)
+         .enter()
+         .append("text")
+         .attr("class", "text")
+         .attr("y", function(d,i){ return 316 + i*(20)})
+         .attr("x", -520) // 100 is where the first dot appears. 25 is the distance between dots
+         .style("fill", function(d){ return legend_color(d)})
+         .text(function(d){ return d})
+         .attr("text-anchor", "left")
+         .style("alignment-baseline", "middle")
 
     // add explanation of groups
        // Add labels
        svg.append("text")
        .attr("class", "label")
-       .attr("x", -200)
+       .attr("x", -570)
        .attr("y", 300)
        .html("Group Classifications")
 
        svg.append("text")
        .attr("class", "label")
-       .attr("x", -200)
+       .attr("x", -510)
        .attr("y", 320)
-       .html("1: Two or more assessments in the last three years.")
+       .html(": Two or more assessments in the last three years.")
       
        svg.append("text")
        .attr("class", "label")
-       .attr("x", -200)
+       .attr("x", -500)
        .attr("y", 340)
-       .html("2a: Two or more assessments in the last 5-7 years.")
+       .html(": Two or more assessments in the last 5-7 years.")
 
        svg.append("text")
        .attr("class", "label")
-       .attr("x", -200)
+       .attr("x", -500)
        .attr("y", 360)
-       .html("2b: One assessment in the last 5-7 years.")
+       .html(": One assessment in the last 5-7 years.")
 
        svg.append("text")
        .attr("class", "label")
-       .attr("x", -200)
+       .attr("x", -510)
        .attr("y", 380)
-       .html("3: No assessments in the last 7 years.")
+       .html(": No assessments in the last 7 years.")
 
-       // text box
-
-        d3.select("#rect").append("svg").attr("width", 800).attr("height", 200);
-        svg.append('rect')
-        .attr('x', -210)
-        .attr('y', 275)
-        .attr('width', 400)
-        .attr('height', 120)
-        .attr('stroke', 'black')
-        .attr('fill', 'none');
+    //    // text box
+    //     d3.select("#rect").append("svg").attr("width", 800).attr("height", 200);
+    //     svg.append('rect')
+    //     .attr('x', -260)
+    //     .attr('y', 275)
+    //     .attr('width', 450)
+    //     .attr('height', 120)
+    //     .attr('stroke', 'black')
+    //     .attr('fill', 'none');
  
        // FUNCTIONS:
     //MOUSEOVER TOOL
