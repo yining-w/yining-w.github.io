@@ -186,7 +186,7 @@ d3.json('output_4.json').then(function (data) {
             .style("fill-opacity", 1)
             .raise()
  
-            let lang = "<h2>"+ d.properties.country_wb +  "</h2><p><h4>Pillar 1:</h4><p>" + d.properties.pillar1+ " " + d.properties.pillar1b + "</p><h4>Pillar 2: </h4><p>" + d.properties.pillar2_schoolsurveys + "</p><p><b>Household Survey: </b>" + d.properties.pillar2_hh + "<h4>Pillar 3: </h4><p>" + d.properties.pillar3_products
+            let lang = "<h2>"+ d.properties.country_wb +  "</h2><p><h4>Pillar 1:</h4><p>" + d.properties.pillar1+ "</p><h4>Pillar 2: </h4><p>" + d.properties.pillar2_schoolsurveys + "</p><p><b>Household Survey: </b>" + d.properties.pillar2_hh + "<h4>Pillar 3: </h4><p>" + d.properties.pillar3_products
             
             popup
             .style("opacity", 1)
