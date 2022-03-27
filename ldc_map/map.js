@@ -64,11 +64,11 @@ d3.json('output_4.json').then(function (data) {
        .style("fill", function(d) {
         var value = d.properties.group;
             if(value == "3") {
-                return "#0090fc"
+                return "#0074CC"
             } else if (value == "2a") {
                 return "#5fbaff" }
                 else if (value == "2b") {
-                    return "#0074CC"
+                    return "#0090fc"
                 } else if (value == "1") {
                     return "#c1e4fe"
                 } else {
@@ -89,62 +89,63 @@ d3.json('output_4.json').then(function (data) {
     var legend_keys = ["1", "2a", "2b", "3", ""]
     var legend_color = d3.scaleOrdinal()
                         .domain(legend_keys)
-                        .range(["#c1e4fe", "#0074CC", "#5fbaff", "#0090fc"]);
+                        .range(["#c1e4fe", "#5fbaff","#0090fc", "#0074CC" ]);
     
-    svg.selectAll("g")
-      .data(legend_keys)
-      .enter()
-      .append("rect")
-        .attr("class", "foo")
-        .attr("y", function(d,i){ return 390 + i*(-20)})
-        .attr("x", -570) // 100 is where the first dot appears. 25 is the distance between dots
-        .attr("width", 40)
-        .attr("height", 10)
-        .style("fill", function(d){ return legend_color(d)})
+    // svg.selectAll("g")
+    //   .data(legend_keys)
+    //   .enter()
+    //   .append("rect")
+    //     .attr("class", "foo")
+    //     .attr("y", function(d,i){ return 325 + i*(20)})
+    //     .attr("x", -590) // 100 is where the first dot appears. 25 is the distance between dots
+    //     .attr("width", 40)
+    //     .attr("height", 10)
+    //     .style("fill", function(d){ return legend_color(d)})
 
-     svg.selectAll("mylabels")
-         .data(legend_keys)
-         .enter()
-         .append("text")
-         .attr("class", "text")
-         .attr("y", function(d,i){ return 316 + i*(20)})
-         .attr("x", -520) // 100 is where the first dot appears. 25 is the distance between dots
-         .style("fill", function(d){ return legend_color(d)})
-         .text(function(d){ return d})
-         .attr("text-anchor", "left")
-         .style("alignment-baseline", "middle")
+    //  svg.selectAll("mylabels")
+    //      .data(legend_keys)
+    //      .enter()
+    //      .append("text")
+    //      .attr("class", "text")
+    //      .attr("y", function(d,i){ return 325 + i*(20)})
+    //      .attr("x", -720) // 100 is where the first dot appears. 25 is the distance between dots
+    //      .style("fill", function(d){ return legend_color(d)})
+    //      .text(function(d){ return d})
+    //      .attr("text-anchor", "left")
+    //      .style("alignment-baseline", "middle")
 
-    // add explanation of groups
-       // Add labels
-       svg.append("text")
-       .attr("class", "label")
-       .attr("x", -570)
-       .attr("y", 300)
-       .html("Group Classifications")
+    // // add explanation of groups
+    //    // Add labels
+    //    svg.append("text")
+    //    .attr("class", "labelhead")
+    //    .attr("x", -740)
+    //    .attr("y", 300)
+    //    .html("Group Classifications (Based on International/Regional Learning Assessments)")
 
-       svg.append("text")
-       .attr("class", "label")
-       .attr("x", -510)
-       .attr("y", 320)
-       .html(": Two or more assessments in the last three years.")
+    //    svg.append("text")
+    //    .attr("class", "label")
+    //    .attr("x", -710)
+    //    .attr("y", 329)
+    //    .html(": Two or more in the last three years.")
       
-       svg.append("text")
-       .attr("class", "label")
-       .attr("x", -500)
-       .attr("y", 340)
-       .html(": Two or more assessments in the last 5-7 years.")
+    //    svg.append("text")
+    //    .attr("class", "label")
+    //    .attr("x", -700)
+    //    .attr("y", 349)
+    //    .html(": Two or more in the last 5-7 years.")
 
-       svg.append("text")
-       .attr("class", "label")
-       .attr("x", -500)
-       .attr("y", 360)
-       .html(": One assessment in the last 5-7 years.")
+    //    svg.append("text")
+    //    .attr("class", "label")
+    //    .attr("x", -700)
+    //    .attr("y", 369)
+    //    .html(": One in the last 5-7 years.")
 
-       svg.append("text")
-       .attr("class", "label")
-       .attr("x", -510)
-       .attr("y", 380)
-       .html(": No assessments in the last 7 years.")
+    //    svg.append("text")
+    //    .attr("text-anchor", "start")
+    //    .attr("class", "label")
+    //    .attr("x", -710)
+    //    .attr("y", 389)
+    //    .html(": None in the last 7 years.")
 
     //    // text box
     //     d3.select("#rect").append("svg").attr("width", 800).attr("height", 200);
@@ -189,9 +190,9 @@ d3.json('output_4.json').then(function (data) {
             let lang = "<h2>"+ d.properties.country_wb +  "</h2><p><h4>Pillar 1:</h4><p>" + d.properties.pillar1+ "</p><h4>Pillar 2: </h4><p>" + d.properties.pillar2_schoolsurveys + "</p><p><b>Household Survey: </b>" + d.properties.pillar2_hh + "<h4>Pillar 3: </h4><p>" + d.properties.pillar3_products
             
             popup
-            .style("opacity", 1)
-            .style("left", "800px" )
-            .style("top", "130px")
+            .style("opacity", 0.8)
+            .style("left", "960px" )
+            .style("top", "300px")
             .html(lang)
     
     })
