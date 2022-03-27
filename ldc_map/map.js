@@ -1,8 +1,3 @@
-
-// to fix:: turn hover tool into info bar on the side (maybe the bottom?)
-// get all the countries to highlight
-// find the countries that are null, remove antartica
-
 // Set map size
 let w = 200;
 let h = 300;
@@ -31,13 +26,6 @@ d3.json('output_4.json').then(function (data) {
     //    .domain([0, d3.max(data, d => d.properties.pillar1costs)])
         .domain([800000, 900000, 1000000, 1200000, 1400000, 1600000, 1600000, 24000000])
         .range(d3.schemeBlues[8]);
-
-    // // Create a zoom option
-    // let zoom = d3.zoom()
-    // .scaleExtent([1, 2])
-    // .translateExtent([[-500, -300], [1500, 1000]])   
-    // .on('zoom', handleZoom);
-      
 
     // Project map
     let myProjection = d3.geoNaturalEarth1()
@@ -91,71 +79,6 @@ d3.json('output_4.json').then(function (data) {
                         .domain(legend_keys)
                         .range(["#c1e4fe", "#5fbaff","#0090fc", "#0074CC" ]);
     
-    // svg.selectAll("g")
-    //   .data(legend_keys)
-    //   .enter()
-    //   .append("rect")
-    //     .attr("class", "foo")
-    //     .attr("y", function(d,i){ return 325 + i*(20)})
-    //     .attr("x", -590) // 100 is where the first dot appears. 25 is the distance between dots
-    //     .attr("width", 40)
-    //     .attr("height", 10)
-    //     .style("fill", function(d){ return legend_color(d)})
-
-    //  svg.selectAll("mylabels")
-    //      .data(legend_keys)
-    //      .enter()
-    //      .append("text")
-    //      .attr("class", "text")
-    //      .attr("y", function(d,i){ return 325 + i*(20)})
-    //      .attr("x", -720) // 100 is where the first dot appears. 25 is the distance between dots
-    //      .style("fill", function(d){ return legend_color(d)})
-    //      .text(function(d){ return d})
-    //      .attr("text-anchor", "left")
-    //      .style("alignment-baseline", "middle")
-
-    // // add explanation of groups
-    //    // Add labels
-    //    svg.append("text")
-    //    .attr("class", "labelhead")
-    //    .attr("x", -740)
-    //    .attr("y", 300)
-    //    .html("Group Classifications (Based on International/Regional Learning Assessments)")
-
-    //    svg.append("text")
-    //    .attr("class", "label")
-    //    .attr("x", -710)
-    //    .attr("y", 329)
-    //    .html(": Two or more in the last three years.")
-      
-    //    svg.append("text")
-    //    .attr("class", "label")
-    //    .attr("x", -700)
-    //    .attr("y", 349)
-    //    .html(": Two or more in the last 5-7 years.")
-
-    //    svg.append("text")
-    //    .attr("class", "label")
-    //    .attr("x", -700)
-    //    .attr("y", 369)
-    //    .html(": One in the last 5-7 years.")
-
-    //    svg.append("text")
-    //    .attr("text-anchor", "start")
-    //    .attr("class", "label")
-    //    .attr("x", -710)
-    //    .attr("y", 389)
-    //    .html(": None in the last 7 years.")
-
-    //    // text box
-    //     d3.select("#rect").append("svg").attr("width", 800).attr("height", 200);
-    //     svg.append('rect')
-    //     .attr('x', -260)
-    //     .attr('y', 275)
-    //     .attr('width', 450)
-    //     .attr('height', 120)
-    //     .attr('stroke', 'black')
-    //     .attr('fill', 'none');
  
        // FUNCTIONS:
     //MOUSEOVER TOOL
@@ -208,17 +131,7 @@ d3.json('output_4.json').then(function (data) {
         popup
             .style("opacity", 0) // pop up becomes invisible when we mouseout
     })
-//     function handleZoom(e) {
-//         d3.select('svg g')
-//           .attr('transform', e.transform);
-//       }
-    
-//       function initZoom() {
-//         d3.select('svg')
-//           .call(zoom);
-//       }
-      
-// initZoom();
+
 
 
 })
