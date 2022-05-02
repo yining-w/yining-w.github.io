@@ -1,17 +1,10 @@
 // Set map size
-let w = 200;
-let h = 300;
-
-// Set canvas options
-let margin = {top: 250, bottom: 0, left: 600, right: 40 };
-let width = w - margin.left - margin.right;
-let height = h - margin.top - margin.bottom
-
 // Set where to put the svg
-let svg = d3.select("body").select("svg")
-    .attr("viewbox", [0, 0, width, height])
-    .attr("transform", "translate(0" + margin.left + "," + margin.top + ")");
-
+    var svg = d3.select("div#container")
+    .append("svg")
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "250 170 400 400")
+    .classed("svg-content", true);
 
 // Read the data
 d3.json('output_4.json').then(function (data) { 
@@ -30,8 +23,8 @@ d3.json('output_4.json').then(function (data) {
     // Project map
     let myProjection = d3.geoNaturalEarth1()
         .rotate([0, 0])
-        .scale(180)
-        .translate([(width) / 2, height * 4.3 / 2])
+        .scale(50)
+        //.translate([(width) / 2, height * 4.3 / 2])
 
     //path function
     let path = d3.geoPath(myProjection)
@@ -71,7 +64,7 @@ d3.json('output_4.json').then(function (data) {
          .attr("d", path(innerlines))
          .style("fill", "none")
          .style("stroke", "white")
-         .style("stroke-width",1.5)
+         .style("stroke-width",0.5)
 
     // Legend
     var legend_keys = ["1", "2a", "2b", "3", ""]
@@ -106,17 +99,20 @@ d3.json('output_4.json').then(function (data) {
         .style("fill-opacity", 0.8)
         
         svg.select(".p-" + d.properties.ISO) // make every selection unique - calling back the class we defined.
-            .style("stroke-width", 2)
+            .style("stroke-width", 1)
             .style("fill-opacity", 1)
             .raise()
  
             let lang = "<h2>"+ d.properties.country_wb +  "</h2><p><h4>Pillar 1:</h4><p>" + d.properties.pillar1+ "</p><h4>Pillar 2: </h4><p>" + d.properties.pillar2_schoolsurveys + "</p><p><b>Household Survey: </b>" + d.properties.pillar2_hh + "<h4>Pillar 3: </h4><p>" + d.properties.pillar3_products
             
+
             popup
             .style("opacity", 0.8)
-            .style("left", "960px" )
-            .style("top", "300px")
-            .html(lang)
+            .style("left", (60) + "px")
+            .style("top", (0) + "px")
+//            .style("left", "800x" )
+//            .style("top", "300px")
+            .html(lang);
     
     })
 

@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
   
-    <!-- add your script blocks at the end -->
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=SegoeUE:300,400,500,700,900" rel="style">
 
 </head>
 
@@ -17,22 +18,22 @@
     <h3>Understand the Map</h3>
     Each country is classified into one of four groups based on their participation in international or regional learning assessments (ILSA/RLSA).
     <br>
-    <span style="font-weight:bold; color: #c1e4fe">Group 1</span> represents countries that have two or more ILSA/RLSA in the last 3 years.
-    <span style="font-weight:bold; color:#5fbaff;">Group 2a</span> are countries with two or more in the last 5-7 years.
     <br>
-    <span style="font-weight:bold; color:#0090fc;">Group 2b</span> countries have one ILSA/RLSA in the last 5-7 years.
-    <span style="font-weight:bold; color:#0074CC;">Group 3 </span>countries do not have any ILSA/RLSAs in the last 7 years.
+    <span style="font-weight:bold; color:#0074CC;">Group 1 </span>countries do not have any ILSA/RLSAs in the last 7 years.
+    <span style="font-weight:bold; color:#0090fc;">Group 2</span> countries have one ILSA/RLSA in the last 5-7 years.
+    <span style="font-weight:bold; color:#5fbaff;">Group 3</span> are countries with two or more in the last 5-7 years.
+    <span style="font-weight:bold; color: #c1e4fe">Group 4</span> represents countries that have two or more ILSA/RLSA in the last 3 years.    
     <br>
-  </div>
-  <h4 class="headline">Hover to see country recommendations</h4>
-      <div class="chart-container">
-        <svg width="50px" height="570px"></svg>
-        <div class="pop-up"></div>
-      </div>        
-      <br>
-      <div id = "pillars">
-        <p><i>Note: Pillar 2 FLS represents foundational learning module. </i></p>
-        <h3>Learn More About Organizations and Initiatives</h3>
+  <h3>Hover to see country recommendations</h4>
+</div>
+
+  <div id="container" class="svg-container">
+        <div id="container" class="pop-up"></div>
+  </div>        
+  <br>
+  <div id = "pillars">
+    <p><i>Note: Pillar 2 FLS represents foundational learning module. </i></p>
+      <h3>Learn More About Organizations and Initiatives</h3>
         <h4>Pillar 1</h4>
         <div class="inline-block">
           <a href="https://timssandpirls.bc.edu/pirls2021/"> 
@@ -122,5 +123,4 @@
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
 <script src="map.js"></script>
-
 
