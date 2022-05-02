@@ -3,7 +3,7 @@
     var svg = d3.select("div#container")
     .append("svg")
     .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", "250 170 400 400")
+    .attr("viewBox", "250 170 370 400")
     .classed("svg-content", true);
 
 // Read the data
