@@ -3,13 +3,9 @@
     /* Styles for mobile */
     .project-item {
       /* Adjust the layout for mobile */
-      flex-basis: calc(100% - 20px);
-      /*flex-basis: calc(100% / 3);*/
-      box-sizing: border-box;
-      padding: 10px;
       border: 2px solid black; /* Add border style */
-      margin-right: 15px;
-      margin-bottom: 15px;
+      width: 100%; /* Set the width to 100% to occupy the full width of the container */
+      margin-bottom: 20px; /* Add some space between project-items */
       transition: transform 0.3s;
     }
   }
