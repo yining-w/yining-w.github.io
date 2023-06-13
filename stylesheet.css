@@ -1,0 +1,158 @@
+/* Reset styles to remove browser defaults */
+@media (max-width: 767px) {
+    /* Styles for mobile */
+    .project-item {
+      /* Adjust the layout for mobile */
+      flex-basis: calc(100% - 20px);
+      /*flex-basis: calc(100% / 3);*/
+      box-sizing: border-box;
+      padding: 10px;
+      border: 2px solid black; /* Add border style */
+      margin-right: 15px;
+      margin-bottom: 15px;
+      transition: transform 0.3s;
+    }
+  }
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+    margin-left: 25px;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Header styles */
+  header {
+    text-align: left; /* Updated alignment */
+    padding: 20px 0;
+  }
+
+  
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+
+  
+  .resume-link {
+    text-align: left; /* Right align */
+  }
+  
+  .resume-link a {
+    color: blue;
+    text-decoration: none;
+    padding: 0px 0px;
+    border-radius: 5px;
+    margin-right: 25px;
+  }
+  
+  .resume-link a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Navigation styles */
+  nav {
+    margin-bottom: 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Main content styles */
+  section {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+  
+  .project-item {
+    flex-basis: calc(20% - 20px);
+    /*flex-basis: calc(100% / 3);*/
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid black; /* Add border style */
+    margin-right: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+
+  }
+
+  .project-item:hover {
+    transform: translateY(-10px);
+  }  
+
+  
+  .project img {
+    width: 100%;
+    height:200px;
+  }
+  
+  /* Footer styles */
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
