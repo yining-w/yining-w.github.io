@@ -111,7 +111,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   section {
     margin-bottom: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
   }
 
   me {
@@ -121,6 +121,11 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   h2 {
     font-size: 24px;
     margin-bottom: 10px;
+  }
+
+  .github {
+    max-width: 20% !important;
+    height: auto !important;
   }
   
   .project {
