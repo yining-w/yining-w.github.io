@@ -8,6 +8,12 @@
       margin-bottom: 20px; /* Add some space between project-items */
       transition: transform 0.3s;
     }
+
+    .project {
+      display: inline;
+  /*    justify-content: space-between;*/
+  
+    }
   }
 
   .pos {
