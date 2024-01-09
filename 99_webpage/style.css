@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1, h2, h3, p, a {
+    font-family: 'Roboto', sans-serif;
+    margin: 0; /* Resetting default margins */
+}
+
+/* Navigation bar */
+.dummy-nav {
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: right;
+    z-index: 1000; 
+}
+
+.dummy-nav a {
+    display: inline-block;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.dummy-nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #04AA6D;
+    width: 0%;
+}
+
+/* Intro section */
+.intro-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    overflow: hidden; /* Hide overflow for parallax effect */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('intro_background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.foreground-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-image: url('./slum_definition/final.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.intro-text {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* or any color you prefer */
+    z-index: 2; /* Ensure the text is above the background */
+    /* Additional styling as needed */
+}
+
+h1.intro-text {
+    top: 40%; /* Adjust for vertical centering */
+    font-size: 3em; /* Example size */
+}
+
+p.intro-text {
+    top: 50%; /* Adjust for vertical centering */
+    font-size: 1.5em; /* Example size */
+}
+
+/* Story sections */
+.scrollytelling-container {
+    /*font-family: Arial, sans-serif;*/
+}
+
+.story-section {
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.story-section img {
+    /*position: fixed;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    /*opacity: 1;*/
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+/* Divider block */
+.divider-block {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin: 0;
+}

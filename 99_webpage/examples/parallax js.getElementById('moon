@@ -1,0 +1,31 @@
+let moon = document.getElementById('moon');
+let stars = document.getElementById('stars');
+let mountains_behind = document.getElementById('mountains_behind');
+let mountains_front = document.getElementById('mountains_front');
+let text = document.getElementById('text');
+let btn = document.getElementById('btn');
+let header = document.querySelector('header');
+
+
+window.addEventListener('scroll', function() {
+  
+    const totalScrollHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPosition = window.scrollY;
+    const scrollPercentage = (scrollPosition / totalScrollHeight);
+  
+    // Function to calculate position based on scroll percentage
+    function calculatePosition(base, range, percentage) {
+      return base + (range * percentage);
+    }
+  
+    // Assuming each image moves into frame at every 5% scroll
+    const step = 0.05; // 5% as a decimal
+  
+    // Adjust these base and range values as needed for each image
+    moon.style.top = calculatePosition(-50, 100, scrollPercentage / step) + 'px';
+    stars.style.left = calculatePosition(-50, 100, (scrollPercentage - step) / step) + 'px';
+    mountains_behind.style.top = calculatePosition(-50, 100, (scrollPercentage - 2 * step) / step) + 'px';
+    mountains_front.style.top = calculatePosition(-50, 100, (scrollPercentage - 3 * step) / step) + 'px';
+    // Continue adjusting for more images
+  });
+  
