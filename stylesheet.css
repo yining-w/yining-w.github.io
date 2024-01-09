@@ -3,7 +3,7 @@
     /* Styles for mobile */
     .project-item {
       /* Adjust the layout for mobile */
-      border: 2px solid black; /* Add border style */
+      border: 0.5px solid black; /* Add border style */
       width: 100%; /* Set the width to 100% to occupy the full width of the container */
       margin-bottom: 20px; /* Add some space between project-items */
       transition: transform 0.3s;
@@ -140,13 +140,25 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 /*    justify-content: space-between;*/
 
   }
+
+  .container-item {
+    /*flex-basis: calc(100% / 3);*/
+    box-sizing: border-box;
+    padding: 10px;
+    border: 0.5px solid black; /* Add border style */
+    margin-right: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+    width:100%;
+
+  }
   
   .project-item {
     flex-basis: calc(20% - 20px);
     /*flex-basis: calc(100% / 3);*/
     box-sizing: border-box;
     padding: 10px;
-    border: 2px solid black; /* Add border style */
+    border: 0.5px solid black; /* Add border style */
     margin-right: 15px;
     margin-bottom: 15px;
     transition: transform 0.3s;
