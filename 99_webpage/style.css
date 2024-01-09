@@ -144,3 +144,17 @@ p.intro-text {
 h2 {
     margin: 0;
 }
+
+.sec1 {
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .column {
+    flex: 1;
+    box-sizing: border-box;
+    padding-right: 20px;
+  }
+  
