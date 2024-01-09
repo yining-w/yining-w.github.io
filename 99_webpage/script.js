@@ -1,9 +1,34 @@
 console.log("JavaScript file is loaded and running");
 
 window.addEventListener('scroll', () => {
+  const containers = document.querySelectorAll('.container');
+
+  containers.forEach((container, index) => {
+      const dividerBlock = container.querySelector('.divider-block');
+      if (!dividerBlock) return;
+
+      const containerTop = container.offsetTop;
+      const containerBottom = containerTop + container.offsetHeight;
+      const scrollPosition = window.pageYOffset;
+
+      // Check the position of the next divider block
+      const nextContainer = containers[index + 1];
+      const nextContainerTop = nextContainer ? nextContainer.offsetTop : Infinity;
+
+      if (scrollPosition >= containerTop && scrollPosition < containerBottom && scrollPosition < nextContainerTop - dividerBlock.offsetHeight) {
+          // Make the divider block fixed when scrolling within the container
+          dividerBlock.style.position = 'fixed';
+          dividerBlock.style.top = '0';
+      } else {
+          // Revert the divider block to its original position
+          dividerBlock.style.position = 'static';
+      }
+  });
+
   const scrollyContainer = document.querySelector('.scrollytelling-container');
   const scrollyContainerBottom = scrollyContainer.offsetTop + scrollyContainer.offsetHeight - window.innerHeight;
   const scrollPosition = window.pageYOffset;
+
 
   const sections = document.querySelectorAll('.story-section');
 
