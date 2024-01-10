@@ -59,7 +59,7 @@ h4 {
 
 .progress-bar {
     height: 8px;
-    background: #04AA6D;
+    background: #00429d;
     width: 0%;
 }
 
@@ -116,26 +116,35 @@ p.intro-text {
 }
 
 /* Story sections */
-.scrollytelling-container p {
-    font-size: 2em;
-}
-
 .story-section {
     min-height: 100vh;
     width: 100%;
-    text-align: center;
     position: relative;
 }
 
 .story-section img {
     /*position: fixed;*/
-    top: 50%;
-    left: 50%;
+    top: 60%;
+    left: 70%;
     transform: translate(-50%, -50%);
     width: 60%;
     /*opacity: 1;*/
     transition: opacity 0.3s ease;
     z-index: 1;
+
+}
+
+.story-section p {
+    
+    z-index: 2; /* Higher than images, lower than divider blocks */
+    position: relative; /* z-index works on positioned elements */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1); /* Adjust color and blur radius */
+    /*box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);  Adjust color and blur radius  */
+    text-align: left;
+    font-size: 2em;
+    margin: 30px;
+
+
 }
 
 /* Divider block */
@@ -150,6 +159,7 @@ p.intro-text {
     padding: 10px;
     box-sizing: border-box;
     top: 0; /* Adjust as needed */
+    z-index:3;
 }
 
 
@@ -170,3 +180,13 @@ h2 {
     padding-right: 20px;
   }
   
+  b {
+    color: #bb5c9b;
+  }
+
+  .story-section #subtitle {
+    font-size: 8px;
+    margin: 30px;
+
+  }
+  /*#00429d,#85489d,#bb5c9b,#df7d97,#f5a591,#ffd189,#fbff7c*/
