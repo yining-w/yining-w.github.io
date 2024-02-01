@@ -189,4 +189,18 @@ h2 {
     margin: 30px;
 
   }
+
+.image-swipe-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* or any specific width */
+    height: auto; /* Adjust based on your image */
+}
+
+.image-swipe-container img {
+    width: 100%;
+    height: auto;
+    transition: clip-path 0.3s ease-out; /* Smooth transition for the clip-path change */
+    clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%); /* Initially clip the entire image */
+}
   /*#00429d,#85489d,#bb5c9b,#df7d97,#f5a591,#ffd189,#fbff7c*/
