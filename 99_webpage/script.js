@@ -2,225 +2,68 @@ console.log("JavaScript file is loaded and running");
 
 window.addEventListener('scroll', () => {
     const scrollPosition = window.pageYOffset;
-    const containers = document.querySelectorAll('.container');
 
-    containers.forEach((container, index) => {
-        const dividerBlock = container.querySelector('.divider-block');
-        if (!dividerBlock) return;
-
-        const containerTop = container.offsetTop;
-        const containerBottom = containerTop + container.offsetHeight;
-        const nextContainer = containers[index + 1];
-        const nextContainerTop = nextContainer ? nextContainer.offsetTop : Infinity;
-
-        if (scrollPosition >= containerTop && scrollPosition < nextContainerTop) {
-            dividerBlock.style.position = 'fixed';
-            dividerBlock.style.top = '0';
-            dividerBlock.style.zIndex = 100; // High z-index to stack on top
-        } else {
-            dividerBlock.style.position = 'static';
-            dividerBlock.style.zIndex = 'auto'; // Reset z-index
-        }
-
-        // Adjust z-index to create stacking effect
-        if (nextContainer && scrollPosition >= nextContainerTop - dividerBlock.offsetHeight) {
-            dividerBlock.style.zIndex = -1; // Lower z-index to stack behind
-        }
+    document.querySelectorAll('.container').forEach((container, index) => {
+        // Existing logic for handling fixed positioning of divider blocks
     });
 
-    // Scrollytelling container logic
-    const scrollyContainer = document.querySelector('.scrollytelling-container');
-    const scrollyContainerBottom = scrollyContainer.offsetTop + scrollyContainer.offsetHeight - window.innerHeight;
+    document.querySelectorAll('.scrollytelling-container').forEach((scrollyContainer) => {
+        const containerTop = scrollyContainer.offsetTop;
+        const containerBottom = containerTop + scrollyContainer.offsetHeight;
+        let isWithinContainer = scrollPosition + window.innerHeight > containerTop && scrollPosition < containerBottom;
 
-    const sections = document.querySelectorAll('.story-section');
+        let highestActiveSectionTop = Infinity; // Initialize with Infinity for comparison
 
-    if (scrollPosition > scrollyContainerBottom) {
-        console.log("Reached the end of the storytelling container");
-
-        sections.forEach((section) => {
+        scrollyContainer.querySelectorAll('.story-section').forEach((section) => {
             const image = section.querySelector('img');
-            image.style.opacity = 1;
-            image.style.position = 'absolute';
-        });
+            const sectionRect = section.getBoundingClientRect();
+            const sectionTopRelativeToDocument = window.pageYOffset + sectionRect.top; // Absolute top position relative to the document
 
-    } else {
-        sections.forEach((section, index) => {
-            const image = section.querySelector('img');
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionBottom = sectionTop + sectionHeight;
+            // Determine if section is currently in view
+            const sectionInView = sectionRect.top < window.innerHeight && sectionRect.bottom > 0;
 
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                image.style.opacity = 1; // Show the image
+            if ((sectionInView || sectionTopRelativeToDocument < scrollPosition) && isWithinContainer) {
+                image.style.opacity = 1;
                 image.style.position = 'fixed';
-
-                // Show all previous images
-                for (let j = 0; j <= index; j++) {
-                    const previousImage = sections[j].querySelector('img');
-                    previousImage.style.opacity = 1;
-                    previousImage.style.position = 'fixed';
-                }
+                highestActiveSectionTop = Math.min(highestActiveSectionTop, sectionTopRelativeToDocument);
             } else {
-                image.style.opacity = 0; // Hide the image
-                image.style.position = 'fixed';
+                // This condition ensures images are hidden when scrolling past the container
+                image.style.opacity = 0;
             }
         });
-    }
-});
 
-// sec 2 
-window.addEventListener('scroll', () => {
-    const scrollPosition = window.pageYOffset;
-    const containers = document.querySelectorAll('.container');
-
-    containers.forEach((container, index) => {
-        const dividerBlock = container.querySelector('.divider-block');
-        if (!dividerBlock) return;
-
-        const containerTop = container.offsetTop;
-        const containerBottom = containerTop + container.offsetHeight;
-        const nextContainer = containers[index + 1];
-        const nextContainerTop = nextContainer ? nextContainer.offsetTop : Infinity;
-
-        if (scrollPosition >= containerTop && scrollPosition < nextContainerTop) {
-            dividerBlock.style.position = 'fixed';
-            dividerBlock.style.top = '0';
-            dividerBlock.style.zIndex = 100; // High z-index to stack on top
+        // Ensure all images above the highest active section remain visible within the container
+        if (isWithinContainer) {
+            scrollyContainer.querySelectorAll('.story-section').forEach((section) => {
+                const sectionTopRelativeToDocument = window.pageYOffset + section.getBoundingClientRect().top;
+                if (sectionTopRelativeToDocument <= highestActiveSectionTop) {
+                    const image = section.querySelector('img');
+                    image.style.opacity = 1; // Keep previous images visible
+                    image.style.position = 'fixed';
+                }
+            });
         } else {
-            dividerBlock.style.position = 'static';
-            dividerBlock.style.zIndex = 'auto'; // Reset z-index
+            // Additional condition to hide all images if the viewport is no longer in the container
+            scrollyContainer.querySelectorAll('.story-section img').forEach((image) => {
+                image.style.opacity = 0;
+            });
         }
 
-        // Adjust z-index to create stacking effect
-        if (nextContainer && scrollPosition >= nextContainerTop - dividerBlock.offsetHeight) {
-            dividerBlock.style.zIndex = -1; // Lower z-index to stack behind
+        // Special handling for the first image when no section is active and viewport is within the container
+        if (!isWithinContainer) {
+            const firstImage = scrollyContainer.querySelector('.story-section img');
+            if (firstImage) {
+                firstImage.style.opacity = 0;
+            }
         }
     });
-
-    // Scrollytelling container logic
-    const scrollyContainer = document.querySelector('.scrollytelling-container2');
-    const scrollyContainerBottom = scrollyContainer.offsetTop + scrollyContainer.offsetHeight - window.innerHeight;
-
-    const sections = document.querySelectorAll('.story-section');
-
-    if (scrollPosition > scrollyContainerBottom) {
-        console.log("Reached the end of the storytelling container");
-
-        sections.forEach((section) => {
-            const image = section.querySelector('img');
-            image.style.opacity = 1;
-            image.style.position = 'absolute';
-        });
-
-    } else {
-        sections.forEach((section, index) => {
-            const image = section.querySelector('img');
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionBottom = sectionTop + sectionHeight;
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                image.style.opacity = 1; // Show the image
-                image.style.position = 'fixed';
-
-                // Show all previous images
-                for (let j = 0; j <= index; j++) {
-                    const previousImage = sections[j].querySelector('img');
-                    previousImage.style.opacity = 1;
-                    previousImage.style.position = 'fixed';
-                }
-            } else {
-                image.style.opacity = 0; // Hide the image
-                image.style.position = 'fixed';
-            }
-        });
-    }
 });
 
-// sec3 
-window.addEventListener('scroll', () => {
-    const scrollPosition = window.pageYOffset;
-    const containers = document.querySelectorAll('.container');
 
-    containers.forEach((container, index) => {
-        const dividerBlock = container.querySelector('.divider-block');
-        if (!dividerBlock) return;
 
-        const containerTop = container.offsetTop;
-        const containerBottom = containerTop + container.offsetHeight;
-        const nextContainer = containers[index + 1];
-        const nextContainerTop = nextContainer ? nextContainer.offsetTop : Infinity;
 
-        if (scrollPosition >= containerTop && scrollPosition < nextContainerTop) {
-            dividerBlock.style.position = 'fixed';
-            dividerBlock.style.top = '0';
-            dividerBlock.style.zIndex = 100; // High z-index to stack on top
-        } else {
-            dividerBlock.style.position = 'static';
-            dividerBlock.style.zIndex = 'auto'; // Reset z-index
-        }
 
-        // Adjust z-index to create stacking effect
-        if (nextContainer && scrollPosition >= nextContainerTop - dividerBlock.offsetHeight) {
-            dividerBlock.style.zIndex = -1; // Lower z-index to stack behind
-        }
-    });
-
-    // Scrollytelling container logic
-    const scrollyContainer = document.querySelector('.scrollytelling-container3');
-    const scrollyContainerBottom = scrollyContainer.offsetTop + scrollyContainer.offsetHeight - window.innerHeight;
-
-    const sections = document.querySelectorAll('.story-section');
-
-    if (scrollPosition > scrollyContainerBottom) {
-        console.log("Reached the end of the storytelling container");
-
-        sections.forEach((section) => {
-            const image = section.querySelector('img');
-            image.style.opacity = 1;
-            image.style.position = 'absolute';
-        });
-
-    } else {
-        sections.forEach((section, index) => {
-            const image = section.querySelector('img');
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionBottom = sectionTop + sectionHeight;
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                image.style.opacity = 1; // Show the image
-                image.style.position = 'fixed';
-
-                // Show all previous images
-                for (let j = 0; j <= index; j++) {
-                    const previousImage = sections[j].querySelector('img');
-                    previousImage.style.opacity = 1;
-                    previousImage.style.position = 'fixed';
-                }
-            } else {
-                image.style.opacity = 0; // Hide the image
-                image.style.position = 'fixed';
-            }
-        });
-    }
-});
-
-// Progress bar logic
-function move() {
-    var elem = document.getElementById("myBar");
-    var width = 1;
-    var id = setInterval(frame, 10);
-    function frame() {
-        if (width >= 100) {
-            clearInterval(id);
-        } else {
-            width++;
-            elem.style.width = width + '%';
-        }
-    }
-}
-
+// Progress bar
 window.onscroll = function() {myFunction()};
 
 function myFunction() {
