@@ -91,3 +91,45 @@ document.addEventListener('scroll', () => {
         image.style.clipPath = `polygon(0 0, ${clipPathValue}% 0, ${clipPathValue}% 100%, 0 100%)`;
     }
   });
+
+
+// divider
+window.addEventListener('scroll', function() {
+    var firstDivider = document.getElementById('one');
+    var secondDivider = document.getElementById('two');
+    var container = document.querySelector('.container2');
+
+    var introSectionHeight = document.querySelector('.intro-section').offsetHeight;
+    var scrollTop = window.scrollY;
+
+    // Handle first divider
+    if (scrollTop >= introSectionHeight && scrollTop < container.offsetTop) {
+      firstDivider.classList.add('fixed');
+    } else {
+      firstDivider.classList.remove('fixed');
+    }
+
+    // Handle second divider
+    if (scrollTop >= container.offsetTop && scrollTop < container.offsetTop + container.offsetHeight) {
+      secondDivider.classList.add('fixed');
+    } else {
+      secondDivider.classList.remove('fixed');
+    }
+});
+
+// divider for imagine spaces
+window.addEventListener('scroll', function() {
+    var fifthDivider = document.getElementById('five');
+    var container = document.querySelector('.container3');
+
+    var introSectionHeight = document.querySelector('.intro-section').offsetHeight;
+    var scrollTop = window.scrollY;
+
+    // Handle first divider
+    if (scrollTop >= container.offsetTop && scrollTop < container.offsetTop + container.offsetHeight) {
+        fifthDivider.classList.add('fixed');
+    } else {
+        fifthDivider.classList.remove('fixed');
+    }
+
+});
