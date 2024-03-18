@@ -87,7 +87,7 @@ h4 {
     background: #FFFFFF;
     font-family: 'Monsterrat', sans-serif;
     font-size:1em;
-    z-index: 99; /* Ensure the text is above the background */
+    z-index: 99999; /* Ensure the text is above the background */
 
 }
 
@@ -148,14 +148,14 @@ p.intro-text {
     top: 60%;
     left: 70%;
     transform: translate(-80%, -50%);
-    width:75%;
+    width:60%;
 }
 
 .parttwo img {
     top: 60%;
     left: 70%;
     transform: translate(-80%, -55%);
-    width:70%;
+    width:50%;
     max-width: 400px; /* Set maximum width to prevent image from becoming too large */
     height: auto; /* Maintain aspect ratio */   
 
@@ -164,7 +164,7 @@ p.intro-text {
 .partthree img {
     top: 60%;
     left: 70%;
-    width: 75%;
+    width: 60%;
     transform: translate(-80%, -60%);
     max-width: 400px; /* Set maximum width to prevent image from becoming too large */
     height: auto; /* Maintain aspect ratio */
