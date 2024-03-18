@@ -105,6 +105,7 @@ h4 {
         url('intro_background.jpg');
     background-size: cover;
     background-attachment: fixed;
+    filter: gray saturate(0%) brightness(70%) contrast(1000%);
 }
 
 .foreground-image {
