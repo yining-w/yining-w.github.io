@@ -277,4 +277,7 @@ h2 {
     transition: clip-path 0.3s ease-out; /* Smooth transition for the clip-path change */
     clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%); /* Initially clip the entire image */
 }
-  /*#00429d,#85489d,#bb5c9b,#df7d97,#f5a591,#ffd189,#fbff7c*/
+
+.highlight-rect {
+    z-index: 9999;
+}

@@ -133,3 +133,38 @@ window.addEventListener('scroll', function() {
     }
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const img = document.getElementById('interactiveImage');
+    const mapAreas = document.querySelectorAll('area');
+
+    img.onload = function() {
+        const imgWidth = img.offsetWidth;
+        const imgHeight = img.offsetHeight;
+        const scaleX = 0.6; // Image width scale
+        const translateX = -0.8 * imgWidth * scaleX; // Image translate X
+        const translateY = -0.6 * imgHeight * scaleX; // Image translate Y
+
+        mapAreas.forEach(area => {
+            area.addEventListener('mouseenter', function() {
+                const coords = this.coords.split(',').map(x => parseInt(x));
+                const overlay = document.createElement('div');
+                overlay.style.position = 'absolute';
+
+                // Adjust the coordinates based on the image's transformation
+                overlay.style.left = `${img.offsetLeft + (coords[0] * scaleX + translateX)}px`;
+                overlay.style.top = `${img.offsetTop + (coords[1] * scaleX + translateY)}px`;
+                overlay.style.width = `${(coords[2] - coords[0]) * scaleX}px`;
+                overlay.style.height = `${(coords[3] - coords[1]) * scaleX}px`;
+                overlay.style.backgroundColor = 'rgba(255, 255, 0, 0.5)'; // Semi-transparent yellow
+                overlay.className = 'overlay';
+                document.body.appendChild(overlay); // Append to body to handle fixed positioning
+            });
+
+            area.addEventListener('mouseleave', function() {
+                const overlays = document.querySelectorAll('.overlay');
+                overlays.forEach(overlay => overlay.remove());
+            });
+        });
+    };
+});
