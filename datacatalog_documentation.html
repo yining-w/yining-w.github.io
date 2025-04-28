@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Database Field Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f7f7f7;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #000000;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .source-title {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 24px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+<p><a href="https://webscraper-l8gi.onrender.com/" target="_blank">Launch Econ Catalog Downloader
+</a></p>
+
+<h1>Econ Catalog Metadata Information</h1>
+<p>The below tables are a brief summary of columns included in each output. The queries are downloaded as is from each database, therefore information available differ per source.</p>
+
+
+<!-- ✅ NBER Table -->
+<div class="source-title"><a href="https://www.nber.org/search?page=1&perPage=50&q=">NBER</a></div>
+<table>
+    <thead>
+        <tr>
+            <th>Retrieved Values</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>imageurl</td><td>Link to paper image</td></tr>
+        <tr><td>authors</td><td>Authors of paper</td></tr>
+        <tr><td>publisheddate</td><td>Date paper was published</td></tr>
+        <tr><td>displaydate</td><td>Display for published date</td></tr>
+        <tr><td>abstract</td><td>Paper Abstract</td></tr>
+        <tr><td>newthisweek</td><td>Paper was published this week</td></tr>
+        <tr><td>certifiedrandom</td><td></td></tr>
+        <tr><td>nid</td><td>NBER ID</td></tr>
+        <tr><td>title</td><td>Title of Paper</td></tr>
+        <tr><td>type</td><td>Type of Publication</td></tr>
+        <tr><td>url</td><td>Link to paper</td></tr>
+        <tr><td>id</td><td>Full ID</td></tr>
+        <tr><td>backofficeid</td><td>Column for Internal Use</td></tr>
+        <tr><td>displaytypename</td><td>Type of Publication, Display format</td></tr>
+        <tr><td>quote</td><td>taglines</td></tr>
+        <tr><td>papers</td><td></td></tr>
+        <tr><td>investigators</td><td></td></tr>
+    </tbody>
+</table>
+
+<!-- (Later) ERIC Table Here -->
+<div class="source-title"><a href="https://eric.ed.gov">ERIC</a></div>
+<center>
+<p>Please refer to their <a href="https://eric.ed.gov/?advanced">search tips</a> on how to best query sources.</p>
+</center>
+<table>
+    <thead>
+        <tr>
+            <th>Retrieved Values</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>id</td><td>ERIC Paper ID</td></tr>
+        <tr><td>title</td><td>Title of Publication</td></tr>
+        <tr><td>author</td><td>Authors of Publication</td></tr>
+        <tr><td>description</td><td>Summary of work</td></tr>
+        <tr><td>subject</td><td>Related Key Terms</td></tr>
+        <tr><td>publicationtype</td><td>Type of Publication</td></tr>
+        <tr><td>publicationdateyear</td><td>Year of Publication</td></tr>
+        <tr><td>language</td><td>Language of Publication</td></tr>
+        <tr><td>issn</td><td>ISSN</td></tr>
+        <tr><td>publisher</td><td>Publishing Company</td></tr>
+        <tr><td>peerreviewed</td><td>T/F: Whether publication was peer reviewed</td></tr>
+        <tr><td>isbn</td><td>ISBN</td></tr>
+
+    </tbody>
+</table>
+
+<!-- (Later) WB Working Papers Table Here -->
+<div class="source-title"><a href="https://www.worldbank.org/en/research/brief/world-bank-policy-research-working-papers">World Bank Working Papers</a></div>
+<center>
+<p>Please review the World Bank's <a href="https://documents.worldbank.org/en/publication/documents-reports/api">query documentation</a> for search approach and how to interpret results.</p>
+</center>
+<table>
+    <thead>
+        <tr>
+            <th>Retrieved Values</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr><td>id</td><td>World Bank ID</td></tr>
+        <tr><td>admreg</td><td>Region</td></tr>
+        <tr><td>authors</td><td>Authors of Publication</td></tr>
+        <tr><td>count</td><td>Country</td></tr>
+        <tr><td>docna</td><td>Title</td></tr>
+        <tr><td>docty</td><td>Type of Publication</td></tr>
+        <tr><td>seccl</td><td>Security classification</td></tr>
+        <tr><td>lang</td><td>Language of Publication</td></tr>
+        <tr><td>entityids</td><td>Alternate document ID        </td></tr>
+        <tr><td>subtopic</td><td>Subtopic</td></tr>
+        <tr><td>teratopic</td><td>Topic (legacy)</td></tr>
+        <tr><td>repnb</td><td>Report number</td></tr>
+        <tr><td>docdt</td><td>Document date</td></tr>
+        <tr><td>keywd</td><td>Keywords</td></tr>
+        <tr><td>volnb</td><td>Volume number</td></tr>
+        <tr><td>geo_regions</td><td>Geographic region</td></tr>
+        <tr><td>majdocty</td><td>Major document type</td></tr>
+        <tr><td>abstracts</td><td>Abstract</td></tr>
+        <tr><td>colti</td><td>Collection / Series title</td></tr>
+        <tr><td>display_title</td><td>Title (Report name plus volume name)</td></tr>
+        <tr><td>majdocty</td><td>Major document type</td></tr>
+        <tr><td>disclosure_date</td><td>Disclosure Date</td></tr> 
+        <tr><td>pdfurl</td><td>Link to pdf file </td></tr>       
+        <tr><td>txturl</td><td>Link to txt file</td></tr>
+        <tr><td>disclstat</td><td>Disclosure Status</td></tr>
+        <tr><td>chronical_docm_id</td><td>Alternate document ID</td></tr>
+        <tr><td>totvolnb</td><td>Total volumns</td></tr>
+        <tr><td>historic_topic</td><td>Historic topic (legacy topic)</td></tr>
+        <tr><td>guid</td><td>Alternate document ID</td></tr>
+        <tr><td>available_in</td><td>Available in (other language translatios)</td></tr>
+        <tr><td>fullavailablein</td><td></td></tr>
+        <tr><td>url</td><td>link to work</td></tr>
+        <tr><td>count_exact</td><td>Country</td></tr>
+        <tr><td>docty_exact</td><td>Document Type</td></tr>
+        <tr><td>lang_exact</td><td>Language</td></tr>
+        <tr><td>disclstat_exact</td><td>Disclosure Status</td></tr>
+        <tr><td>dois</td><td>DOI</td></tr>
+        <tr><td>origu</td><td>Originating unit in the Bank</td></tr>
+
+    </tbody>
+</table>
+
+<!-- (Later) African Education DB Table Here -->
+<div class="source-title"><a href="https://eric.ed.gov">African Education Research Database</a></div>
+<center><p>As of latest update for this tool (4/28/2025), most recent information available are from 2023</p></center>
+<table>
+    <thead>
+        <tr>
+            <th>Retrieved Values</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr><td>Abstract</td><td>Publication Abstract</td></tr>
+        <tr><td>Title</td><td>Title of Publication</td></tr>
+        <tr><td>id</td><td>ESSA ID</td></tr>
+        <tr><td>TypeOfDocument</td><td>Publication Type</td></tr>
+        <tr><td>Year</td><td>Year of Publication</td></tr>
+        <tr><td>Url</td><td>Link to publication</td></tr>
+        <tr><td>Methods1</td><td>Methods used in publication</td></tr>
+        <tr><td>Author1</td><td>First Author</td></tr>
+        <tr><td>Author2</td><td>Second Author</td></tr>
+        <tr><td>Author3</td><td>Third Author</td></tr>
+        <tr><td>Author4</td><td>Fourth Author</td></tr>
+        <tr><td>Author5</td><td>Fifth Author</td></tr>
+        <tr><td>Country1</td><td>Country included in publication</td></tr>
+        <tr><td>Country2</td><td>Country included in publication</td></tr>
+        <tr><td>Country3</td><td>Country included in publication</td></tr>
+        <tr><td>Country4</td><td>Country included in publication</td></tr>
+        <tr><td>Country5</td><td>Country included in publication</td></tr>
+        <tr><td>Keywords1</td><td>Keywords included</td></tr>
+        <tr><td>Keywords2</td><td>Keywords included</td></tr>
+        <tr><td>Keywords3</td><td>Keywords included</td></tr>
+        <tr><td>Keywords4</td><td>Keywords included</td></tr>
+        <tr><td>Keywords5</td><td>Keywords included</td></tr>
+        <tr><td>Keywords6</td><td>Keywords included</td></tr>
+        <tr><td>Keywords7</td><td>Keywords included</td></tr>
+        <tr><td>Keywords8</td><td>Keywords included</td></tr>
+    </tbody>
+</table>
+
+
+
+</body>
+</html>
