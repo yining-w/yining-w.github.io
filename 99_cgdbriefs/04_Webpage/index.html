@@ -130,9 +130,7 @@
                 region: item.region,
                 destination_url: item.link
               });
-              setTimeout(() => {
-                window.open(item.link, '_blank');
-              }, 200);
+              window.open(item.link, '_blank', 'noopener');
             });
             listContainer.appendChild(a);
           } else {
