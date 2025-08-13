@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Region List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Sofia Sans', sans-serif;
+    }
+    .search-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
+    .search-container input {
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .search-hint {
+      text-align: right;
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .tabs {
+      display: flex;
+      gap: 20px;
+      border-bottom: 3px solid #0d5c6b;
+      margin-bottom: 15px;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      color: #0d5c6b;
+      cursor: pointer;
+    }
+    .tab.active {
+      font-weight: bold;
+      border-bottom: 4px solid #0d5c6b;
+    }
+    .list-container {
+      padding-left: 5px;
+    }
+    .list-container a, .list-container span {
+      display: block;
+      margin: 6px 0;
+      text-decoration: none;
+    }
+    .list-container a {
+      color: #0d5c6b;
+    }
+    .list-container a:hover {
+      text-decoration: underline;
+    }
+    .list-container span.disabled {
+      color: #aaa;
+      cursor: default;
+    }
+  </style>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DB8QNTJSHX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DB8QNTJSHX');
+  </script>
+</head>
+<body>
+  <div class="search-container">
+    <label for="searchInput">🔍</label>
+    <input type="text" id="searchInput" placeholder="Search country...">
+  </div>
+  <div class="search-hint">Press Enter to search across all regions</div>
+
+  <div class="tabs">
+    <button class="tab active" data-region="Africa">Africa</button>
+    <button class="tab" data-region="Americas">Americas</button>
+    <button class="tab" data-region="Asia">Asia</button>
+    <button class="tab" data-region="Europe">Europe</button>
+    <button class="tab" data-region="Oceania">Oceania</button>
+  </div>
+
+  <div class="list-container" id="countryList"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tabs = document.querySelectorAll(".tab");
+      const listContainer = document.getElementById("countryList");
+      const searchInput = document.getElementById("searchInput");
+
+      let allData = [];
+      let currentRegion = "Africa";
+
+      function renderList(region, query = "") {
+        currentRegion = region;
+        const filtered = allData.filter(item =>
+          item.region === region && item.country.toLowerCase().includes(query.toLowerCase())
+        );
+        listContainer.innerHTML = "";
+        filtered.forEach(item => {
+          if (item.link) {
+            const a = document.createElement("a");
+            a.href = item.link;
+            a.textContent = item.country;
+            a.addEventListener("click", () => {
+              gtag('event', 'country_link_click', {
+                country_name: item.country,
+                region: item.region,
+                destination_url: item.link
+              });
+            });
+            listContainer.appendChild(a);
+          } else {
+            const span = document.createElement("span");
+            span.textContent = item.country;
+            span.classList.add("disabled");
+            listContainer.appendChild(span);
+          }
+        });
+      }
+
+      function findRegionByCountry(query) {
+        const match = allData.find(item => item.country.toLowerCase() === query.toLowerCase());
+        return match ? match.region : null;
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          document.querySelector(".tab.active")?.classList.remove("active");
+          tab.classList.add("active");
+          renderList(tab.dataset.region, searchInput.value);
+        });
+      });
+
+      searchInput.addEventListener("input", () => {
+        renderList(currentRegion, searchInput.value);
+      });
+
+      searchInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          const input = searchInput.value.trim();
+          const targetRegion = findRegionByCountry(input);
+          if (targetRegion) {
+            document.querySelector(".tab.active")?.classList.remove("active");
+            const newTab = [...tabs].find(tab => tab.dataset.region === targetRegion);
+            if (newTab) {
+              newTab.classList.add("active");
+            }
+            renderList(targetRegion, input);
+          } else {
+            listContainer.innerHTML = `<p>No matches found.</p>`;
+          }
+        }
+      });
+
+      // Load CSV file from project folder
+      fetch("data.csv")
+        .then(response => response.text())
+        .then(text => {
+          const lines = text.split(/\r?\n/);
+          allData = lines
+            .map(line => {
+              const [country, region, link] = line.split(",");
+              return { country: country?.trim(), region: region?.trim(), link: link?.trim() };
+            })
+            .filter(item => item.country && item.region);
+
+          // Render the initial tab
+          const activeTab = document.querySelector(".tab.active");
+          if (activeTab) {
+            renderList(activeTab.dataset.region);
+          }
+        })
+        .catch(err => {
+          console.error("Failed to load CSV:", err);
+        });
+    });
+  </script>
+</body>
+</html>
