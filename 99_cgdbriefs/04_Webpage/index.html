@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Region List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -10,6 +11,9 @@
   <style>
     body {
       font-family: 'Sofia Sans', sans-serif;
+      margin: 0;
+      padding: 10px;
+      box-sizing: border-box;
     }
     .search-container {
       display: flex;
@@ -17,12 +21,15 @@
       align-items: center;
       gap: 8px;
       margin-bottom: 5px;
+      flex-wrap: wrap;
     }
     .search-container input {
       padding: 8px;
       font-size: 14px;
       border: 1px solid #ccc;
       border-radius: 4px;
+      width: 100%;
+      max-width: 300px;
     }
     .search-hint {
       text-align: right;
@@ -32,7 +39,8 @@
     }
     .tabs {
       display: flex;
-      gap: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
       border-bottom: 3px solid #0d5c6b;
       margin-bottom: 15px;
     }
@@ -68,12 +76,12 @@
     }
   </style>
   <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DB8QNTJSHX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-DB8QNTJSHX');
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
 </head>
 <body>
@@ -113,12 +121,18 @@
             const a = document.createElement("a");
             a.href = item.link;
             a.textContent = item.country;
-            a.addEventListener("click", () => {
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+            a.addEventListener("click", (e) => {
+              e.preventDefault();
               gtag('event', 'country_link_click', {
                 country_name: item.country,
                 region: item.region,
                 destination_url: item.link
               });
+              setTimeout(() => {
+                window.open(item.link, '_blank');
+              }, 200);
             });
             listContainer.appendChild(a);
           } else {
