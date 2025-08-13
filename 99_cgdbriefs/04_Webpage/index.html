@@ -130,7 +130,7 @@
                 region: item.region,
                 destination_url: item.link
               });
-              window.open(item.link, '_blank', 'noopener');
+              window.top.location = item.link;
             });
             listContainer.appendChild(a);
           } else {
