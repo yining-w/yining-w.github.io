@@ -1,10 +1,116 @@
 country,region,link
-South Africa,Africa,
-Nigeria,Africa,https://google.com
-Kenya,Africa,https://google.com
-Brazil,Americas,https://google.com
-Canada,Americas,https://google.com
-Japan,Asia,https://google.com
-Germany,Europe,https://google.com
-France,Europe,https://google.com
-Australia,Oceania,https://google.com
+Afghanistan,South Asia,https://www.cgdev.org/sites/default/files/SAS_AFG.pdf
+Algeria,Middle East and North Africa,https://www.cgdev.org/sites/default/files/MNA_DZA.pdf
+American Samoa,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_ASM.pdf
+Angola,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_AGO.pdf
+Argentina,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_ARG.pdf
+Bangladesh,South Asia,https://www.cgdev.org/sites/default/files/SAS_BGD.pdf
+Belize,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_BLZ.pdf
+Benin,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_BEN.pdf
+Bhutan,South Asia,https://www.cgdev.org/sites/default/files/SAS_BTN.pdf
+Bolivia,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_BOL.pdf
+Botswana,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_BWA.pdf
+Brazil,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_BRA.pdf
+Burkina Faso,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_BFA.pdf
+Burundi,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_BDI.pdf
+Cabo Verde,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_CPV.pdf
+Cambodia,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_KHM.pdf
+Cameroon,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_CMR.pdf
+Central African Republic,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_CAF.pdf
+Chad,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_TCD.pdf
+China,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_CHN.pdf
+Colombia,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_COL.pdf
+Comoros,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_COM.pdf
+"Congo, Dem Rep",Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_COD.pdf
+"Congo, Rep",Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_COG.pdf
+Costa Rica,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_CRI.pdf
+Cote d'Ivoire,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_CIV.pdf
+Cuba,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_CUB.pdf
+Djibouti,Middle East and North Africa,https://www.cgdev.org/sites/default/files/MNA_DJI.pdf
+Dominica,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_DMA.pdf
+Dominican Republic,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_DOM.pdf
+Ecuador,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_ECU.pdf
+"Egypt, Arab Rep",Middle East and North Africa,https://www.cgdev.org/sites/default/files/MNA_EGY.pdf
+El Salvador,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_SLV.pdf
+Equatorial Guinea,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_GNQ.pdf
+Eritrea,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_ERI.pdf
+Eswatini,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_SWZ.pdf
+Ethiopia,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_ETH.pdf
+Fiji,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_FJI.pdf
+Gabon,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_GAB.pdf
+"Gambia, The",Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_GMB.pdf
+Ghana,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_GHA.pdf
+Grenada,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_GRD.pdf
+Guatemala,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_GTM.pdf
+Guinea,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_GIN.pdf
+Guinea-Bissau,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_GNB.pdf
+Guyana,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_GUY.pdf
+Haiti,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_HTI.pdf
+Honduras,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_HND.pdf
+India,South Asia,https://www.cgdev.org/sites/default/files/SAS_IND.pdf
+Indonesia,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_IDN.pdf
+"Iran, Islamic Rep",Middle East and North Africa,https://www.cgdev.org/sites/default/files/MNA_IRN.pdf
+Iraq,Middle East and North Africa,https://www.cgdev.org/sites/default/files/MNA_IRQ.pdf
+Jamaica,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_JAM.pdf
+Jordan,Middle East and North Africa,https://www.cgdev.org/sites/default/files/MNA_JOR.pdf
+Kenya,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_KEN.pdf
+Kiribati,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_KIR.pdf
+"Korea, Dem People’s Rep",East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_PRK.pdf
+Lao PDR,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_LAO.pdf
+Lebanon,Middle East and North Africa,https://www.cgdev.org/sites/default/files/MNA_LBN.pdf
+Lesotho,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_LSO.pdf
+Liberia,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_LBR.pdf
+Libya,Middle East and North Africa,https://www.cgdev.org/sites/default/files/MNA_LBY.pdf
+Madagascar,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_MDG.pdf
+Malawi,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_MWI.pdf
+Malaysia,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_MYS.pdf
+Maldives,South Asia,https://www.cgdev.org/sites/default/files/SAS_MDV.pdf
+Mali,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_MLI.pdf
+Marshall Islands,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_MHL.pdf
+Mauritania,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_MRT.pdf
+Mexico,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_MEX.pdf
+"Micronesia, Fed Sts",East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_FSM.pdf
+Mongolia,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_MNG.pdf
+Morocco,Middle East and North Africa,https://www.cgdev.org/sites/default/files/MNA_MAR.pdf
+Mozambique,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_MOZ.pdf
+Myanmar,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_MMR.pdf
+Namibia,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_NAM.pdf
+Nepal,South Asia,https://www.cgdev.org/sites/default/files/SAS_NPL.pdf
+Nicaragua,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_NIC.pdf
+Niger,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_NER.pdf
+Nigeria,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_NGA.pdf
+Pakistan,South Asia,https://www.cgdev.org/sites/default/files/SAS_PAK.pdf
+Papua New Guinea,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_PNG.pdf
+Paraguay,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_PRY.pdf
+Peru,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_PER.pdf
+Philippines,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_PHL.pdf
+Rwanda,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_RWA.pdf
+Samoa,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_WSM.pdf
+Sao Tome and Principe,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_STP.pdf
+Senegal,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_SEN.pdf
+Sierra Leone,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_SLE.pdf
+Solomon Islands,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_SLB.pdf
+Somalia,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_SOM.pdf
+South Africa,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_ZAF.pdf
+South Sudan,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_SSD.pdf
+Sri Lanka,South Asia,https://www.cgdev.org/sites/default/files/SAS_LKA.pdf
+St Lucia,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_LCA.pdf
+St Vincent and the Grenadines,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_VCT.pdf
+Sudan,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_SDN.pdf
+Suriname,Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_SUR.pdf
+Syrian Arab Republic,Middle East and North Africa,https://www.cgdev.org/sites/default/files/MNA_SYR.pdf
+Tanzania,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_TZA.pdf
+Thailand,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_THA.pdf
+Timor-Leste,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_TLS.pdf
+Togo,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_TGO.pdf
+Tonga,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_TON.pdf
+Tunisia,Middle East and North Africa,https://www.cgdev.org/sites/default/files/MNA_TUN.pdf
+Tuvalu,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_TUV.pdf
+Uganda,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_UGA.pdf
+Vanuatu,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_VUT.pdf
+"Venezuela, RB",Latin America and Caribbean,https://www.cgdev.org/sites/default/files/LAC_VEN.pdf
+Vietnam,East Asia and Pacific,https://www.cgdev.org/sites/default/files/EAP_VNM.pdf
+West Bank and Gaza,Middle East and North Africa,https://www.cgdev.org/sites/default/files/MNA_PSE.pdf
+"Yemen, Rep",Middle East and North Africa,https://www.cgdev.org/sites/default/files/MNA_YEM.pdf
+Zambia,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_ZMB.pdf
+Zimbabwe,Sub-Saharan Africa,https://www.cgdev.org/sites/default/files/SSA_ZWE.pdf
