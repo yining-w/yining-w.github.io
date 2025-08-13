@@ -134,12 +134,8 @@
                 destination_url: item.link
               });
               setTimeout(() => {
-                try {
-                  window.top.location = item.link;
-                } catch (err) {
-                  window.open(item.link, "_blank");
-                }
-              }, 200);
+                window.open(item.link, "_blank");
+            }, 200);
             });
             listContainer.appendChild(a);
           } else {
