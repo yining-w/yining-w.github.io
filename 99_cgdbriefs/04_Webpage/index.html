@@ -84,8 +84,6 @@
     gtag('config', 'G-DB8QNTJSHX');
   </script>
 </head>
-
-
 <body>
   <div class="search-container">
     <label for="searchInput">🔍</label>
@@ -184,6 +182,7 @@
         .then(text => {
           const lines = text.split(/\r?\n/);
           allData = lines
+            .slice(1) // skip header row
             .map(line => {
               const [country, region, link] = line.split(",");
               return { country: country?.trim(), region: region?.trim(), link: link?.trim() };
