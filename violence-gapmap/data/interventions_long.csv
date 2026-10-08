@@ -1,0 +1,160 @@
+﻿study_id,arm_key,url,programname,treatment,author,countrycode,country,incomelevel,region,violence_sexual,violence_emotional,violence_physical,perpetrator_teacher,perpetrator_peer,perpetrator_any,grade,urban_rural,sample,focus_primary,focus_primary_placeholder
+1,1-1,,SEL Program,SEL Program,Crooks et al (2015),CAN,Canada,HIC,NAC,0,1,1,0,1,0,Lower Secondary,both,Causally identified,Knowledge and Norms,0
+2,2-1,,#Tamojunto,#Tamojunto,Gusmoes et al (2018),BRA,Brazil,UMC,LCN,0,1,1,0,1,0,Lower Secondary,urban,Causally identified,Knowledge and Norms,0
+3,3-1,,Safe Touches,Safe Touches,Pulido et al (2015),USA,United States,HIC,NAC,1,0,0,0,0,0,Primary,urban,Weakly identified,Knowledge and Norms,1
+4,4-1,,Right to Play,Boys*,Karmaliani et al (2020),PAK,Pakistan,LMC,MEA,0,1,1,0,1,0,Lower Secondary,both,Causally identified,Knowledge and Norms,0
+4,4-2,,Right to Play,Girls*,Karmaliani et al (2020),PAK,Pakistan,LMC,MEA,0,1,1,0,1,0,Lower Secondary,both,Causally identified,Knowledge and Norms,0
+5,5-1,,Irie Classroom Toolbox,Irie Classroom Toolbox,Baker-Henningham et al (2021),JAM,Jamaica,UMC,LCN,0,1,1,1,0,0,Kindergarten,urban,Causally identified,Knowledge and Norms,0
+6,6-1,https://www.socialscienceregistry.org/trials/8361,Está na Hora de Agir,Boys Only,Amaral et al (2024),MOZ,Mozambique,LIC,SSF,1,1,1,1,1,0,Lower Secondary,not clear,Causally identified,Identify and Respond,0
+6,6-2,https://www.socialscienceregistry.org/trials/8361,Está na Hora de Agir,Girls Only,Amaral et al (2024),MOZ,Mozambique,LIC,SSF,1,1,1,1,1,0,Lower Secondary,not clear,Causally identified,Identify and Respond,0
+6,6-3,https://www.socialscienceregistry.org/trials/8361,Está na Hora de Agir,Boys and Girls,Amaral et al (2024),MOZ,Mozambique,LIC,SSF,1,1,1,1,1,0,Lower Secondary,not clear,Causally identified,Identify and Respond,0
+8,8-1,,Olweus Bullying Prevention Program,Olweus Bullying Prevention Program,Farrell et al (2018),USA,United States,HIC,NAC,0,0,1,0,1,0,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+10,10-1,,Programa Compasso,Programa Compasso,Mccoy et al (2021),BRA,Brazil,UMC,LCN,0,0,1,0,0,1,Primary,urban,Causally identified,Knowledge and Norms,0
+11,11-1,,Shifting Norms Toward Reporting,Shifting Norms Toward Reporting,Gutierrez et al (2025),PER,Peru,UMC,LCN,1,1,1,0,0,0,Lower Secondary,urban,Causally identified,Identify and Respond,0
+12,12-1,,Shifting Boundaries,Shifting Boundaries,Taylor et al (2015),USA,United States,HIC,NAC,1,0,0,0,1,0,Lower Secondary,urban,Causally identified,Knowledge and Norms,0
+13,13-1,,Good School Toolkit,Good School Toolkit,Devries et al (2017),UGA,Uganda,LIC,SSF,1,1,1,1,1,0,Lower Secondary,both,Causally identified,Knowledge and Norms,0
+14,14-1,,"IMPower, 50:50",Girls,Baiocchi et al (2017),KEN,Kenya,LMC,SSF,1,0,0,0,0,1,Lower Secondary,urban,Causally identified,Knowledge and Norms,0
+15,15-1,https://www.isrctn.com/ISRCTN10751359?q=10751359&filters=&sort=&offset=1&totalResults=1&page=1&pageSize=10,Learning Together,Girls*,Bonell et al (2018),GBR,United Kingdom,HIC,ECS,0,1,1,0,1,0,Lower Secondary,not clear,Causally identified,Knowledge and Norms,0
+16,16-1,https://www.trialregister.nl/trial/3903,KiVa/Kiva+,KiVa/Kiva+,Huitsing et al (2018),NLD,Netherlands,HIC,ECS,0,1,1,0,1,0,Primary,both,Causally identified,Knowledge and Norms,0
+19,19-1,https://ensaiosclinicos.gov.br/rg/RBR-6q23nk,PROERD,PROERD,Sanchez et al (2023),BRA,Brazil,UMC,LCN,0,1,1,0,1,0,Lower Secondary,not clear,Causally identified,Knowledge and Norms,0
+20,20-1,https://clinicaltrials.gov/study/NCT01678846,Good School Toolkit,Good School Toolkit,Devries et al (2015),UGA,Uganda,LIC,SSF,0,0,1,1,0,0,Lower Secondary,both,Causally identified,Knowledge and Norms,0
+21,21-1,,Life Skills Training Program,Life Skills Training Program,Botvin et al (2006),USA,United States,HIC,NAC,0,1,1,0,1,0,Lower Secondary,urban,Causally identified,Knowledge and Norms,0
+22,22-1,,Antibullying Program,Antibullying Program,Fekkes et al (2006),NLD,Netherlands,HIC,ECS,0,1,1,0,1,0,Primary,not clear,Causally identified,Knowledge and Norms,0
+24,24-1,,KiVa,KiVa,Karna et al (2011),FIN,Finland,HIC,ECS,0,1,1,0,1,0,Lower Secondary,both,Causally identified,Knowledge and Norms,0
+25,25-1,,School-wide Positive Behavioral Interventions and Supports,School-wide Positive Behavioral Interventions and Supports,Waasdorp (2012),USA,United States,HIC,NAC,0,1,1,0,1,0,Primary,not clear,Causally identified,Knowledge and Norms,0
+26,26-1,,KiVa,KiVa,Williford et al (2011),FIN,Finland,HIC,ECS,0,1,1,0,1,0,Primary,not clear,Causally identified,Knowledge and Norms,0
+27,27-1,,The Positive Action Program,The Positive Action Program,Snyder et al (2013),USA,United States,HIC,NAC,0,1,1,0,1,0,Primary,not clear,Causally identified,Knowledge and Norms,0
+28,28-1,,Community Schools,Community Schools,Dinarte and Egana-delSol (2019),SLV,El Salvador,UMC,LCN,0,0,1,0,1,0,Lower Secondary,not clear,Causally identified,Knowledge and Norms,0
+28,28-1,,Community Schools,Community Schools,Dinarte and Egana-delSol (2019),SLV,El Salvador,UMC,LCN,0,0,1,0,1,0,Upper Secondary,not clear,Causally identified,Knowledge and Norms,0
+29,29-1,,Do Kadam,Do Kadam,Santhya et al (2019),IND,India,LMC,SAS,0,0,0,0,1,0,Lower Secondary,rural,Causally identified,Knowledge and Norms,0
+29,29-1,,Do Kadam,Do Kadam,Santhya et al (2019),IND,India,LMC,SAS,0,0,0,0,1,0,Upper Secondary,rural,Causally identified,Knowledge and Norms,0
+30,30-1,,GREAT Teacher Program,GREAT Teacher Program,Simon et al (2008),USA,United States,HIC,NAC,0,1,1,0,0,0,Lower Secondary,urban,Causally identified,Knowledge and Norms,0
+32,32-1,,Friendly Schools/Cool Kids - Taking Control,Cool Kids - Taking Control,Rapee et al (2021),AUS,Australia,HIC,EAS,0,1,1,0,1,0,Primary,both,Causally identified,Knowledge and Norms,0
+32,32-2,,Friendly Schools/Cool Kids - Taking Control,Both,Rapee et al (2021),AUS,Australia,HIC,EAS,0,1,1,0,1,0,Primary,both,Causally identified,Knowledge and Norms,0
+32,32-3,,Friendly Schools/Cool Kids - Taking Control,Friendly Schools,Rapee et al (2021),AUS,Australia,HIC,EAS,0,1,1,0,1,0,Primary,both,Causally identified,Knowledge and Norms,0
+33,33-1,,Nationwide Technical Assistance,Nationwide Technical Assistance,Smarrelli (2023),PER,Peru,UMC,LCN,1,1,1,1,1,1,Primary,both,Causally identified,Identify and Respond,0
+33,33-1,,Nationwide Technical Assistance,Nationwide Technical Assistance,Smarrelli (2023),PER,Peru,UMC,LCN,1,1,1,1,1,1,Lower Secondary,both,Causally identified,Identify and Respond,0
+33,33-1,,Nationwide Technical Assistance,Nationwide Technical Assistance,Smarrelli (2023),PER,Peru,UMC,LCN,1,1,1,1,1,1,Upper Secondary,both,Causally identified,Identify and Respond,0
+34,34-1,,GEMS,GEMS,Achyut et al (2017c),VNM,Viet Nam,UMC,EAS,1,1,1,1,1,0,Lower Secondary,both,Weakly identified,Knowledge and Norms,1
+35,35-1,,Roots,Roots,Paluck et al (2016),USA,United States,HIC,NAC,0,1,1,0,1,0,Lower Secondary,both,Causally identified,Knowledge and Norms,0
+36,36-1,,Steps to Respect,Steps to Respect,Brown et al (2011),USA,United States,HIC,NAC,0,1,1,0,1,0,Primary,both,Causally identified,Knowledge and Norms,0
+37,37-1,,Irie Classroom Toolbox,Irie Classroom Toolbox,Baker-Henningham et al (2019),JAM,Jamaica,UMC,LCN,0,0,1,1,0,0,Kindergarten,urban,Weakly identified,Knowledge and Norms,1
+37,37-1,,Irie Classroom Toolbox,Irie Classroom Toolbox,Baker-Henningham et al (2019),JAM,Jamaica,UMC,LCN,0,0,1,1,0,0,Primary,urban,Weakly identified,Knowledge and Norms,1
+39,39-1,,EmpaTeach,EmpaTeach,Fabbri et al (2021),TZA,Tanzania,LMC,SSF,0,1,1,1,0,0,Primary,other,Causally identified,Knowledge and Norms,0
+39,39-1,,EmpaTeach,EmpaTeach,Fabbri et al (2021),TZA,Tanzania,LMC,SSF,0,1,1,1,0,0,Lower Secondary,other,Causally identified,Knowledge and Norms,0
+39,39-1,,EmpaTeach,EmpaTeach,Fabbri et al (2021),TZA,Tanzania,LMC,SSF,0,1,1,1,0,0,Upper Secondary,other,Causally identified,Knowledge and Norms,0
+40,40-1,,No Means No,No Means No,Hartmann et al (2025),ZAF,South Africa,UMC,SSF,1,0,0,0,0,1,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+41,41-1,,Parental Involvement Program,Parent Involvement Program,Cunha et al (2023),CHN,China,UMC,EAS,0,1,1,0,1,0,Lower Secondary,urban,Causally identified,Knowledge and Norms,0
+42,42-1,,The Flemish anti-bullying intervention,The Flemish anti-bullying intervention,Veerle Stevens et al (2000),BEL,Belgium,HIC,ECS,0,1,1,0,1,0,Primary,not clear,Weakly identified,Knowledge and Norms,1
+42,42-1,,The Flemish anti-bullying intervention,The Flemish anti-bullying intervention,Veerle Stevens et al (2000),BEL,Belgium,HIC,ECS,0,1,1,0,1,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,1
+42,42-1,,The Flemish anti-bullying intervention,The Flemish anti-bullying intervention,Veerle Stevens et al (2000),BEL,Belgium,HIC,ECS,0,1,1,0,1,0,Upper Secondary,not clear,Weakly identified,Knowledge and Norms,1
+43,43-1,,"Resolve it, Solve it","Resolve it, Solve it",Swaim et al (2009),USA,United States,HIC,NAC,0,1,1,0,1,0,Upper Secondary,rural,Weakly identified,Knowledge and Norms,1
+44,44-1,,GEMS,GEMS,Achyut et al (2017a),IND,India,LMC,SAS,1,1,1,1,1,0,Lower Secondary,both,Causally identified,Knowledge and Norms,0
+45,45-1,,ViSC Social Competence Program,ViSC Social Competence Program,Dogan et al (2017),TUR,Turkiye,UMC,ECS,0,1,1,0,1,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,1
+45,45-1,,ViSC Social Competence Program,ViSC Social Competence Program,Dogan et al (2017),TUR,Turkiye,UMC,ECS,0,1,1,0,1,0,Upper Secondary,not clear,Weakly identified,Knowledge and Norms,1
+46,46-1,,KiVa,KiVa,Nocentini et al (2016),ITA,Italy,HIC,ECS,0,1,1,0,1,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,1
+47,47-1,,NoTrap!,NoTrap!,Palladino et al (2016),ITA,Italy,HIC,ECS,0,1,1,0,1,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,1
+47,47-1,,NoTrap!,NoTrap!,Palladino et al (2016),ITA,Italy,HIC,ECS,0,1,1,0,1,0,Upper Secondary,not clear,Weakly identified,Knowledge and Norms,1
+48,48-1,,REBE-ViSC,REBE-ViSC,Trip et al (2015),ROU,Romania,HIC,ECS,0,1,1,0,1,0,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+49,49-1,,dynamic approach to school improvement,dynamic approach to school improvement,Kyriakides et al (2013),BEL;CYP;GBR;GRC;NLD,Belgium; Cyprus; United Kingdom; Greece; Netherlands,HIC,ECS,0,1,1,0,1,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,1
+50,50-1,,Friendly Schools,Friendly Schools,Cross et al (2011),AUS,Australia,HIC,EAS,0,1,1,0,1,0,Primary,urban,Causally identified,Knowledge and Norms,0
+50,50-1,,Friendly Schools,Friendly Schools,Cross et al (2011),AUS,Australia,HIC,EAS,0,1,1,0,1,0,Lower Secondary,urban,Causally identified,Knowledge and Norms,0
+50,50-1,,Friendly Schools,Friendly Schools,Cross et al (2011),AUS,Australia,HIC,EAS,0,1,1,0,1,0,Upper Secondary,urban,Causally identified,Knowledge and Norms,0
+51,51-1,,Clinical Prevention Program,Clinical Prevention Program,Tsiantis et al (2013),GRC,Greece,HIC,ECS,0,1,1,0,1,0,Primary,urban,Weakly identified,Knowledge and Norms,1
+52,52-1,,Interaction Competencies with Children for Teachers,Interaction Competencies with Children for Teachers,Nkuba et al (2018),TZA,Tanzania,LMC,SSF,0,1,1,1,0,0,Upper Secondary,both,Weakly identified,Knowledge and Norms,1
+54,54-1,,Unnamed programme,Unnamed programme,Naidoo et al (2016),ZAF,South Africa,UMC,SSF,1,1,1,0,1,0,Upper Secondary,both,Weakly identified,Knowledge and Norms,1
+55,55-1,,Safe@Last,Safe@Last,Morris et al (2016),USA,United States,HIC,NAC,1,0,0,0,0,1,Primary,not clear,Weakly identified,Knowledge and Norms,1
+56,56-1,https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id=368919&isReview=true,Learn to BE SAFE with Emmy,Learn to BE SAFE with Emmy,White et al (2018),AUS,Australia,HIC,EAS,1,0,0,0,0,1,Primary,urban,Weakly identified,Knowledge and Norms,1
+57,57-1,,I have the right to feel safe,I have the right to feel safe,Bustamante et al (2018),ECU,Ecuador,UMC,LCN,1,0,0,0,0,1,Primary,other,Weakly identified,Knowledge and Norms,1
+58,58-1,,Tutoría Entre Iguales,Tutoría Entre Iguales,Ferrer-Cascales (2018),ESP,Spain,HIC,ECS,0,1,1,0,1,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,1
+58,58-1,,Tutoría Entre Iguales,Tutoría Entre Iguales,Ferrer-Cascales (2018),ESP,Spain,HIC,ECS,0,1,1,0,1,0,Upper Secondary,not clear,Weakly identified,Knowledge and Norms,1
+60,60-1,,Unnamed programme,Unnamed programme,Salimi et al (2019),IRN,"Iran, Islamic Rep.",UMC,MEA,0,1,1,0,1,0,Primary,urban,Weakly identified,Knowledge and Norms,1
+61,61-1,,Dat-e Adolescence,Dat-e Adolescence,Munoz Fernandez et al (2019),ESP,Spain,HIC,ECS,1,1,1,0,1,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,1
+61,61-1,,Dat-e Adolescence,Dat-e Adolescence,Munoz Fernandez et al (2019),ESP,Spain,HIC,ECS,1,1,1,0,1,0,Upper Secondary,not clear,Weakly identified,Knowledge and Norms,1
+62,62-1,https://clinicaltrials.gov/ct2/show/NCT02427061,Manhood 2.0,Manhood 2.0,Miller et al (2020),USA,United States,HIC,NAC,1,0,0,0,1,0,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+62,62-1,https://clinicaltrials.gov/ct2/show/NCT02427061,Manhood 2.0,Manhood 2.0,Miller et al (2020),USA,United States,HIC,NAC,1,0,0,0,1,0,Upper Secondary,urban,Weakly identified,Knowledge and Norms,1
+63,63-1,,Life Orientation,Life Orientation,Taylor et al (2020),ZAF,South Africa,UMC,SSF,0,0,1,0,1,0,Upper Secondary,both,Weakly identified,Knowledge and Norms,1
+64,64-1,,Second Step Child Protection Unit,Second Step Child Protection Unit,(2020),USA,United States,HIC,NAC,1,0,0,0,0,0,Kindergarten,other,Weakly identified,Knowledge and Norms,1
+64,64-1,,Second Step Child Protection Unit,Second Step Child Protection Unit,(2020),USA,United States,HIC,NAC,1,0,0,0,0,0,Primary,other,Weakly identified,Knowledge and Norms,1
+65,65-1,,Child Safety Matters Curriculum,Child Safety Matters Curriculum,Weeks et al (2021),USA,United States,HIC,NAC,1,0,0,0,0,1,Kindergarten,not clear,Weakly identified,Knowledge and Norms,1
+65,65-1,,Child Safety Matters Curriculum,Child Safety Matters Curriculum,Weeks et al (2021),USA,United States,HIC,NAC,1,0,0,0,0,1,Primary,not clear,Weakly identified,Knowledge and Norms,1
+66,66-1,https://clinicaltrials.gov/ct2/show/NCT03597048,Eliminating the Stigma of Differences,Eliminating the Stigma of Differences,Dupont Reyes (2020),USA,United States,HIC,NAC,0,1,1,0,1,1,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+67,67-1,,GEMS,GEMS,Achyut et al (2017b),BGD,Bangladesh,LMC,SAS,1,1,1,1,1,0,Lower Secondary,both,Causally identified,Knowledge and Norms,0
+70,70-1,,Speak Up and Be Safe,Speak Up and Be Safe,Wolfersteig et al (2022),USA,United States,HIC,NAC,1,1,1,0,0,1,Kindergarten,urban,Weakly identified,Knowledge and Norms,1
+70,70-1,,Speak Up and Be Safe,Speak Up and Be Safe,Wolfersteig et al (2022),USA,United States,HIC,NAC,1,1,1,0,0,1,Primary,urban,Weakly identified,Knowledge and Norms,1
+70,70-1,,Speak Up and Be Safe,Speak Up and Be Safe,Wolfersteig et al (2022),USA,United States,HIC,NAC,1,1,1,0,0,1,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+71,71-1,,Play it Safe!,Play it Safe!,Thompson et al (2021),USA,United States,HIC,NAC,1,1,1,0,0,1,Primary,not clear,Weakly identified,Knowledge and Norms,1
+72,72-1,,Theory-Based Educational Intervention,Theory-Based Educational Intervention,Kaveh et al (2022),IRN,"Iran, Islamic Rep.",UMC,MEA,0,1,1,0,1,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,1
+72,72-1,,Theory-Based Educational Intervention,Theory-Based Educational Intervention,Kaveh et al (2022),IRN,"Iran, Islamic Rep.",UMC,MEA,0,1,1,0,1,0,Upper Secondary,not clear,Weakly identified,Knowledge and Norms,1
+73,73-1,,Child Safety Matters,Child Safety Matters,Bright (2024),USA,United States,HIC,NAC,1,1,1,0,0,1,Kindergarten,both,Weakly identified,Knowledge and Norms,1
+73,73-1,,Child Safety Matters,Child Safety Matters,Bright (2024),USA,United States,HIC,NAC,1,1,1,0,0,1,Primary,both,Weakly identified,Knowledge and Norms,1
+74,74-1,,Solution Based Approach,Solution Based Approach,Sahin et al (2024),TUR,Turkiye,UMC,ECS,0,1,1,0,0,0,Upper Secondary,not clear,Weakly identified,Knowledge and Norms,1
+75,75-1,,Interaction Competencies with Children - for Teachers,Interaction Competencies with Children - for Teachers,Ssenyonga et al (2022),UGA,Uganda,LIC,SSF,0,1,1,1,0,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,1
+75,75-1,,Interaction Competencies with Children - for Teachers,Interaction Competencies with Children - for Teachers,Ssenyonga et al (2022),UGA,Uganda,LIC,SSF,0,1,1,1,0,0,Upper Secondary,not clear,Weakly identified,Knowledge and Norms,1
+76,76-1,,Iowa Strengthening Families Program,Iowa Strengthening Families Program,Spoth et al (2000),USA,United States,HIC,NAC,0,1,1,0,0,0,Lower Secondary,both,Causally identified,Knowledge and Norms,0
+77,77-1,,4Rs,4Rs,Jones et al (2011),USA,United States,HIC,NAC,0,1,1,0,0,1,Kindergarten,urban,Weakly identified,Knowledge and Norms,1
+77,77-1,,4Rs,4Rs,Jones et al (2011),USA,United States,HIC,NAC,0,1,1,0,0,1,Primary,urban,Weakly identified,Knowledge and Norms,1
+78,78-1,,All Stars Core,All Stars Core,Rorie et al (2011),USA,United States,HIC,NAC,0,1,1,0,0,1,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+79,79-1,,Positive Action,Positive Action,Li et al (2011),USA,United States,HIC,NAC,0,1,1,0,1,0,Primary,urban,Weakly identified,Knowledge and Norms,1
+80,80-1,,Tools for Gettting Along,Tools for Gettting Along,Daunic et al (2011),USA,United States,HIC,NAC,0,1,1,0,1,1,Primary,not clear,Weakly identified,Knowledge and Norms,1
+81,81-1,,INTEMO Program,INTEMO Program,Castillo et al (2013),ESP,Spain,HIC,ECS,0,1,1,0,1,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,1
+81,81-1,,INTEMO Program,INTEMO Program,Castillo et al (2013),ESP,Spain,HIC,ECS,0,1,1,0,1,0,Upper Secondary,not clear,Weakly identified,Knowledge and Norms,1
+82,82-1,https://crimesolutions.ojp.gov/ratedprograms/safe-dates#5-0,Safe Dates,Safe Dates,Foshee et al (2014),USA,United States,HIC,NAC,0,1,1,0,1,0,Lower Secondary,rural,Weakly identified,Knowledge and Norms,1
+83,83-1,,ESPACE,ESPACE,Hebert et al (2001),CAN,Canada,HIC,NAC,1,0,0,0,0,1,Kindergarten,urban,Weakly identified,Knowledge and Norms,1
+83,83-1,,ESPACE,ESPACE,Hebert et al (2001),CAN,Canada,HIC,NAC,1,0,0,0,0,1,Primary,urban,Weakly identified,Knowledge and Norms,1
+84,84-1,https://nij.ojp.gov/funding/awards/2005-wt-bx-0002,Gender Violence/Harassment Prevention Programming,Law/Justice,Taylor et al (2010),USA,United States,HIC,NAC,1,0,0,0,1,1,Primary,other,Causally identified,Knowledge and Norms,0
+84,84-1,https://nij.ojp.gov/funding/awards/2005-wt-bx-0002,Gender Violence/Harassment Prevention Programming,Law/Justice,Taylor et al (2010),USA,United States,HIC,NAC,1,0,0,0,1,1,Lower Secondary,other,Causally identified,Knowledge and Norms,0
+84,84-1,https://nij.ojp.gov/funding/awards/2005-wt-bx-0002,Gender Violence/Harassment Prevention Programming,Law/Justice,Taylor et al (2010),USA,United States,HIC,NAC,1,0,0,0,1,1,Upper Secondary,other,Causally identified,Knowledge and Norms,0
+84,84-2,https://nij.ojp.gov/funding/awards/2005-wt-bx-0002,Gender Violence/Harassment Prevention Programming,Interaction,Taylor et al (2010),USA,United States,HIC,NAC,1,0,0,0,1,1,Primary,other,Causally identified,Knowledge and Norms,0
+84,84-2,https://nij.ojp.gov/funding/awards/2005-wt-bx-0002,Gender Violence/Harassment Prevention Programming,Interaction,Taylor et al (2010),USA,United States,HIC,NAC,1,0,0,0,1,1,Lower Secondary,other,Causally identified,Knowledge and Norms,0
+84,84-2,https://nij.ojp.gov/funding/awards/2005-wt-bx-0002,Gender Violence/Harassment Prevention Programming,Interaction,Taylor et al (2010),USA,United States,HIC,NAC,1,0,0,0,1,1,Upper Secondary,other,Causally identified,Knowledge and Norms,0
+85,85-1,,Good Touch Bad Touch,Good Touch Bad Touch,Erogul et al (2013),TUR,Turkiye,UMC,ECS,1,0,0,0,0,1,Primary,not clear,Weakly identified,Knowledge and Norms,1
+86,86-1,,(No) Child's Play,(No) Child's Play,Krahe et al (2009),DEU,Germany,HIC,ECS,1,0,0,0,0,1,Kindergarten,other,Weakly identified,Knowledge and Norms,0
+86,86-1,,(No) Child's Play,(No) Child's Play,Krahe et al (2009),DEU,Germany,HIC,ECS,1,0,0,0,0,1,Primary,other,Weakly identified,Knowledge and Norms,0
+87,87-1,,My Space My Boundaries,My Space My Boundaries,Baker et al (2012),USA,United States,HIC,NAC,1,0,0,0,0,1,Primary,rural,Weakly identified,Knowledge and Norms,1
+88,88-1,,Childhelp Speak Up Be Safe,Childhelp Speak Up Be Safe,Diaz et al (2021),USA,United States,HIC,NAC,1,1,1,0,0,1,Upper Secondary,urban,Weakly identified,Knowledge and Norms,1
+89,89-1,,Adapted WHO life skills development concepts,Adapted WHO life skills development concepts,Chamroonsawasdi et al (2010),THA,Thailand,UMC,EAS,1,0,1,0,1,0,Upper Secondary,not clear,Weakly identified,Knowledge and Norms,1
+90,90-1,,IGEL Program,IGEL Program,Czerwinski et al (2018),DEU,Germany,HIC,ECS,1,0,0,0,0,1,Primary,both,Weakly identified,Knowledge and Norms,1
+91,91-1,,ESPACE,ESPACE,Daigneault (2011),CAN,Canada,HIC,NAC,1,0,0,0,0,1,Kindergarten,urban,Weakly identified,Knowledge and Norms,0
+91,91-1,,ESPACE,ESPACE,Daigneault (2011),CAN,Canada,HIC,NAC,1,0,0,0,0,1,Primary,urban,Weakly identified,Knowledge and Norms,0
+92,92-1,,CSAPE-H,CSAPE-H,Kang et al (2020),KOR,"Korea, Rep.",HIC,EAS,1,0,0,0,0,1,Primary,urban,Weakly identified,Knowledge and Norms,1
+93,93-1,,C-SAPE,C-SAPE,Kim et al (2020),KOR,"Korea, Rep.",HIC,EAS,1,0,0,0,0,1,Primary,urban,Weakly identified,Knowledge and Norms,1
+94,94-1,,Chinese Doll,Chinese Doll,Xu et al (2015),CHN,China,UMC,EAS,1,0,0,0,0,1,Primary,urban,Weakly identified,Knowledge and Norms,1
+95,95-1,,Cool and Safe,Cool and Safe,Muller et al (2014),DEU,Germany,HIC,ECS,1,0,0,0,0,1,Primary,not clear,Weakly identified,Knowledge and Norms,1
+96,96-1,,Medienhelden,Medienhelden,Chaux et al (2016),DEU,Germany,HIC,ECS,0,1,1,0,1,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,1
+96,96-1,,Medienhelden,Medienhelden,Chaux et al (2016),DEU,Germany,HIC,ECS,0,1,1,0,1,0,Upper Secondary,not clear,Weakly identified,Knowledge and Norms,1
+97,97-1,,"The programme (Moreno, Sánchez & Alcántara, 2006)","The programme (Moreno, Sánchez & Alcántara, 2006)",Manso et al (2014),ESP,Spain,HIC,ECS,1,1,1,0,0,1,Primary,not clear,Weakly identified,Knowledge and Norms,0
+98,98-1,,RISE Program,RISE Program,Connolly et al (2015),CAN,Canada,HIC,NAC,1,1,1,0,1,0,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+99,99-1,,ViSC,ViSC,Kountouri et al (2016),CYP,Cyprus,HIC,ECS,0,1,1,0,1,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,1
+100,100-1,,Skills for Life,Skills for Life,Fekkes et al (2016),NLD,Netherlands,HIC,ECS,1,1,1,0,1,0,Lower Secondary,not clear,Causally identified,Knowledge and Norms,0
+101,101-1,,Violence Prevention Project,Violence Prevention Project,Thompkins et al (2014),USA,United States,HIC,NAC,0,1,1,0,1,0,Upper Secondary,urban,Weakly identified,Knowledge and Norms,1
+102,102-1,,Whole School and Shared Concern Intervention,Whole School and Shared Concern Intervention,Gerald Wurf (2012),HKG,"Hong Kong SAR, China",HIC,EAS,0,1,1,0,1,0,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+103,103-1,,Olweus Prevention Programme,Olweus Prevention Programme,Yaakub et al (2010),MYS,Malaysia,UMC,EAS,0,1,1,0,1,0,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+104,104-1,,Cyberprogram 2.0,Cyberprogram 2.0,Garaigordobil and Martinez-Valderrey (2015),ESP,Spain,HIC,ECS,0,1,1,0,1,0,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+105,105-1,,Education Program,Education Program,Caroline Hunt (2006),AUS,Australia,HIC,EAS,0,1,1,0,1,0,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+106,106-1,,Youth Matters,Youth Matters,Jenson et al (2013),USA,United States,HIC,NAC,0,1,1,0,1,0,Primary,not clear,Causally identified,Knowledge and Norms,0
+107,107-1,,Early Childhood Friendship Project,Early Childhood Friendship Project,Ostrov et al (2015),USA,United States,HIC,NAC,0,1,1,0,1,0,Kindergarten,both,Weakly identified,Knowledge and Norms,1
+107,107-1,,Early Childhood Friendship Project,Early Childhood Friendship Project,Ostrov et al (2015),USA,United States,HIC,NAC,0,1,1,0,1,0,Primary,both,Weakly identified,Knowledge and Norms,1
+108,108-1,,Embedded within wider curriculum,Embedded within wider curriculum,Andreou et al (2007),GRC,Greece,HIC,ECS,0,1,1,0,1,0,Primary,not clear,Weakly identified,Knowledge and Norms,1
+109,109-1,,Olweus Prevention Programme,Olweus Prevention Programme,Bauer et al (2007),USA,United States,HIC,NAC,0,1,1,0,1,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,1
+110,110-1,,Dare to Care: Bully Proofing your School,Dare to Care: Bully Proofing your School,Beran et al (2004),CAN,Canada,HIC,NAC,0,1,1,0,1,0,Primary,not clear,Weakly identified,Knowledge and Norms,1
+111,111-1,,"Build Respect, Stop Bullying TM","Build Respect, Stop Bullying TM",Evers et al (2008),USA,United States,HIC,NAC,0,1,1,0,1,0,Lower Secondary,both,Weakly identified,Knowledge and Norms,1
+111,111-1,,"Build Respect, Stop Bullying TM","Build Respect, Stop Bullying TM",Evers et al (2008),USA,United States,HIC,NAC,0,1,1,0,1,0,Upper Secondary,both,Weakly identified,Knowledge and Norms,1
+112,112-1,,Bully-Proofing Your School,Bully-Proofing Your School,Menard et al (2014),USA,United States,HIC,NAC,0,1,1,0,1,0,Primary,both,Weakly identified,Knowledge and Norms,1
+113,113-1,,Noncadiamointrappola,Noncadiamointrappola,Palladino and Menesini (2012),ITA,Italy,HIC,ECS,0,1,1,0,1,0,Upper Secondary,not clear,Weakly identified,Knowledge and Norms,1
+114,114-1,,Stengths in Motion,Stengths in Motion,Rawana et al (2011),CAN,Canada,HIC,NAC,0,1,1,0,1,0,Primary,urban,Weakly identified,Knowledge and Norms,1
+114,114-1,,Stengths in Motion,Stengths in Motion,Rawana et al (2011),CAN,Canada,HIC,NAC,0,1,1,0,1,0,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+114,114-1,,Stengths in Motion,Stengths in Motion,Rawana et al (2011),CAN,Canada,HIC,NAC,0,1,1,0,1,0,Upper Secondary,urban,Weakly identified,Knowledge and Norms,1
+115,115-1,,Restorative Whole School Approach,Restorative Whole School Approach,Wong et al (2011),HKG,"Hong Kong SAR, China",HIC,EAS,0,1,1,0,1,0,Lower Secondary,urban,Weakly identified,Knowledge and Norms,1
+116,116-1,,Respect,Respect,Ertesvag and Vaaland (2007),NOR,Norway,HIC,ECS,0,1,1,0,1,0,Primary,not clear,Weakly identified,Knowledge and Norms,1
+117,117-1,,Implicit Theories of Personality,Implicit Theories of Personality,Yeager et al (2012),USA,United States,HIC,NAC,0,1,1,0,1,0,Upper Secondary,urban,Weakly identified,Knowledge and Norms,1
+118,118-1,,Second Step: Student Success Through Prevention,Second Step: Student Success Through Prevention,Espelage et al (2013),USA,United States,HIC,NAC,1,0,1,0,1,0,Lower Secondary,not clear,Weakly identified,Knowledge and Norms,0
+119,119-1,,Anti-Bullying Law,Boys*,Rees et al (2022),USA,United States,HIC,NAC,0,1,1,0,1,0,Upper Secondary,both,Causally identified,Enact Laws,0
+119,119-2,,Anti-Bullying Law,Girls*,Rees et al (2022),USA,United States,HIC,NAC,0,1,1,0,1,0,Upper Secondary,both,Causally identified,Enact Laws,0
+120,120-1,,Anti-Bullying Law,Anti-Bullying Law,Nikolaou (2017),USA,United States,HIC,NAC,0,1,1,0,1,0,Upper Secondary,both,Causally identified,Enact Laws,0
+122,122-1,,Green Dot,Green Dot,Coker et al (2017),USA,United States,HIC,NAC,1,0,0,0,1,1,Upper Secondary,both,Causally identified,Knowledge and Norms,0
+123,123-1,http://clinicaltrials.gov/show/NCT02484014,SEHER,Delivered by lay counsellor,Shinde (2018),IND,India,LMC,SAS,0,1,1,0,1,0,Upper Secondary,both,Causally identified,Knowledge and Norms,0
+123,123-2,http://clinicaltrials.gov/show/NCT02484014,SEHER,Delivered by teacher,Shinde (2018),IND,India,LMC,SAS,0,1,1,0,1,0,Upper Secondary,both,Causally identified,Knowledge and Norms,0
+124,124-1,,IHPS,IHPS,Salimi et al (2020),IRN,"Iran, Islamic Rep.",UMC,MEA,0,1,1,0,1,0,Primary,urban,Weakly identified,Knowledge and Norms,1
+125,125-1,https://link.springer.com/article/10.1007/s11121-022-01379-z,KiVa,Partial (No Online),Valenzuela et al (2022),CHL,Chile,HIC,LCN,0,1,1,0,1,0,Primary,urban,Causally identified,Knowledge and Norms,0
+125,125-2,https://link.springer.com/article/10.1007/s11121-022-01379-z,KiVa,Full,Valenzuela et al (2022),CHL,Chile,HIC,LCN,0,1,1,0,1,0,Primary,urban,Causally identified,Knowledge and Norms,0
