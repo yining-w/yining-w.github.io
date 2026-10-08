@@ -355,7 +355,7 @@
     .chart svg { display: block; max-width: 100%; }
     .cluster-title { fill: var(--cgd-teal); font-size: 12px; font-weight: 700; }
     .cluster-count { fill: var(--cgd-dark-gray); font-size: 10.5px; }
-    .income-label { fill: var(--cgd-dark-gray); font-size: 9.5px; pointer-events: none; }
+    .income-label { fill: var(--cgd-dark-gray); font-size: 9.5px; cursor: default; }
     .empty-label { fill: var(--cgd-teal-gray); font-size: 10.5px; font-style: italic; }
     .cluster-rule { stroke: var(--cgd-light-gray); stroke-width: 1; }
     .bubble { cursor: pointer; }
@@ -797,36 +797,8 @@
       a.row.program.localeCompare(b.row.program);
   }
 
-  // Layout engine, set at build time: 'grid' (rows of bubbles) or 'force' (d3-force blobs).
-  const LAYOUT = 'force';
-
-  // d3-force: packs one income sub-group into an organic blob. Causally identified bubbles are pulled
-  // left and weakly identified ones right, so each blob reads as sorted by sample. The simulation is run
-  // to rest synchronously (no live jiggle) from a deterministic spiral start, so the result is stable.
-  function forceBlob(sub, maxW, geo) {
-    const both = sub.some(p => p.row.sample === 'causal') && sub.some(p => p.row.sample === 'weak');
-    const spread = both ? geo.step * Math.sqrt(sub.length) / 2.8 : 0;
-    const nodes = sub.map((p, i) => {
-      const a = i * 2.39996, rr = geo.step * 0.55 * Math.sqrt(i + 0.5);   // phyllotaxis start
-      return { p, x: rr * Math.cos(a), y: rr * Math.sin(a), tx: p.row.sample === 'causal' ? -spread : spread };
-    });
-    const half = Math.max(geo.r, maxW / 2 - geo.r);
-    const sim = d3.forceSimulation(nodes)
-      .force('x', d3.forceX(d => d.tx).strength(0.14))
-      .force('y', d3.forceY(0).strength(0.14))
-      .force('collide', d3.forceCollide(geo.r + geo.gap / 2 + 0.2).iterations(3))
-      .stop();
-    for (let i = 0; i < 220; i += 1) {
-      sim.tick();
-      for (const n of nodes) n.x = Math.max(-half, Math.min(half, n.x));   // keep inside the column
-    }
-    const minX = d3.min(nodes, n => n.x), minY = d3.min(nodes, n => n.y), maxY = d3.max(nodes, n => n.y);
-    return { nodes, minX, minY, h: maxY - minY + 2 * geo.r };
-  }
-
   // Lays out one cluster: income sub-blocks (low to high income) separated by a gap.
   function layoutCluster(pts, x0, y0, w, geo, labels, frame) {
-    if (LAYOUT === 'force') return layoutClusterForce(pts, x0, y0, w, geo, labels, frame);
     const labelW = labels ? geo.labelW : 0;
     const cols = Math.max(1, Math.floor((w - labelW + geo.gap) / geo.step));
     let y = y0, first = true;
@@ -843,29 +815,6 @@
       y += Math.ceil(sub.length / cols) * geo.step - geo.gap;
     }
     if (first) {                                             // empty cluster
-      frame.push({ type: 'empty', x: x0, y: y0 + geo.r + 3, text: 'None' });
-      return geo.step;
-    }
-    return y - y0;
-  }
-
-  function layoutClusterForce(pts, x0, y0, w, geo, labels, frame) {
-    const labelW = labels ? geo.labelW : 0;
-    let y = y0, first = true;
-    for (const inc of INCOME_ORDER) {
-      const sub = pts.filter(p => p.row.income === inc).sort(sortWithin);
-      if (!sub.length) continue;
-      if (!first) y += geo.groupGap;
-      first = false;
-      const blob = forceBlob(sub, w - labelW, geo);
-      for (const n of blob.nodes) {
-        n.p.x = x0 + labelW + (n.x - blob.minX) + geo.r;
-        n.p.y = y + (n.y - blob.minY) + geo.r;
-      }
-      if (labels) frame.push({ type: 'income', x: x0, y: y + blob.h / 2, text: INCOME_SHORT[inc], inc });
-      y += blob.h;
-    }
-    if (first) {
       frame.push({ type: 'empty', x: x0, y: y0 + geo.r + 3, text: 'None' });
       return geo.step;
     }
@@ -996,7 +945,9 @@
       } else if (f.type === 'hrule') {
         gFrame.append('line').attr('class', 'cluster-rule').attr('x1', f.x1).attr('x2', f.x2).attr('y1', f.y).attr('y2', f.y);
       } else if (f.type === 'income') {
-        gFrame.append('text').attr('class', 'income-label').attr('x', f.x).attr('y', f.y).attr('dy', '0.35em').text(f.text);
+        const t = gFrame.append('text').attr('class', 'income-label').attr('x', f.x).attr('y', f.y).attr('dy', '0.35em')
+          .attr('tabindex', 0).attr('data-tooltip-owner', '').text(f.text);
+        attachTooltip(t.node(), () => simpleTip(INCOME_NAMES[f.inc], 'World Bank income group'));
       } else {
         const cls = { title: 'cluster-title', count: 'cluster-count', empty: 'empty-label', sub: 'cluster-count' }[f.type];
         gFrame.append('text').attr('class', cls).attr('x', f.x).attr('y', f.y)
@@ -1127,7 +1078,7 @@
       'Source: CGD review of evaluations of school violence prevention interventions.',
       'Each bubble is one intervention arm; an arm covering several grades appears once in each grade.',
       'Within each group, bubbles are ordered by income group, from low to high, then causally identified before weakly identified.',
-      'Income groups and regions follow the World Bank classification for fiscal year 2026–2027.',
+      'Income groups and regions follow the current World Bank classification.',
       'Default comparators are countries in the same region and the same or an adjacent income group.',
       'Causally identified studies are the review\'s main sample; weakly identified studies are the other included studies.',
       'General covers outcomes that do not distinguish who the perpetrator is.',
