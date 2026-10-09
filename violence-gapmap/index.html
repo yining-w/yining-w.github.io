@@ -118,10 +118,8 @@
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 10px 14px;
     }
+    .control-row.control-row--stack { grid-template-columns: minmax(0, 1fr) !important; }
     .control-row--custom { grid-template-columns: minmax(0, .9fr) minmax(0, 1.6fr) minmax(0, 1fr); }
-    #countrySelect option { color: var(--cgd-teal-black); }
-    #countrySelect option.no-study-option { color: #8C9A9E; }
-    #controlsHome .select-note { display: none; }   /* note shows in the pop-up only */
     .control-note { margin: 5px 0 0; color: var(--cgd-dark-gray); font-size: 12px; line-height: 1.3; }
 
     .country-picker { position: relative; }
@@ -189,7 +187,7 @@
       gap: 0 12px;
       min-height: var(--control-height);
       padding: 2px 10px;
-      border: 1px solid var(--cgd-border);
+      border: 0;
       border-radius: var(--radius);
       background: var(--cgd-white);
     }
@@ -201,6 +199,7 @@
       font-size: 13px;
       line-height: 1.2;
     }
+    .check-global { font-weight: 700; }
     .check-group input[type="checkbox"] {
       width: 15px;
       height: 15px;
@@ -216,7 +215,7 @@
       min-width: 0;
       margin: 0;
       padding: 2px;
-      border: 1px solid var(--cgd-border);
+      border: 0;
       border-radius: 11px;
       background: var(--cgd-white);
     }
@@ -235,7 +234,9 @@
       text-align: center;
       white-space: nowrap;
     }
-    #compareMode { grid-template-columns: 1.7fr 1fr 1fr; grid-auto-flow: row; }
+    #compareMode { display: flex; flex-wrap: wrap; gap: 2px; }
+    #compareMode label { flex: 1 1 auto; }
+    #compareMode span { padding: 0 12px; }
     .segmented input:checked + span { background: var(--cgd-teal); color: var(--cgd-white); }
     .segmented input:disabled + span { color: var(--cgd-teal-gray); cursor: not-allowed; }
     .segmented input:focus-visible + span {
@@ -366,7 +367,7 @@
     .legend__key[aria-pressed="false"] { color: var(--cgd-teal-gray); text-decoration: line-through; }
     .legend__key[aria-pressed="false"] .swatch { fill-opacity: 0 !important; }
     .legend__static { display: inline-flex; align-items: center; gap: 5px; min-height: 24px; }
-    .legend__static[data-hidden="true"] { display: none; }
+    .legend__group--country { flex-basis: 100%; }
     .legend svg { display: block; overflow: visible; }
 
     .chart { position: relative; min-width: 0; margin-top: 8px; }
@@ -413,7 +414,7 @@
     .tooltip__grid { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 3px 10px; margin: 0; }
     .tooltip__grid dt { color: var(--cgd-dark-gray); }
     .tooltip__grid dd { margin: 0; }
-    .tooltip__hint { margin: 8px 0 0; color: var(--cgd-dark-gray); font-style: italic; }
+    .bubble.is-pinned { stroke: var(--cgd-gold); stroke-width: 3; }
 
     /* ---------- dialog ---------- */
     .dialog {
@@ -468,7 +469,7 @@
     @container cgd-viz (width < 560px) {
       .controls { grid-template-columns: minmax(0, 1fr); }
       .control-row, .control-row--custom { grid-template-columns: minmax(0, 1fr); }
-      #compareMode span { white-space: normal; line-height: 1.1; }
+      #compareMode label { flex-basis: 45%; }
     }
     @media (max-width: 520px), (hover: none) and (pointer: coarse) {
       select { font-size: 16px !important; }
@@ -486,7 +487,7 @@
 <body>
   <main class="viz" id="viz">
     <header class="viz__header">
-      <h1 class="viz__title" id="vizTitle">Evidence Map for What We Know and Don't to Reduce Violence</h1>
+      <h1 class="viz__title" id="vizTitle">Evidence Map for What We Know and Don't Know to Reduce Violence</h1>
       <div class="header-actions">
         <button class="icon-button" id="contrastButton" type="button" aria-pressed="false" aria-label="High contrast" data-tooltip-owner>
           <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16">
@@ -499,17 +500,18 @@
 
     <div id="controlsHome">
     <section class="controls" id="controls" aria-label="Filters">
-      <div class="control">
+      <div class="control control--wide">
         <label for="countrySelect">Select country</label>
         <select id="countrySelect"></select>
-        <p class="control-note select-note">Slightly greyed out country names have no studies.</p>
         <p class="no-studies" id="noStudies" role="status" hidden></p>
       </div>
 
-      <fieldset class="control">
+      <fieldset class="control control--wide">
         <legend class="control__label">Compare with</legend>
         <div class="segmented" id="compareMode">
           <label><input type="radio" name="compareMode" value="default"><span>Default comparators</span></label>
+          <label><input type="radio" name="compareMode" value="region"><span>Same region</span></label>
+          <label><input type="radio" name="compareMode" value="income"><span>Adjacent income level</span></label>
           <label><input type="radio" name="compareMode" value="all"><span>All</span></label>
           <label><input type="radio" name="compareMode" value="custom"><span>Custom</span></label>
         </div>
@@ -534,7 +536,7 @@
         </div>
       </div>
 
-      <div class="control-row">
+      <div class="control-row control-row--stack">
         <fieldset class="control">
           <legend class="control__label">Type of violence</legend>
           <div class="check-group" id="typeChecks"></div>
@@ -581,11 +583,6 @@
       <div class="intro__actions"><button class="primary-button" id="introGo" type="button">Show the evidence</button></div>
     </dialog>
 
-    <dialog class="dialog" id="detailDialog" aria-labelledby="dialogTitle">
-      <form method="dialog"><button class="dialog__close" value="close" aria-label="Close details">×</button></form>
-      <h2 id="dialogTitle"></h2>
-      <div id="dialogBody"></div>
-    </dialog>
   </main>
 
   <script
@@ -671,7 +668,7 @@
   const SETTING_LABEL = { 'urban': 'Urban', 'rural': 'Rural', 'both': 'Both', 'other': 'Other', 'not clear': 'Not clear' };
 
   const TYPES = [['sexual', 'Sexual'], ['emotional', 'Emotional'], ['physical', 'Physical']];
-  const PERPS = [['teacher', 'Teacher'], ['peer', 'Peer'], ['any', 'General']];   // 'any' = perpetrator_any
+  const PERPS = [['teacher', 'Teacher'], ['peer', 'Peer'], ['any', 'Not explicitly identified']];   // 'any' = perpetrator_any
 
   const FOCUS = [
     { key: 'Knowledge and Norms', label: 'Knowledge and norms' },
@@ -679,7 +676,7 @@
     { key: 'Enact Laws', label: 'Enact laws' }
   ].filter(f => ROWS.some(r => r.focus === f.key));                    // legend from data present
   const FOCUS_BY_KEY = new Map(FOCUS.map(f => [f.key, f]));
-  const SAMPLE_LABEL = { causal: 'Causally identified', weak: 'Weakly identified' };
+  const SAMPLE_LABEL = { causal: 'Causally identified', weak: 'Not as strongly identified' };
 
   // Colours per theme. Standard = CGD palette; contrast = bright hues on a dark ground.
   const THEMES = {
@@ -755,14 +752,30 @@
     if (!c || !INCOME_BAND[c.income]) return { incomes: '', regions: '' };
     return { incomes: INCOME_BAND[c.income].join('|'), regions: c.region };
   }
+  // Rule-based comparator modes: default = same region + adjacent income; region = same region, any income;
+  // income = adjacent income level, any region.
+  const RULE_MODES = ['default', 'region', 'income'];
+  function modeSets(mode, code) {
+    const c = COUNTRY.get(code);
+    if (!c) return { incomes: '', regions: '' };
+    const band = INCOME_BAND[c.income] ? INCOME_BAND[c.income].join('|') : '';
+    if (mode === 'region') return { incomes: INCOME_ORDER.join('|'), regions: c.region };
+    if (mode === 'income') return { incomes: band, regions: REGION_ORDER.join('|') };
+    return similarSets(code);
+  }
+  function modeAvailable(mode, code) {
+    const c = COUNTRY.get(code);
+    if (!c) return false;
+    return mode === 'region' ? true : !!INCOME_BAND[c.income];
+  }
 
   /* ================================================================ filtering */
   function comparatorTest() {
     if (state.mode === 'all') return () => true;
     let incomes, regions;
     let excluded = new Set();
-    if (state.mode === 'default') {
-      const s = similarSets(state.country);
+    if (RULE_MODES.includes(state.mode)) {
+      const s = modeSets(state.mode, state.country);
       incomes = setOf(s.incomes); regions = setOf(s.regions);
     } else {
       incomes = setOf(state.incomes); regions = setOf(state.regions); excluded = setOf(state.excluded);
@@ -992,6 +1005,7 @@
   let lastWidth = 0;
 
   function render() {
+    if (tooltipOwner && tooltipOwner.classList?.contains('bubble')) hideTooltip();
     syncControls();
     const rows = filteredRows();
     const pts = pointsFor(rows);
@@ -1050,9 +1064,9 @@
 
   function wireBubble(node) {
     attachTooltip(node, () => bubbleTip(d3.select(node).datum()));
-    node.addEventListener('click', () => openDetail(node, d3.select(node).datum()));
+    node.addEventListener('click', () => togglePin(node));
     node.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(node, d3.select(node).datum()); }
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); togglePin(node); }
     });
   }
 
@@ -1083,12 +1097,14 @@
     g2.append(el('span', 'legend__label', 'Evidence:'));
     const n = pal().neutral, ns = pal().stroke(n);
     const k1 = el('span', 'legend__static'); k1.append(swatch(n, ns), document.createTextNode('Causally identified'));
-    const k2 = el('span', 'legend__static'); k2.append(swatch(markFill(n, 'weak'), ns), document.createTextNode('Weakly identified'));
+    const k2 = el('span', 'legend__static'); k2.append(swatch(markFill(n, 'weak'), ns), document.createTextNode(SAMPLE_LABEL.weak));
     const k3 = el('span', 'legend__static');
     k3.append(swatch(pal().ownFill, pal().own, 2), document.createTextNode(COUNTRY.get(state.country)?.name || ''));
-    k3.dataset.hidden = String(!pts.some(p => p.own));   // only when the country has bubbles on the chart
-    g2.append(k1, k2, k3);
-    frag.append(g1, g2);
+    const g0 = el('div', 'legend__group legend__group--country');
+    g0.append(k3);
+    g0.hidden = !pts.some(p => p.own);   // only when the country has bubbles on the chart
+    g2.append(k1, k2);
+    frag.append(g0, g1, g2);
     legendEl.replaceChildren(frag);
   }
 
@@ -1114,16 +1130,19 @@
   function renderTitleAndMessages(rows) {
     const c = COUNTRY.get(state.country);
     const note = document.getElementById('compareNote');
-    if (!c) note.textContent = 'Select a country to use default comparators.';
-    else if (!INCOME_BAND[c.income]) note.textContent = `${c.name} has no World Bank income group, so default comparators are unavailable.`;
+    if (!c) note.textContent = 'Select a country to compare by region or income level.';
+    else if (!INCOME_BAND[c.income]) note.textContent = `${c.name} has no World Bank income group, so only Same region is available.`;
     else {
       const incs = INCOME_BAND[c.income].slice().sort((a, b) => INCOME_ORDER.indexOf(a) - INCOME_ORDER.indexOf(b));
-      note.textContent = `Default: ${REGION_NAMES[c.region]}; ${joinWords(incs.map(i => INCOME_SHORT[i].toLowerCase()))} income.`;
+      const incText = `${joinWords(incs.map(i => INCOME_SHORT[i].toLowerCase()))} income`;
+      note.textContent = state.mode === 'region' ? `Same region: ${REGION_NAMES[c.region]}, all income levels.`
+        : state.mode === 'income' ? `Adjacent income level: ${incText}, all regions.`
+        : `Default: ${REGION_NAMES[c.region]}; ${incText}.`;
     }
 
     const msg = document.getElementById('noStudies');
     if (c && !COUNTRIES_WITH_STUDIES.has(c.code)) {
-      msg.textContent = `${c.name} doesn't have any studies from our review, but you can still check out the evidence base from other contexts.`;
+      msg.textContent = `Our review didn't identify any studies from ${c.name}, but below we show other interventions from relevant contexts.`;
       msg.hidden = false;
     } else {
       msg.hidden = true;
@@ -1132,8 +1151,8 @@
 
     const status = document.getElementById('status');
     status.textContent = rows.length ? '' :
-      (state.mode === 'default'
-        ? 'No studies from the default comparators match these filters. Choose All or Custom to widen the comparison.'
+      (RULE_MODES.includes(state.mode)
+        ? 'No studies from these comparators match these filters. Choose another comparison, All or Custom to widen it.'
         : 'No studies match these filters. Widen the comparison or tick more boxes.');
 
     document.getElementById('chartSummary').textContent =
@@ -1142,16 +1161,17 @@
   }
 
   function renderNotes() {
+    // Chicago (notes-bibliography) citation for the working paper.
+    const source = 'Source: Evans, Dave, Gabriela Smarrelli, and Yi Ning Wong. \u201CKeeping Children Safe at School: ' +
+      'A Systematic Review of What We Do and Don\u2019t Know about School-Related Violence Interventions.\u201D ' +
+      'CGD Working Paper. Washington, DC: Center for Global Development, 2026.';
     const lines = [
-      'Source: CGD review of evaluations of school violence prevention interventions.',
-      'Each bubble is one intervention arm; an arm covering several grades appears once in each grade.',
-      'Income groups and regions follow the World Bank classification for fiscal year 2026–2027.',
-      'Default comparators are countries in the same region and the same or an adjacent income group.',
-      'General covers outcomes that do not distinguish who the perpetrator is.',
-
+      'Each bubble is one intervention arm.',
+      'Income groups and regions follow the World Bank classification for fiscal year 2026\u20132027.',
+      'Default comparators are countries in the same region and the same or an adjacent income group.'
     ];
     const p = document.getElementById('notes');
-    p.textContent = lines.join(' ');
+    p.replaceChildren(document.createTextNode(source), document.createElement('br'), document.createTextNode(lines.join(' ')));
   }
 
   /* ---------------------------------------------------------------- DOM helpers */
@@ -1170,7 +1190,7 @@
     const out = [];
     if (r.p.teacher) out.push('Teachers');
     if (r.p.peer) out.push('Peers');
-    if (r.p.any) out.push('General');
+    if (r.p.any) out.push('Not explicitly identified');
     return out.length ? out.join(', ') : 'Not coded';
   }
   function studyLink(r) {
@@ -1195,12 +1215,12 @@
     const sub = el('p', 'tooltip__sub'); sub.append(studyLink(r));
     box.append(sub);
     box.append(factGrid([
+      ['Country', r.countryLabel],
+      ['Income', INCOME_NAMES[r.income]],
+      ['Grades', r.grades.map(g => GRADE_LABEL[g]).join(', ')],
       ['Violence', violenceText(r)],
-      ['Perpetrator', perpText(r)],
-      ['Country', `${r.countryLabel} (${INCOME_NAMES[r.income]})`],
-      ['Evidence', SAMPLE_LABEL[r.sample]]
+      ['Perpetrator', perpText(r)]
     ]));
-    box.append(el('p', 'tooltip__hint', 'Click for full intervention'));
     return box;
   }
   function simpleTip(title, body) {
@@ -1211,7 +1231,7 @@
 
   /* ---------------------------------------------------------------- tooltip (Section 10.9) */
   const tooltip = document.getElementById('tooltip');
-  let tooltipOwner = null, tooltipCloseTimer = 0;
+  let tooltipOwner = null, tooltipCloseTimer = 0, tooltipPinned = false;
 
   function placeTooltip(x, y, offset = 14) {
     const pad = 12;
@@ -1239,18 +1259,31 @@
   function hideTooltip() {
     tooltip.hidden = true;
     tooltipOwner?.removeAttribute('aria-describedby');
+    tooltipOwner?.classList?.remove('is-pinned');
     tooltipOwner = null;
+    tooltipPinned = false;
+  }
+  // Clicking (or Enter on) a bubble pins its pop-up so it stays put and its link can be clicked.
+  // Click the same bubble again, click elsewhere, or press Escape to release it.
+  function togglePin(node) {
+    if (tooltipPinned && tooltipOwner === node) { hideTooltip(); return; }
+    hideTooltip();
+    showTooltip(node, bubbleTip(d3.select(node).datum()));
+    tooltipPinned = true;
+    node.classList.add('is-pinned');
+    CGDTracking.trackEngagement('detail_open', 'intervention_popup');
   }
   function scheduleTooltipClose() {
+    if (tooltipPinned) return;
     clearTimeout(tooltipCloseTimer);
     tooltipCloseTimer = setTimeout(hideTooltip, 260);   // time to move into the tooltip and click the link
   }
   function attachTooltip(owner, factory) {
     owner.addEventListener('pointerenter', e => {
-      if (e.pointerType !== 'touch') showTooltip(owner, factory(), { x: e.clientX, y: e.clientY });
+      if (e.pointerType !== 'touch' && !tooltipPinned) showTooltip(owner, factory(), { x: e.clientX, y: e.clientY });
     });
     owner.addEventListener('pointerleave', e => { if (e.pointerType !== 'touch') scheduleTooltipClose(); });
-    owner.addEventListener('focus', () => showTooltip(owner, factory()));
+    owner.addEventListener('focus', () => { if (!tooltipPinned) showTooltip(owner, factory()); });
     owner.addEventListener('blur', scheduleTooltipClose);
   }
   tooltip.addEventListener('pointerenter', () => clearTimeout(tooltipCloseTimer));
@@ -1260,38 +1293,6 @@
     if (e.target.closest('[data-tooltip-owner]') || e.target.closest('#tooltip')) return;
     hideTooltip();
   });
-
-  /* ---------------------------------------------------------------- detail dialog (placeholder) */
-  const dialog = document.getElementById('detailDialog');
-  let dialogInvoker = null;
-  function openDetail(invoker, d) {
-    hideTooltip();
-    const r = d.row;
-    dialogInvoker = invoker;
-    document.getElementById('dialogTitle').textContent = armTitle(r);
-    const body = el('div');
-    const sub = el('p', 'dialog__sub'); sub.append(studyLink(r));
-    body.append(sub, factGrid([
-      ['Country', r.countryLabel],
-      ['Income group', INCOME_NAMES[r.income]],
-      ['Grades', r.grades.map(g => GRADE_LABEL[g]).join(', ')],
-      ['Urban/rural', SETTING_LABEL[r.setting]],
-      ['Primary focus', FOCUS_BY_KEY.get(r.focus).label + (r.focusPlaceholder ? ' (placeholder, not yet coded)' : '')],
-      ['Violence', violenceText(r)],
-      ['Perpetrator', perpText(r)],
-      ['Evidence', SAMPLE_LABEL[r.sample]]
-    ]));
-    body.append(el('p', 'placeholder', 'Full intervention profile coming soon.'));
-    document.getElementById('dialogBody').replaceChildren(body);
-    dialog.showModal();
-    CGDTracking.trackEngagement('detail_open', 'intervention_detail');
-  }
-  dialog.addEventListener('close', () => {
-    CGDTracking.trackEngagement('detail_close', 'intervention_detail');
-    dialogInvoker?.focus?.();
-    dialogInvoker = null;
-  });
-  dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });   // click outside
 
   /* ================================================================ controls */
   const countrySelect = document.getElementById('countrySelect');
@@ -1303,7 +1304,6 @@
     for (const c of COUNTRIES) {
       const o = el('option', null, c.name);
       o.value = c.code;
-      if (!COUNTRIES_WITH_STUDIES.has(c.code)) o.className = 'no-study-option';   // greyed: no studies
       frag.append(o);
     }
     countrySelect.replaceChildren(frag);
@@ -1324,6 +1324,13 @@
   buildChecks(document.getElementById('perpChecks'), PERPS, 'perps');
   buildChecks(document.getElementById('incomeChecks'), INCOME_ORDER.map(k => [k, INCOME_SHORT[k]]), 'incomes');
   buildChecks(document.getElementById('regionChecks'), REGION_ORDER.map(k => [k, REGION_NAMES[k]]), 'regions');
+  (function addGlobalRegion() {   // 'Global' ticks every region
+    const host = document.getElementById('regionChecks');
+    const l = el('label', 'check-global');
+    const i = el('input'); i.type = 'checkbox'; i.id = 'regionGlobal'; i.value = 'GLOBAL';
+    l.append(i, document.createTextNode('Global'));
+    host.prepend(l);
+  })();
 
   function syncChecks(name, value, total) {
     const on = setOf(value);
@@ -1338,7 +1345,7 @@
     countrySelect.value = state.country;
     document.querySelectorAll('input[name="compareMode"]').forEach(i => {
       i.checked = i.value === state.mode;
-      if (i.value === 'default') i.disabled = !state.country || !INCOME_BAND[COUNTRY.get(state.country)?.income];
+      if (RULE_MODES.includes(i.value)) i.disabled = !modeAvailable(i.value, state.country);
     });
     document.querySelectorAll('input[name="groupBy"]').forEach(i => { i.checked = i.value === state.groupBy; });
     document.getElementById('customRow').hidden = state.mode !== 'custom';
@@ -1346,6 +1353,10 @@
     syncChecks('perps', state.perps, PERPS.length);
     syncChecks('incomes', state.incomes, INCOME_ORDER.length);
     syncChecks('regions', state.regions, REGION_ORDER.length);
+    const globalBox = document.getElementById('regionGlobal');
+    const allRegions = setOf(state.regions).size === REGION_ORDER.length;
+    globalBox.checked = allRegions;
+    globalBox.disabled = allRegions && !COUNTRY.get(state.country);   // nothing to fall back to without a country
     if (state.mode === 'custom') syncCountryPicker();
   }
 
@@ -1411,8 +1422,9 @@
   countrySelect.addEventListener('change', () => {
     const code = countrySelect.value;
     const patch = { country: code };
-    if (!code) patch.mode = state.mode === 'default' ? 'all' : state.mode;
-    else if (INCOME_BAND[COUNTRY.get(code).income]) patch.mode = 'default';   // default comparators for a new country
+    if (!code) patch.mode = RULE_MODES.includes(state.mode) ? 'all' : state.mode;
+    else if (RULE_MODES.includes(state.mode) && modeAvailable(state.mode, code)) patch.mode = state.mode;
+    else if (modeAvailable('default', code)) patch.mode = 'default';   // default comparators for a new country
     setState(patch);
     CGDTracking.trackEngagement('filter', 'country_filter', code ? COUNTRY.get(code).name : 'none');
   });
@@ -1420,8 +1432,10 @@
   document.getElementById('compareMode').addEventListener('change', e => {
     const mode = e.target.value;
     const patch = { mode };
-    if (mode === 'custom' && state.country && INCOME_BAND[COUNTRY.get(state.country).income]) {
-      Object.assign(patch, similarSets(state.country), { excluded: '' });   // start from the default rule
+    if (mode === 'custom' && state.country) {
+      // start from the rule currently in use (or the default rule)
+      const from = RULE_MODES.includes(state.mode) ? state.mode : 'default';
+      if (modeAvailable(from, state.country)) Object.assign(patch, modeSets(from, state.country), { excluded: '' });
     }
     setState(patch);
     CGDTracking.trackEngagement('compare', 'comparator_mode', mode);
@@ -1433,8 +1447,17 @@
   });
 
   function wireChecks(hostId, key, label) {
-    document.getElementById(hostId).addEventListener('change', () => {
-      const on = [...document.querySelectorAll(`#${hostId} input:checked`)].map(i => i.value);
+    document.getElementById(hostId).addEventListener('change', e => {
+      if (e.target.id === 'regionGlobal') {
+        // Global on = every region; Global off = back to the selected country's region.
+        const c = COUNTRY.get(state.country);
+        if (e.target.checked) setState({ regions: REGION_ORDER.join('|') });
+        else if (c) setState({ regions: c.region });
+        else syncControls();
+        CGDTracking.trackEngagement('filter', 'comparator_region', 'global');
+        return;
+      }
+      const on = [...document.querySelectorAll(`#${hostId} input[name="${key}"]:checked`)].map(i => i.value);
       if (!on.length) { syncControls(); return; }
       setState({ [key]: on.join('|') });
       CGDTracking.trackEngagement('filter', label);
