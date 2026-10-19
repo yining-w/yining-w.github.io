@@ -6,7 +6,7 @@ data = (root / 'data/tool-data.json').read_text().replace('</', '<\\/')
 tpl = (root / 'src/index.template.html').read_text()
 assert '/*__DATA__*/' in tpl
 html = tpl.replace('/*__DATA__*/', data)
-assert "/*__LAYOUT__*/'grid'" in html
-(root / 'index.html').write_text(html)                                                   # grid layout
-(root / 'index-force.html').write_text(html.replace("/*__LAYOUT__*/'grid'", "'force'"))  # d3-force layout
-print('wrote index.html and index-force.html')
+assert "/*__LAYOUT__*/'force'" in html
+# d3-force layout. For the earlier grid layout, change 'force' to 'grid' in the template.
+(root / 'index-force.html').write_text(html)
+print('wrote index-force.html')

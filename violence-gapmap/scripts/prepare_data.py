@@ -19,6 +19,20 @@ out.mkdir(parents=True, exist_ok=True)
 s = pd.read_stata(study_path, convert_categoricals=False)
 t = pd.read_stata(treat_path, convert_categoricals=False)
 
+# Study-level corrections: data/study_corrections.csv (study_id,author_label,title,note).
+# A blank cell leaves that field as it is in studylevel.dta.
+corr_path = out / "study_corrections.csv"
+if corr_path.exists():
+    corr = pd.read_csv(corr_path, dtype=str).fillna("")
+    for _, c in corr.iterrows():
+        mask = s["id"] == int(c.study_id)
+        assert mask.sum() == 1, f"study_corrections.csv: unknown study id {c.study_id}"
+        if c.author_label.strip():
+            s.loc[mask, "author_lab"] = c.author_label.strip()
+        if c.title.strip():
+            s.loc[mask, "study"] = c.title.strip()
+assert not s["study"].str.contains("Trained Teacher", case=False).any(), "'Trained Teachers' slip still in a title"
+
 # ---------------------------------------------------------------- World Bank
 wb_raw = json.load(open(wb_path))[1]
 wb = {}
@@ -86,12 +100,29 @@ def flag(v):
 # Rows map to treatmentlevel arms where a study has them; studies absent from
 # treatmentlevel (Other_Studies) keep one row with treatment = programme name.
 # Only the treatment name is taken from treatmentlevel; everything else is study-level.
+# Studies whose "arms" are really one intervention (e.g. Boys*/Girls* subgroups): keep a single
+# row and show the programme name only, no treatment label.
+SINGLE_ARM_IDS = {4, 119}   # Right to Play (Karmaliani et al 2020); Anti-Bullying Law (Rees et al 2022)
 arms = t[["id", "treatment"]].copy()
+dedup = arms["id"].isin(SINGLE_ARM_IDS)
+arms = pd.concat([arms[~dedup], arms[dedup].drop_duplicates("id").assign(treatment="")]).sort_index()
 arms["arm"] = arms.groupby("id").cumcount() + 1
 merged = s.merge(arms, on="id", how="left", validate="one_to_many")
 merged["treatment"] = merged["treatment"].fillna("")
 merged["arm"] = merged["arm"].fillna(1).astype(int)
-assert merged["id"].isin(t["id"]).sum() == len(t), "every treatment arm must survive the merge"
+assert merged["id"].isin(t["id"]).sum() == len(t) - sum(t["id"].isin(SINGLE_ARM_IDS)) + len(SINGLE_ARM_IDS), \
+    "every treatment arm (after de-duplication) must survive the merge"
+assert all((merged["id"] == i).sum() == 1 for i in SINGLE_ARM_IDS)
+
+# Link corrections: data/link_overrides.csv (study_id,url) replaces the study's link.
+# A blank url there means "no direct link" (falls back to a Google Scholar search in the tool).
+overrides_path = out / "link_overrides.csv"
+LINK_OVERRIDES = {}
+if overrides_path.exists():
+    ov = pd.read_csv(overrides_path, dtype=str).fillna("")
+    LINK_OVERRIDES = {int(i): u.strip() for i, u in zip(ov["study_id"], ov["url"])}
+    unknown = set(LINK_OVERRIDES) - set(s["id"].astype(int))
+    assert not unknown, f"link_overrides.csv has unknown study ids: {sorted(unknown)}"
 
 records, long_rows = [], []
 for _, r in merged.sort_values(["id", "arm"]).iterrows():
@@ -100,6 +131,12 @@ for _, r in merged.sort_values(["id", "arm"]).iterrows():
     codes = country_codes(r.countrycode.strip())
     url = r.studyregistrationlink.strip()
     url = url if url.lower().startswith("http") else ""
+    if int(r.id) in LINK_OVERRIDES:
+        url = LINK_OVERRIDES[int(r.id)]
+    # "FORTHCOMING" in link_overrides.csv: no link yet; the tool shows the author as text, marked forthcoming.
+    forthcoming = url.upper() == "FORTHCOMING"
+    if forthcoming:
+        url = ""
     grades = GRADE_MAP[r.baselineage.strip()]
     settings = clean_setting(r.urbanorrural)
     # PLACEHOLDER: uncoded primary focus is shown as Knowledge and Norms until coded.
@@ -114,6 +151,7 @@ for _, r in merged.sort_values(["id", "arm"]).iterrows():
         "author": r.author_lab.strip(),
         "title": r.study.strip(),
         "url": url,
+        "forthcoming": forthcoming,
         "countries": codes,
         "countryLabel": "; ".join(wb[c]["name"] for c in codes),
         "income": wb[codes[0]]["income"],     # current WB classification
@@ -149,7 +187,7 @@ for _, r in merged.sort_values(["id", "arm"]).iterrows():
                 "perpetrator_peer": int(rec["p"]["peer"]),
                 "perpetrator_any": int(rec["p"]["any"]),
                 "grade": g, "urban_rural": st,
-                "sample": "Causally identified" if sample == "causal" else "Weakly identified",
+                "sample": "Causally identified" if sample == "causal" else "Not as strongly identified",
                 "focus_primary": focus,
                 "focus_primary_placeholder": int(focus_placeholder),
             })
