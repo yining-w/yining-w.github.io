@@ -678,7 +678,7 @@
     { key: 'Enact Laws', label: 'Enact laws' }
   ].filter(f => ROWS.some(r => r.focus === f.key));                    // legend from data present
   const FOCUS_BY_KEY = new Map(FOCUS.map(f => [f.key, f]));
-  const SAMPLE_LABEL = { causal: 'Causally identified', weak: 'Not as strongly identified' };
+  const SAMPLE_LABEL = { causal: 'More rigorous (causal evidence)', weak: 'Additional evidence' };
 
   // Colours per theme. Standard = CGD palette; contrast = bright hues on a dark ground.
   const THEMES = {
@@ -1098,7 +1098,7 @@
     const g2 = el('div', 'legend__group');
     g2.append(el('span', 'legend__label', 'Evidence:'));
     const n = pal().neutral, ns = pal().stroke(n);
-    const k1 = el('span', 'legend__static'); k1.append(swatch(n, ns), document.createTextNode('Causally identified'));
+    const k1 = el('span', 'legend__static'); k1.append(swatch(n, ns), document.createTextNode(SAMPLE_LABEL.causal));
     const k2 = el('span', 'legend__static'); k2.append(swatch(markFill(n, 'weak'), ns), document.createTextNode(SAMPLE_LABEL.weak));
     const k3 = el('span', 'legend__static');
     k3.append(swatch(pal().ownFill, pal().own, 2), document.createTextNode(COUNTRY.get(state.country)?.name || ''));
@@ -1108,7 +1108,7 @@
       .filter(code => code !== state.country)
       .map(code => COUNTRY.get(code).name).sort((a, b) => a.localeCompare(b));
     const k4 = el('span', 'legend__static');
-    k4.append(swatch(pal().neutral, pal().stroke(pal().neutral)),
+    k4.append(swatch('none', pal().stroke(pal().neutral)),   // empty circle
       document.createTextNode('Comparator countries'));
     k4.hidden = !comp.length;
     const g0 = el('div', 'legend__group legend__group--country');

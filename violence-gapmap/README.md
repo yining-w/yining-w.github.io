@@ -34,7 +34,7 @@ python3 scripts/build_html.py .
 - Fonts: headers (title, dialog/tooltip titles, control labels, cluster titles) and all button/checkbox option labels use the CGD sans (Sofia Pro); all other text uses Bitter from Google Fonts, falling back to Georgia. Text sizes sit about 1px above the CGD house scale; the source note stays at 12px, in italics.
 - "Display evidence from comparable contexts" modes: Default comparators (same region + same/adjacent income), Same region (any income), Same + adjacent income levels (any region), All, Custom (starts from the rule in use).
 - Legend: once a country is selected, a top row shows the country (when it has bubbles) and the comparator countries on the chart.
-- Sample labels: Causally identified (Main) and Not as strongly identified (Other).
+- Sample labels: "More rigorous (causal evidence)" (Main) and "Additional evidence" (Other). Comparator countries legend key is an empty circle.
 - Source line uses the Chicago citation for Evans, Smarrelli and Wong (2026), CGD Working Paper; add the paper number/URL once assigned.
 - Selection panels and the chart have no outline; the chart panel has a minimum height (560px, 420px on phones).
 - Study corrections: `data/study_corrections.csv` (study_id,author_label,title,note) overrides the review's author label and/or title for 6 studies (Jin et al 2017, was Xu et al 2015; Kim and Kang 2016, was Kim et al 2020; Palladino et al 2012 title; and the 'Trained Teachers' find-and-replace slip in ids 39, 52, 75, 94). The prep script fails if 'Trained Teachers' reappears in any title.

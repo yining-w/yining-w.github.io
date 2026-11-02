@@ -187,7 +187,7 @@ for _, r in merged.sort_values(["id", "arm"]).iterrows():
                 "perpetrator_peer": int(rec["p"]["peer"]),
                 "perpetrator_any": int(rec["p"]["any"]),
                 "grade": g, "urban_rural": st,
-                "sample": "Causally identified" if sample == "causal" else "Not as strongly identified",
+                "sample": "More rigorous (causal evidence)" if sample == "causal" else "Additional evidence",
                 "focus_primary": focus,
                 "focus_primary_placeholder": int(focus_placeholder),
             })
